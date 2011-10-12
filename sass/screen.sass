@@ -3,6 +3,7 @@
 @import compass/css3/text-shadow
 @import compass/utilities/general/clearfix
 @import compass/css3/font-face
+@import compass/css3/border-radius
 
 +font-face("Museo", font-files("/museo/Museo300-Regular-webfont.woff", woff, "/museo/Museo300-Regular-webfont.otf", opentype), "/museo/Museo300-Regular-webfont.eot")
 +font-face("MuseoBold", font-files("/museo/Museo700-Regular-webfont.woff", woff, "/museo/Museo700-Regular-webfont.otf", opentype), "/museo/Museo700-Regular-webfont.eot")
@@ -12,8 +13,8 @@ $ribbon_bg: #2E3B45
 $ribbon_fg: lighten($ribbon_bg, 5%)
 
 body
-  font: 16px/1.5 "Museo", sans-serif
   color: #333
+  font: 16px/1.5 "Museo", sans-serif
   background: #F9EFD9
 
 section > *
@@ -66,12 +67,13 @@ hr
   width: 720px
   margin: auto
 
-#name
+.name
   font-family: "Novecento"
   text-transform: uppercase
   line-height: 12em
   margin-bottom: 2em
   color: #A10A0F
+  text-align: center
 
 #ribbon
   +linear-gradient(color_stops($ribbon_fg, $ribbon_bg))
@@ -127,34 +129,52 @@ hr
   float: right
   width: 48%
 
-#code_jam
-  width: 300px
-  background: #E15137
-  padding: 3em 2em
-  padding-bottom: 16em
-  font-size: 14px
-  color: #FFF
-  border-width: 20px 10px
-  border-style: solid
-  border-color: $ribbon_bg transparent $ribbon_bg $ribbon_bg
-
-  h3
-    margin-bottom: 1em
-    color: #FFF
-
-  a
-    color: #FFF !important
-
-  strong
-    display: block
-
-    &:after
-      content: "?"
-
 #speakers
   width: 340px
 
   li
     text-indent: -1em
     margin-left: 1.5em
+
+#code_jam
+  background: #E15137
+  padding: 3em 2em
+  padding-bottom: 16em
+  color: #FFF
+  margin-top: 8em
+  position: relative
+  -moz-border-top-left-radius: 20px
+  -webkit-border-top-left-radius: 20px
+  -moz-border-top-right-radius: 20px
+  -webkit-border-top-right-radius: 20px
+
+  #checkout
+    font-size: 3em
+    color: #000
+    text-align: center
+
+  .name
+    color: #F9EFD9
+    font-family: "MuseoBold"
+
+  h3
+    color: darken(#E15137, 40%)
+    border-bottom: 1px solid darken(#E15137, 20%)
+    margin-bottom: 0.5em
+
+  a
+    color: #FFF !important
+    border-bottom: 1px dotted darken(#E15137, 20%)
+
+  .thirds
+    +clearfix
+
+    .third
+      width: 30%
+      float: left
+      margin-right: 2em
+
+      &:last-child
+        margin-right: 0
+
 

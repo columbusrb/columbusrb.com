@@ -81,74 +81,74 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url(/novecento/Novecentowide-Normal-webfont.eot?iefix) format('eot'), url(/novecento/Novecentowide-Normal-webfont.woff) format('woff'), url(/novecento/Novecentowide-Normal-webfont.otf) format('opentype');
 }
 
-/* line 14, ../../sass/screen.sass */
+/* line 15, ../../sass/screen.sass */
 body {
-  font: 16px/1.5 "Museo", sans-serif;
   color: #333333;
+  font: 16px/1.5 "Museo", sans-serif;
   background: #f9efd9;
 }
 
-/* line 19, ../../sass/screen.sass */
+/* line 20, ../../sass/screen.sass */
 section > * {
   margin-left: 1.5em;
 }
 
-/* line 22, ../../sass/screen.sass */
+/* line 23, ../../sass/screen.sass */
 section {
   margin-bottom: 2.5em;
 }
 
-/* line 25, ../../sass/screen.sass */
+/* line 26, ../../sass/screen.sass */
 a {
   text-decoration: none;
   color: #a10a0f;
 }
 
-/* line 29, ../../sass/screen.sass */
+/* line 30, ../../sass/screen.sass */
 strong {
   color: black;
   font-family: "MuseoBold";
 }
 
-/* line 33, ../../sass/screen.sass */
+/* line 34, ../../sass/screen.sass */
 h1, h2, h3, h4 {
   font-family: "Novecento";
   color: #072d2a;
 }
 
-/* line 37, ../../sass/screen.sass */
+/* line 38, ../../sass/screen.sass */
 h1 {
   font-size: 2em;
 }
 
-/* line 40, ../../sass/screen.sass */
+/* line 41, ../../sass/screen.sass */
 h2 {
   font-size: 1.5em;
 }
 
-/* line 43, ../../sass/screen.sass */
+/* line 44, ../../sass/screen.sass */
 h3 {
   font-size: 1.4em;
 }
 
-/* line 46, ../../sass/screen.sass */
+/* line 47, ../../sass/screen.sass */
 h4 {
   font-size: 1.2em;
 }
 
-/* line 49, ../../sass/screen.sass */
+/* line 50, ../../sass/screen.sass */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 52, ../../sass/screen.sass */
+/* line 53, ../../sass/screen.sass */
 li {
   list-style: disc;
   list-style-position: inside;
   padding-bottom: 0.5em;
 }
 
-/* line 57, ../../sass/screen.sass */
+/* line 58, ../../sass/screen.sass */
 hr {
   width: 35%;
   border-width: 0;
@@ -157,22 +157,23 @@ hr {
   margin-bottom: 5em;
 }
 
-/* line 65, ../../sass/screen.sass */
+/* line 66, ../../sass/screen.sass */
 .container {
   width: 720px;
   margin: auto;
 }
 
-/* line 69, ../../sass/screen.sass */
-#name {
+/* line 70, ../../sass/screen.sass */
+.name {
   font-family: "Novecento";
   text-transform: uppercase;
   line-height: 12em;
   margin-bottom: 2em;
   color: #a10a0f;
+  text-align: center;
 }
 
-/* line 76, ../../sass/screen.sass */
+/* line 78, ../../sass/screen.sass */
 #ribbon {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #384854), color-stop(100%, #2e3b45));
   background-image: -webkit-linear-gradient(top, #384854, #2e3b45);
@@ -187,11 +188,11 @@ hr {
   line-height: 3em;
   position: relative;
 }
-/* line 85, ../../sass/screen.sass */
+/* line 87, ../../sass/screen.sass */
 #ribbon a {
   color: white;
 }
-/* line 88, ../../sass/screen.sass */
+/* line 90, ../../sass/screen.sass */
 #ribbon:before {
   content: " ";
   position: absolute;
@@ -204,7 +205,7 @@ hr {
   border-color: #2e3b45 #2e3b45 #2e3b45 transparent;
   z-index: -1;
 }
-/* line 100, ../../sass/screen.sass */
+/* line 102, ../../sass/screen.sass */
 #ribbon:after {
   content: " ";
   position: absolute;
@@ -217,69 +218,90 @@ hr {
   border-color: #2e3b45 transparent #2e3b45 #2e3b45;
   z-index: -1;
 }
-/* line 113, ../../sass/screen.sass */
+/* line 115, ../../sass/screen.sass */
 #ribbon a:first-child {
   margin-right: 1em;
 }
-/* line 116, ../../sass/screen.sass */
+/* line 118, ../../sass/screen.sass */
 #ribbon a:last-child {
   margin-left: 1em;
 }
 
-/* line 119, ../../sass/screen.sass */
+/* line 121, ../../sass/screen.sass */
 #top, #bottom {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 122, ../../sass/screen.sass */
+/* line 124, ../../sass/screen.sass */
 .left {
   float: left;
   width: 48%;
 }
 
-/* line 126, ../../sass/screen.sass */
+/* line 128, ../../sass/screen.sass */
 .right {
   float: right;
   width: 48%;
 }
 
-/* line 130, ../../sass/screen.sass */
-#code_jam {
-  width: 300px;
-  background: #e15137;
-  padding: 3em 2em;
-  padding-bottom: 16em;
-  font-size: 14px;
-  color: white;
-  border-width: 20px 10px;
-  border-style: solid;
-  border-color: #2e3b45 transparent #2e3b45 #2e3b45;
-}
-/* line 141, ../../sass/screen.sass */
-#code_jam h3 {
-  margin-bottom: 1em;
-  color: white;
-}
-/* line 145, ../../sass/screen.sass */
-#code_jam a {
-  color: white !important;
-}
-/* line 148, ../../sass/screen.sass */
-#code_jam strong {
-  display: block;
-}
-/* line 151, ../../sass/screen.sass */
-#code_jam strong:after {
-  content: "?";
-}
-
-/* line 154, ../../sass/screen.sass */
+/* line 132, ../../sass/screen.sass */
 #speakers {
   width: 340px;
 }
-/* line 157, ../../sass/screen.sass */
+/* line 135, ../../sass/screen.sass */
 #speakers li {
   text-indent: -1em;
   margin-left: 1.5em;
+}
+
+/* line 139, ../../sass/screen.sass */
+#code_jam {
+  background: #e15137;
+  padding: 3em 2em;
+  padding-bottom: 16em;
+  color: white;
+  margin-top: 8em;
+  position: relative;
+  -moz-border-top-left-radius: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -moz-border-top-right-radius: 20px;
+  -webkit-border-top-right-radius: 20px;
+}
+/* line 151, ../../sass/screen.sass */
+#code_jam #checkout {
+  font-size: 3em;
+  color: black;
+  text-align: center;
+}
+/* line 156, ../../sass/screen.sass */
+#code_jam .name {
+  color: #f9efd9;
+  font-family: "MuseoBold";
+}
+/* line 160, ../../sass/screen.sass */
+#code_jam h3 {
+  color: #42130a;
+  border-bottom: 1px solid #9b2b17;
+  margin-bottom: 0.5em;
+}
+/* line 165, ../../sass/screen.sass */
+#code_jam a {
+  color: white !important;
+  border-bottom: 1px dotted #9b2b17;
+}
+/* line 169, ../../sass/screen.sass */
+#code_jam .thirds {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 172, ../../sass/screen.sass */
+#code_jam .thirds .third {
+  width: 30%;
+  float: left;
+  margin-right: 2em;
+}
+/* line 177, ../../sass/screen.sass */
+#code_jam .thirds .third:last-child {
+  margin-right: 0;
 }

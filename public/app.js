@@ -1,3 +1,3 @@
 $(window).load(function(){
-  $('#name').bigtext();
+  $('.name').bigtext();
 });

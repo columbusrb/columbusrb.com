@@ -90,7 +90,7 @@ body {
 
 /* line 20, ../../sass/screen.sass */
 section > * {
-  margin-left: 1.5em;
+  margin-left: 2em;
 }
 
 /* line 23, ../../sass/screen.sass */
@@ -125,45 +125,49 @@ h1 {
 h2 {
   font-size: 1.5em;
 }
-
 /* line 44, ../../sass/screen.sass */
+h2 img {
+  vertical-align: text-top;
+}
+
+/* line 47, ../../sass/screen.sass */
 h3 {
   font-size: 1.4em;
 }
 
-/* line 47, ../../sass/screen.sass */
+/* line 50, ../../sass/screen.sass */
 h4 {
   font-size: 1.2em;
 }
 
-/* line 50, ../../sass/screen.sass */
+/* line 53, ../../sass/screen.sass */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 53, ../../sass/screen.sass */
+/* line 56, ../../sass/screen.sass */
 li {
   list-style: disc;
   list-style-position: inside;
   padding-bottom: 0.5em;
 }
 
-/* line 58, ../../sass/screen.sass */
+/* line 61, ../../sass/screen.sass */
 hr {
   width: 35%;
   border-width: 0;
-  border-bottom: 1px solid #384854;
+  border-bottom: 1px solid #425564;
   margin-top: 2em;
   margin-bottom: 5em;
 }
 
-/* line 66, ../../sass/screen.sass */
+/* line 69, ../../sass/screen.sass */
 .container {
   width: 720px;
   margin: auto;
 }
 
-/* line 70, ../../sass/screen.sass */
+/* line 73, ../../sass/screen.sass */
 .name {
   font-family: "Novecento";
   text-transform: uppercase;
@@ -173,14 +177,26 @@ hr {
   text-align: center;
 }
 
-/* line 78, ../../sass/screen.sass */
+/* line 81, ../../sass/screen.sass */
 #ribbon {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #384854), color-stop(100%, #2e3b45));
-  background-image: -webkit-linear-gradient(top, #384854, #2e3b45);
-  background-image: -moz-linear-gradient(top, #384854, #2e3b45);
-  background-image: -o-linear-gradient(top, #384854, #2e3b45);
-  background-image: -ms-linear-gradient(top, #384854, #2e3b45);
-  background-image: linear-gradient(top, #384854, #2e3b45);
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -o-border-top-left-radius: 5px;
+  -ms-border-top-left-radius: 5px;
+  -khtml-border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -o-border-top-right-radius: 5px;
+  -ms-border-top-right-radius: 5px;
+  -khtml-border-top-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #425564), color-stop(100%, #2e3b45));
+  background-image: -webkit-linear-gradient(top, #425564, #2e3b45);
+  background-image: -moz-linear-gradient(top, #425564, #2e3b45);
+  background-image: -o-linear-gradient(top, #425564, #2e3b45);
+  background-image: -ms-linear-gradient(top, #425564, #2e3b45);
+  background-image: linear-gradient(top, #425564, #2e3b45);
   color: white;
   text-align: center;
   font-family: "Novecento";
@@ -188,12 +204,18 @@ hr {
   line-height: 3em;
   position: relative;
 }
-/* line 87, ../../sass/screen.sass */
+/* line 92, ../../sass/screen.sass */
 #ribbon a {
   color: white;
 }
-/* line 90, ../../sass/screen.sass */
+/* line 95, ../../sass/screen.sass */
 #ribbon:before {
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -o-border-bottom-right-radius: 5px;
+  -ms-border-bottom-right-radius: 5px;
+  -khtml-border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   content: " ";
   position: absolute;
   width: 30px;
@@ -205,8 +227,14 @@ hr {
   border-color: #2e3b45 #2e3b45 #2e3b45 transparent;
   z-index: -1;
 }
-/* line 102, ../../sass/screen.sass */
+/* line 108, ../../sass/screen.sass */
 #ribbon:after {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -o-border-bottom-left-radius: 5px;
+  -ms-border-bottom-left-radius: 5px;
+  -khtml-border-bottom-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   content: " ";
   position: absolute;
   width: 30px;
@@ -218,90 +246,98 @@ hr {
   border-color: #2e3b45 transparent #2e3b45 #2e3b45;
   z-index: -1;
 }
-/* line 115, ../../sass/screen.sass */
+/* line 122, ../../sass/screen.sass */
 #ribbon a:first-child {
   margin-right: 1em;
 }
-/* line 118, ../../sass/screen.sass */
+/* line 125, ../../sass/screen.sass */
 #ribbon a:last-child {
   margin-left: 1em;
 }
 
-/* line 121, ../../sass/screen.sass */
+/* line 128, ../../sass/screen.sass */
 #top, #bottom {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 124, ../../sass/screen.sass */
+/* line 131, ../../sass/screen.sass */
 .left {
   float: left;
   width: 48%;
 }
 
-/* line 128, ../../sass/screen.sass */
+/* line 135, ../../sass/screen.sass */
 .right {
   float: right;
   width: 48%;
 }
 
-/* line 132, ../../sass/screen.sass */
+/* line 139, ../../sass/screen.sass */
 #speakers {
   width: 340px;
 }
-/* line 135, ../../sass/screen.sass */
+/* line 142, ../../sass/screen.sass */
 #speakers li {
   text-indent: -1em;
   margin-left: 1.5em;
 }
 
-/* line 139, ../../sass/screen.sass */
+/* line 146, ../../sass/screen.sass */
 #code_jam {
+  -moz-border-radius-topleft: 20px;
+  -webkit-border-top-left-radius: 20px;
+  -o-border-top-left-radius: 20px;
+  -ms-border-top-left-radius: 20px;
+  -khtml-border-top-left-radius: 20px;
+  border-top-left-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -webkit-border-top-right-radius: 20px;
+  -o-border-top-right-radius: 20px;
+  -ms-border-top-right-radius: 20px;
+  -khtml-border-top-right-radius: 20px;
+  border-top-right-radius: 20px;
   background: #e15137;
   padding: 3em 2em;
   padding-bottom: 16em;
   color: #9b2b17;
   margin-top: 8em;
   position: relative;
-  -moz-border-top-left-radius: 20px;
-  -webkit-border-top-left-radius: 20px;
-  -moz-border-top-right-radius: 20px;
-  -webkit-border-top-right-radius: 20px;
 }
-/* line 151, ../../sass/screen.sass */
+/* line 156, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
   text-align: center;
 }
-/* line 155, ../../sass/screen.sass */
+/* line 160, ../../sass/screen.sass */
 #code_jam .name {
   color: #f9efd9;
   font-family: "MuseoBold";
 }
-/* line 159, ../../sass/screen.sass */
+/* line 164, ../../sass/screen.sass */
 #code_jam h3 {
   color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 164, ../../sass/screen.sass */
+/* line 169, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 168, ../../sass/screen.sass */
+/* line 173, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 171, ../../sass/screen.sass */
+/* line 176, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
   color: white;
 }
-/* line 177, ../../sass/screen.sass */
+/* line 182, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {
   margin-right: 0;
 }

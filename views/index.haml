@@ -11,13 +11,19 @@
 
 #top
   .left
-    %h2 Next Meeting
+    %h2
+      %img{:src => "/images/when.png"}
+      Next Meeting
+
     %section#when
-      %p#meeting_date
+      %p
         Monday, October 17th, 2011 at 6:30PM
 
 
-    %h2 Location
+    %h2
+      %img{:src => "/images/where.png"}
+      Location
+
     %section#location
       %p
         %a{:href => "http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9"}
@@ -28,7 +34,10 @@
           Westerville, OH 43082
 
   .right
-    %h2 Speakers
+    %h2
+      %img{:src => "/images/speakers.png"}
+      Speakers
+
     %section#speakers
       %ul
         - @speakers.each do |sp|
@@ -38,19 +47,28 @@
             %br
             = sp["talk_name"]
 
-%h2 Who We Are
+%h2
+  %img{:src => "/images/who.png"}
+  Who We Are
+
 %section#who
   %p
     We are a bunch of professionals, students, and geeks who are excited about Ruby and Rails and the joy they have brought back to web development.
 
 
-%h2 What We Do
+%h2
+  %img{:src => "/images/what.png"}
+  What We Do
+
 %section#what
   %p
     Our only purpose is to get together and geek out about one of the best languages ever developed. We talk about the zen of programming. When we get tired of talking about it, we invite others in to talk about it to us. Networking and socializing are just great perks that come along with the territory.
 
 
-%h2 Can I Join?
+%h2
+  %img{:src => "/images/join.png"}
+  Can I Join?
+
 %section#join
   %p
     %strong YES.

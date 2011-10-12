@@ -10,7 +10,7 @@
 +font-face("Novecento", font-files("/novecento/Novecentowide-Normal-webfont.woff", woff, "/novecento/Novecentowide-Normal-webfont.otf", opentype, "/novecento/Novecentowide-Normal-webfont.svg", svg), "/novecento/Novecentowide-Normal-webfont.eot")
 
 $ribbon_bg: #2E3B45
-$ribbon_fg: lighten($ribbon_bg, 5%)
+$ribbon_fg: lighten($ribbon_bg, 10%)
 
 body
   color: #333
@@ -18,7 +18,7 @@ body
   background: #F9EFD9
 
 section > *
-  margin-left: 1.5em
+  margin-left: 2em
 
 section
   margin-bottom: 2.5em
@@ -40,6 +40,9 @@ h1
 
 h2
   font-size: 1.5em
+
+  img
+    vertical-align: text-top
 
 h3
   font-size: 1.4em
@@ -76,6 +79,8 @@ hr
   text-align: center
 
 #ribbon
+  +border-top-left-radius(5px)
+  +border-top-right-radius(5px)
   +linear-gradient(color_stops($ribbon_fg, $ribbon_bg))
   color: #FFF
   text-align: center
@@ -88,6 +93,7 @@ hr
     color: #FFF
 
   &:before
+    +border-bottom-right-radius(5px)
     content: ' '
     position: absolute
     width: 30px
@@ -100,6 +106,7 @@ hr
     z-index: -1
 
   &:after
+    +border-bottom-left-radius(5px)
     content: ' '
     position: absolute
     width: 30px
@@ -137,16 +144,14 @@ hr
     margin-left: 1.5em
 
 #code_jam
+  +border-top-left-radius(20px)
+  +border-top-right-radius(20px)
   background: #E15137
   padding: 3em 2em
   padding-bottom: 16em
   color: #9B2B17
   margin-top: 8em
   position: relative
-  -moz-border-top-left-radius: 20px
-  -webkit-border-top-left-radius: 20px
-  -moz-border-top-right-radius: 20px
-  -webkit-border-top-right-radius: 20px
 
   #checkout
     font-size: 3em

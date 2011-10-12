@@ -249,12 +249,12 @@ hr {
   width: 300px;
   background: #e15137;
   padding: 3em 2em;
-  padding-bottom: 12em;
+  padding-bottom: 16em;
   font-size: 14px;
   color: white;
   border-width: 20px 10px;
   border-style: solid;
-  border-color: transparent transparent transparent #2e3b45;
+  border-color: #2e3b45 transparent #2e3b45 #2e3b45;
 }
 /* line 141, ../../sass/screen.sass */
 #code_jam h3 {

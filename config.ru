@@ -4,6 +4,6 @@ require 'sinatra'
 set :env,  :production
 disable :run
 
-require 'server'
+require "#{Dir.pwd}/server"
 
 run Sinatra::Application

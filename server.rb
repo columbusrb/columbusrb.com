@@ -2,7 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'sass'
-require 'rdiscount'
 require 'yaml'
 
 configure do

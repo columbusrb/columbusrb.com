@@ -89,70 +89,66 @@ body {
 }
 
 /* line 20, ../../sass/screen.sass */
-section > * {
-  margin-left: 2em;
-}
-
-/* line 23, ../../sass/screen.sass */
 section {
+  margin-left: 2em;
   margin-bottom: 2.5em;
 }
 
-/* line 26, ../../sass/screen.sass */
+/* line 24, ../../sass/screen.sass */
 a {
   text-decoration: none;
   color: #a10a0f;
 }
 
-/* line 30, ../../sass/screen.sass */
+/* line 28, ../../sass/screen.sass */
 strong {
   color: black;
   font-family: "MuseoBold";
 }
 
-/* line 34, ../../sass/screen.sass */
+/* line 32, ../../sass/screen.sass */
 h1, h2, h3, h4 {
   font-family: "Novecento";
   color: #072d2a;
 }
 
-/* line 38, ../../sass/screen.sass */
+/* line 36, ../../sass/screen.sass */
 h1 {
   font-size: 2em;
 }
 
-/* line 41, ../../sass/screen.sass */
+/* line 39, ../../sass/screen.sass */
 h2 {
   font-size: 1.5em;
 }
-/* line 44, ../../sass/screen.sass */
+/* line 42, ../../sass/screen.sass */
 h2 img {
   vertical-align: text-top;
 }
 
-/* line 47, ../../sass/screen.sass */
+/* line 45, ../../sass/screen.sass */
 h3 {
   font-size: 1.4em;
 }
 
-/* line 50, ../../sass/screen.sass */
+/* line 48, ../../sass/screen.sass */
 h4 {
   font-size: 1.2em;
 }
 
-/* line 53, ../../sass/screen.sass */
+/* line 51, ../../sass/screen.sass */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 56, ../../sass/screen.sass */
+/* line 54, ../../sass/screen.sass */
 li {
   list-style: disc;
   list-style-position: inside;
   padding-bottom: 0.5em;
 }
 
-/* line 61, ../../sass/screen.sass */
+/* line 59, ../../sass/screen.sass */
 hr {
   width: 35%;
   border-width: 0;
@@ -161,13 +157,13 @@ hr {
   margin-bottom: 5em;
 }
 
-/* line 69, ../../sass/screen.sass */
+/* line 67, ../../sass/screen.sass */
 .container {
   width: 720px;
   margin: auto;
 }
 
-/* line 73, ../../sass/screen.sass */
+/* line 71, ../../sass/screen.sass */
 .name {
   font-family: "Novecento";
   text-transform: uppercase;
@@ -177,7 +173,7 @@ hr {
   text-align: center;
 }
 
-/* line 81, ../../sass/screen.sass */
+/* line 79, ../../sass/screen.sass */
 #ribbon {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -198,17 +194,18 @@ hr {
   background-image: -ms-linear-gradient(top, #425564, #2e3b45);
   background-image: linear-gradient(top, #425564, #2e3b45);
   color: white;
+  background-color: #425564;
   text-align: center;
   font-family: "Novecento";
   margin-bottom: 5em;
   line-height: 3em;
   position: relative;
 }
-/* line 92, ../../sass/screen.sass */
+/* line 91, ../../sass/screen.sass */
 #ribbon a {
   color: white;
 }
-/* line 95, ../../sass/screen.sass */
+/* line 94, ../../sass/screen.sass */
 #ribbon:before {
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -227,7 +224,7 @@ hr {
   border-color: #2e3b45 #2e3b45 #2e3b45 transparent;
   z-index: -1;
 }
-/* line 108, ../../sass/screen.sass */
+/* line 107, ../../sass/screen.sass */
 #ribbon:after {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -246,44 +243,44 @@ hr {
   border-color: #2e3b45 transparent #2e3b45 #2e3b45;
   z-index: -1;
 }
-/* line 122, ../../sass/screen.sass */
+/* line 121, ../../sass/screen.sass */
 #ribbon a:first-child {
   margin-right: 1em;
 }
-/* line 125, ../../sass/screen.sass */
+/* line 124, ../../sass/screen.sass */
 #ribbon a:last-child {
   margin-left: 1em;
 }
 
-/* line 128, ../../sass/screen.sass */
+/* line 127, ../../sass/screen.sass */
 #top, #bottom {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 131, ../../sass/screen.sass */
+/* line 130, ../../sass/screen.sass */
 .left {
   float: left;
   width: 48%;
 }
 
-/* line 135, ../../sass/screen.sass */
+/* line 134, ../../sass/screen.sass */
 .right {
   float: right;
   width: 48%;
 }
 
-/* line 139, ../../sass/screen.sass */
+/* line 138, ../../sass/screen.sass */
 #speakers {
   width: 340px;
 }
-/* line 142, ../../sass/screen.sass */
+/* line 141, ../../sass/screen.sass */
 #speakers li {
   text-indent: -1em;
   margin-left: 1.5em;
 }
 
-/* line 146, ../../sass/screen.sass */
+/* line 145, ../../sass/screen.sass */
 #code_jam {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -304,40 +301,40 @@ hr {
   margin-top: 8em;
   position: relative;
 }
-/* line 156, ../../sass/screen.sass */
+/* line 155, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
   text-align: center;
 }
-/* line 160, ../../sass/screen.sass */
+/* line 159, ../../sass/screen.sass */
 #code_jam .name {
   color: #f9efd9;
   font-family: "MuseoBold";
 }
-/* line 164, ../../sass/screen.sass */
+/* line 163, ../../sass/screen.sass */
 #code_jam h3 {
   color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 169, ../../sass/screen.sass */
+/* line 168, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 173, ../../sass/screen.sass */
+/* line 172, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 176, ../../sass/screen.sass */
+/* line 175, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
   color: white;
 }
-/* line 182, ../../sass/screen.sass */
+/* line 181, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {
   margin-right: 0;
 }

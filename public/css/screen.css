@@ -260,7 +260,7 @@ hr {
   background: #e15137;
   padding: 3em 2em;
   padding-bottom: 16em;
-  color: white;
+  color: #9b2b17;
   margin-top: 8em;
   position: relative;
   -moz-border-top-left-radius: 20px;
@@ -271,35 +271,35 @@ hr {
 /* line 151, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
-  color: black;
   text-align: center;
 }
-/* line 156, ../../sass/screen.sass */
+/* line 155, ../../sass/screen.sass */
 #code_jam .name {
   color: #f9efd9;
   font-family: "MuseoBold";
 }
-/* line 160, ../../sass/screen.sass */
+/* line 159, ../../sass/screen.sass */
 #code_jam h3 {
-  color: #42130a;
+  color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 165, ../../sass/screen.sass */
+/* line 164, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 169, ../../sass/screen.sass */
+/* line 168, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 172, ../../sass/screen.sass */
+/* line 171, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
+  color: white;
 }
 /* line 177, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {

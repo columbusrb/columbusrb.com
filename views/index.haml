@@ -1,0 +1,89 @@
+#name
+  #columbus Columbus
+  #ruby Ruby
+  #brigade Brigade
+
+#ribbon
+  %a{:href=>"http://groups.google.com/group/columbusrb", :target=>"_blank"} Join The Mailing List
+  |
+  %a{:href=>"https://twitter.com/#!/columbusrb", :target=>"_blank"} Follow us on Twitter
+
+
+#top
+  .left
+    %h2 Next Meeting
+    %section#when
+      %p#meeting_date
+        Monday, October 17th, 2011 at 6:30PM
+
+
+    %h2 Location
+    %section#location
+      %p
+        %a{:href => "http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9"}
+          Quick Solutions HQ
+          %br
+          440 Polaris Parkway
+          %br
+          Westerville, OH 43082
+
+  .right
+    %h2 Speakers
+    %section#speakers
+      %ul
+        - @speakers.each do |sp|
+          %li
+            %strong
+              %a{:href => "http://#{sp['link']}"}= sp["name"]
+            %br
+            = sp["talk_name"]
+
+%hr
+
+#bottom
+  .left
+    %h2 Who We Are
+    %section#who
+      %p
+        We are a bunch of professionals, students, and geeks who are excited about Ruby and Rails and the joy they have brought back to web development.
+
+
+    %h2 What We Do
+    %section#what
+      %p
+        Our only purpose is to get together and geek out about one of the best languages ever developed. We talk about the zen of programming. When we get tired of talking about it, we invite others in to talk about it to us. Networking and socializing are just great perks that come along with the territory.
+
+
+    %h2 Can I Join?
+    %section#join
+      %p
+        %strong YES.
+        Go to our
+
+        %a{:href=>"http://groups.google.com/group/columbusrb"}
+          mailing list
+
+        and sign up to begin chatting, or just show up at our next meeting. Meetings are held on the third Monday of every month. You aren't expected to be a expert, so relax and join us.
+
+  .right
+    #code_jam
+      %h3 Code Jam
+      %p
+        %strong What
+        Code Jam is a meetup to pair on cool projects, get one-on-one guidance from experienced Ruby devs and eat pizza.
+
+      %p
+        %strong When
+        Each Wednesday after CRB at 6pm
+
+      %p
+        %strong Where
+        %a{:href=>"http://maps.google.com/maps/ms?source=s_q&hl=en&geocode=&aq=&ie=UTF8&hq=&hnear=1785+O%27Brien+Rd,+Columbus,+Ohio+43228&t=h&msa=0&msid=210175771168447127014.0004a3f81d50a68475a1f&ll=39.988798,-83.119957&spn=0.002713,0.005681&z=18"}
+          2Checkout.com
+          %br
+          1785 O'Brien Road
+          %br
+          Columbus, OH 43228
+
+
+

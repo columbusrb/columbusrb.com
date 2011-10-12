@@ -1,0 +1,13 @@
+speakers:
+  - name: Matt Darby
+    link: matt-darby.com
+    talk_name: The Art of Brewing
+
+  - name: Alex Bartlow
+    link: google.com
+    talk_name: Knockout.js Overview
+
+  - name: John Canady
+    link: google.com
+    talk_name: Basic intro to tmux
+

@@ -1,0 +1,160 @@
+@import compass/reset
+@import compass/css3/gradient
+@import compass/css3/text-shadow
+@import compass/utilities/general/clearfix
+@import compass/css3/font-face
+
++font-face("Museo", font-files("/museo/Museo300-Regular-webfont.woff", woff, "/museo/Museo300-Regular-webfont.otf", opentype), "/museo/Museo300-Regular-webfont.eot")
++font-face("MuseoBold", font-files("/museo/Museo700-Regular-webfont.woff", woff, "/museo/Museo700-Regular-webfont.otf", opentype), "/museo/Museo700-Regular-webfont.eot")
++font-face("Novecento", font-files("/novecento/Novecentowide-Normal-webfont.woff", woff, "/novecento/Novecentowide-Normal-webfont.otf", opentype), "/novecento/Novecentowide-Normal-webfont.eot")
+
+$ribbon_bg: #2E3B45
+$ribbon_fg: lighten($ribbon_bg, 5%)
+
+body
+  font: 16px/1.5 "Museo", sans-serif
+  color: #333
+  background: #F9EFD9
+
+section > *
+  margin-left: 1.5em
+
+section
+  margin-bottom: 2.5em
+
+a
+  text-decoration: none
+  color: #A10A0F
+
+strong
+  color: #000
+  font-family: "MuseoBold"
+
+h1, h2, h3, h4
+  font-family: "Novecento"
+  color: #072D2A
+
+h1
+  font-size: 2em
+
+h2
+  font-size: 1.5em
+
+h3
+  font-size: 1.4em
+
+h4
+  font-size: 1.2em
+
+p
+  margin-bottom: 1.5em
+
+li
+  list-style: disc
+  list-style-position: inside
+  padding-bottom: 0.5em
+
+hr
+  width: 35%
+  border-width: 0
+  border-bottom: 1px solid $ribbon_fg
+  margin-top: 2em
+  margin-bottom: 5em
+
+
+.container
+  width: 720px
+  margin: auto
+
+#name
+  font-family: "Novecento"
+  text-transform: uppercase
+  line-height: 12em
+  margin-bottom: 2em
+  color: #A10A0F
+
+#ribbon
+  +linear-gradient(color_stops($ribbon_fg, $ribbon_bg))
+  color: #FFF
+  text-align: center
+  font-family: "Novecento"
+  margin-bottom: 5em
+  line-height: 3em
+  position: relative
+
+  a
+    color: #FFF
+
+  &:before
+    content: ' '
+    position: absolute
+    width: 30px
+    height: 0
+    left: -30px
+    top: 12px
+    border-width: 20px 10px
+    border-style: solid
+    border-color: $ribbon_bg $ribbon_bg $ribbon_bg transparent
+    z-index: -1
+
+  &:after
+    content: ' '
+    position: absolute
+    width: 30px
+    height: 0
+    right: -30px
+    top: 12px
+    border-width: 20px 10px
+    border-style: solid
+    border-color: $ribbon_bg transparent $ribbon_bg $ribbon_bg
+    z-index: -1
+
+  a
+    &:first-child
+      margin-right: 1em
+
+    &:last-child
+      margin-left: 1em
+
+#top, #bottom
+  +clearfix
+
+.left
+  float: left
+  width: 48%
+
+.right
+  float: right
+  width: 48%
+
+#code_jam
+  width: 300px
+  background: #E15137
+  padding: 3em 2em
+  padding-bottom: 12em
+  font-size: 14px
+  color: #FFF
+  border-width: 20px 10px
+  border-style: solid
+  border-color: transparent transparent transparent $ribbon_bg
+
+  h3
+    margin-bottom: 1em
+    color: #FFF
+
+  a
+    color: #FFF !important
+
+  strong
+    display: block
+
+    &:after
+      content: "?"
+
+#speakers
+  width: 340px
+
+  li
+    text-indent: -1em
+    margin-left: 1.5em
+

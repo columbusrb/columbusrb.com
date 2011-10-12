@@ -66,19 +66,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @font-face {
   font-family: "Museo";
   src: url(/museo/Museo300-Regular-webfont.eot);
-  src: url(/museo/Museo300-Regular-webfont.eot?iefix) format('eot'), url(/museo/Museo300-Regular-webfont.woff) format('woff'), url(/museo/Museo300-Regular-webfont.otf) format('opentype');
+  src: url(/museo/Museo300-Regular-webfont.eot?iefix) format('eot'), url(/museo/Museo300-Regular-webfont.woff) format('woff'), url(/museo/Museo300-Regular-webfont.otf) format('opentype'), url(/museo/Museo300-Regular-webfont.svg) format('svg');
 }
 
 @font-face {
   font-family: "MuseoBold";
   src: url(/museo/Museo700-Regular-webfont.eot);
-  src: url(/museo/Museo700-Regular-webfont.eot?iefix) format('eot'), url(/museo/Museo700-Regular-webfont.woff) format('woff'), url(/museo/Museo700-Regular-webfont.otf) format('opentype');
+  src: url(/museo/Museo700-Regular-webfont.eot?iefix) format('eot'), url(/museo/Museo700-Regular-webfont.woff) format('woff'), url(/museo/Museo700-Regular-webfont.otf) format('opentype'), url(/museo/Museo700-Regular-webfont.svg) format('svg');
 }
 
 @font-face {
   font-family: "Novecento";
   src: url(/novecento/Novecentowide-Normal-webfont.eot);
-  src: url(/novecento/Novecentowide-Normal-webfont.eot?iefix) format('eot'), url(/novecento/Novecentowide-Normal-webfont.woff) format('woff'), url(/novecento/Novecentowide-Normal-webfont.otf) format('opentype');
+  src: url(/novecento/Novecentowide-Normal-webfont.eot?iefix) format('eot'), url(/novecento/Novecentowide-Normal-webfont.woff) format('woff'), url(/novecento/Novecentowide-Normal-webfont.otf) format('opentype'), url(/novecento/Novecentowide-Normal-webfont.svg) format('svg');
 }
 
 /* line 15, ../../sass/screen.sass */

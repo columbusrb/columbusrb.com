@@ -63,7 +63,6 @@ hr
   margin-top: 2em
   margin-bottom: 5em
 
-
 .container
   width: 720px
   margin: auto
@@ -75,6 +74,14 @@ hr
   margin-bottom: 2em
   color: #A10A0F
   text-align: center
+
+#strip
+  background: #7F97AA
+  line-height: 2em
+  text-align: center
+  font-family: "Novecento"
+  color: #FFF
+  border-bottom: 2px solid #8A9CAA
 
 #ribbon
   +border-top-left-radius(5px)
@@ -142,10 +149,21 @@ hr
     text-indent: -1em
     margin-left: 1.5em
 
+#join
+  position: relative
+
+  #tools
+    position: absolute
+    height: 500px
+    width: 500px
+    right: 0
+    bottom: 0
+    background: url(/images/tools.png) no-repeat
+
 #code_jam
   +border-top-left-radius(20px)
   +border-top-right-radius(20px)
-  background: #E15137
+  background: #E15137 url(/images/people.png) bottom center no-repeat
   padding: 3em 2em
   padding-bottom: 16em
   color: #9B2B17

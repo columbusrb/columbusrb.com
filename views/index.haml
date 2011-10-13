@@ -17,7 +17,8 @@
 
     %section#when
       %p
-        Monday, October 17th, 2011 at 6:30PM
+        - day = @next_meeting.day.ordinalize
+        = @next_meeting.strftime("%A, %B #{day}, %Y at 6:30PM")
 
 
     %h2
@@ -70,6 +71,8 @@
   Can I Join?
 
 %section#join
+  #tools
+
   %p
     %strong YES.
     Go to our

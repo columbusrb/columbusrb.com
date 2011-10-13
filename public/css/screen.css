@@ -157,13 +157,13 @@ hr {
   margin-bottom: 5em;
 }
 
-/* line 67, ../../sass/screen.sass */
+/* line 66, ../../sass/screen.sass */
 .container {
   width: 720px;
   margin: auto;
 }
 
-/* line 71, ../../sass/screen.sass */
+/* line 70, ../../sass/screen.sass */
 .name {
   font-family: "Novecento";
   text-transform: uppercase;
@@ -173,7 +173,17 @@ hr {
   text-align: center;
 }
 
-/* line 79, ../../sass/screen.sass */
+/* line 78, ../../sass/screen.sass */
+#strip {
+  background: #7f97aa;
+  line-height: 2em;
+  text-align: center;
+  font-family: "Novecento";
+  color: white;
+  border-bottom: 2px solid #8a9caa;
+}
+
+/* line 86, ../../sass/screen.sass */
 #ribbon {
   -moz-border-radius-topleft: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -201,11 +211,11 @@ hr {
   line-height: 3em;
   position: relative;
 }
-/* line 91, ../../sass/screen.sass */
+/* line 98, ../../sass/screen.sass */
 #ribbon a {
   color: white;
 }
-/* line 94, ../../sass/screen.sass */
+/* line 101, ../../sass/screen.sass */
 #ribbon:before {
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -224,7 +234,7 @@ hr {
   border-color: #2e3b45 #2e3b45 #2e3b45 transparent;
   z-index: -1;
 }
-/* line 107, ../../sass/screen.sass */
+/* line 114, ../../sass/screen.sass */
 #ribbon:after {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -243,44 +253,58 @@ hr {
   border-color: #2e3b45 transparent #2e3b45 #2e3b45;
   z-index: -1;
 }
-/* line 121, ../../sass/screen.sass */
+/* line 128, ../../sass/screen.sass */
 #ribbon a:first-child {
   margin-right: 1em;
 }
-/* line 124, ../../sass/screen.sass */
+/* line 131, ../../sass/screen.sass */
 #ribbon a:last-child {
   margin-left: 1em;
 }
 
-/* line 127, ../../sass/screen.sass */
+/* line 134, ../../sass/screen.sass */
 #top, #bottom {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 130, ../../sass/screen.sass */
+/* line 137, ../../sass/screen.sass */
 .left {
   float: left;
   width: 48%;
 }
 
-/* line 134, ../../sass/screen.sass */
+/* line 141, ../../sass/screen.sass */
 .right {
   float: right;
   width: 48%;
 }
 
-/* line 138, ../../sass/screen.sass */
+/* line 145, ../../sass/screen.sass */
 #speakers {
   width: 340px;
 }
-/* line 141, ../../sass/screen.sass */
+/* line 148, ../../sass/screen.sass */
 #speakers li {
   text-indent: -1em;
   margin-left: 1.5em;
 }
 
-/* line 145, ../../sass/screen.sass */
+/* line 152, ../../sass/screen.sass */
+#join {
+  position: relative;
+}
+/* line 155, ../../sass/screen.sass */
+#join #tools {
+  position: absolute;
+  height: 500px;
+  width: 500px;
+  right: 0;
+  bottom: 0;
+  background: url(/images/tools.png) no-repeat;
+}
+
+/* line 163, ../../sass/screen.sass */
 #code_jam {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -294,47 +318,47 @@ hr {
   -ms-border-top-right-radius: 20px;
   -khtml-border-top-right-radius: 20px;
   border-top-right-radius: 20px;
-  background: #e15137;
+  background: #e15137 url(/images/people.png) bottom center no-repeat;
   padding: 3em 2em;
   padding-bottom: 16em;
   color: #9b2b17;
   margin-top: 8em;
   position: relative;
 }
-/* line 155, ../../sass/screen.sass */
+/* line 173, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
   text-align: center;
 }
-/* line 159, ../../sass/screen.sass */
+/* line 177, ../../sass/screen.sass */
 #code_jam .name {
   color: #f9efd9;
   font-family: "MuseoBold";
 }
-/* line 163, ../../sass/screen.sass */
+/* line 181, ../../sass/screen.sass */
 #code_jam h3 {
   color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 168, ../../sass/screen.sass */
+/* line 186, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 172, ../../sass/screen.sass */
+/* line 190, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 175, ../../sass/screen.sass */
+/* line 193, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
   color: white;
 }
-/* line 181, ../../sass/screen.sass */
+/* line 199, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {
   margin-right: 0;
 }

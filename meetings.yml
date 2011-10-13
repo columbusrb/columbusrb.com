@@ -1,4 +1,4 @@
-speakers:
+10/17/11:
   - name: Matt Darby
     link: matt-darby.com
     talk_name: The Art of Brewing
@@ -10,4 +10,8 @@ speakers:
   - name: John Canady
     link: google.com
     talk_name: Basic intro to tmux
+
+  - name: Isaac Sanders
+    link: google.com
+    talk_name: ReUser gem
 

@@ -3,6 +3,13 @@ require 'sinatra'
 require 'haml'
 require 'sass'
 require 'yaml'
+require 'active_support/all'
+
+def next_meeting_date
+  s = Date.today.beginning_of_month
+  e = Date.today.end_of_month
+  (s..e).select{|d| d.wday == 1}[2]
+end
 
 configure do
   set :haml, { :format => :html5 }
@@ -10,7 +17,11 @@ configure do
 end
 
 get '/' do
-  @speakers = YAML::load(File.open("speakers.yml"))["speakers"]
+  info          = YAML::load(File.open("meetings.yml"))
+  @next_meeting = next_meeting_date
+  date          = @next_meeting.strftime('%D')
+  @speakers     = info[date]
+
   haml :index
 end
 

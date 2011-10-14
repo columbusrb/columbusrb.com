@@ -5,10 +5,26 @@ require 'sass'
 require 'yaml'
 require 'active_support/all'
 
-def next_meeting_date
-  s = Date.today.beginning_of_month
-  e = Date.today.end_of_month
-  (s..e).select{|d| d.wday == 1}[2]
+helpers do
+  def next_crb_meeting_date
+    @next_crb_meeting_date ||= begin
+      s = Date.today.beginning_of_month
+      e = Date.today.end_of_month
+      date = (s..e).select{|d| d.wday == 1}[2]
+      date + 18.5.hours
+    end
+  end
+
+  def next_code_jam_date
+    @next_code_jam_date ||= begin
+      next_crb_meeting_date + 9.days
+    end
+  end
+
+  def formatted_date(date)
+    day = date.day.ordinalize
+    date.strftime("%A, %B #{day}, %Y at %l:%M%P")
+  end
 end
 
 configure do
@@ -17,10 +33,11 @@ configure do
 end
 
 get '/' do
-  info          = YAML::load(File.open("meetings.yml"))
-  @next_meeting = next_meeting_date
-  date          = @next_meeting.strftime('%D')
-  @speakers     = info[date]
+  info      = YAML::load(File.open("meetings.yml"))
+  @next_crb = next_crb_meeting_date
+  @next_jam = next_code_jam_date
+  date      = @next_crb.strftime('%D')
+  @speakers = info[date]
 
   haml :index
 end

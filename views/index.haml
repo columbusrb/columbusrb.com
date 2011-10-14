@@ -16,9 +16,7 @@
       Next Meeting
 
     %section#when
-      %p
-        - day = @next_meeting.day.ordinalize
-        = @next_meeting.strftime("%A, %B #{day}, %Y at 6:30PM")
+      %p= formatted_date(@next_crb)
 
 
     %h2
@@ -100,14 +98,15 @@
 
     .third
       %h3 When
-      Each Wednesday after CRB at 6pm
+      %p= formatted_date(@next_jam)
+
 
     .third
       %h3 Where
-      %a{:href=>"http://maps.google.com/maps/ms?source=s_q&hl=en&geocode=&aq=&ie=UTF8&hq=&hnear=1785+O%27Brien+Rd,+Columbus,+Ohio+43228&t=h&msa=0&msid=210175771168447127014.0004a3f81d50a68475a1f&ll=39.988798,-83.119957&spn=0.002713,0.005681&z=18"}
-        2Checkout.com
+      %a{:href=>"http://maps.google.com/maps/place?q=1275+Kinnear+Rd,+Columbus,+Franklin,+Ohio+43212&hl=en&ftid=0x88388e5de5318269:0x3dfe09a8a22704ee"}
+        TechColumbus
         %br
-        1785 O'Brien Road
+        1275 Kinnear Rd
         %br
-        Columbus, OH 43228
+        Columbus, OH 43212
 

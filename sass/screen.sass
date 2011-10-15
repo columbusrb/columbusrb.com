@@ -9,12 +9,20 @@
 +font-face("MuseoBold", font-files("/museo/Museo700-Regular-webfont.woff", woff, "/museo/Museo700-Regular-webfont.otf", opentype, "/museo/Museo700-Regular-webfont.svg", svg), "/museo/Museo700-Regular-webfont.eot")
 +font-face("Novecento", font-files("/novecento/Novecentowide-Normal-webfont.woff", woff, "/novecento/Novecentowide-Normal-webfont.otf", opentype, "/novecento/Novecentowide-Normal-webfont.svg", svg), "/novecento/Novecentowide-Normal-webfont.eot")
 
+= bolded_webfont
+  font-family: "MuseoBold", Arial
+  font-weight: bold
+
+= headline_font
+  font-family: "Novecento", Helvetica
+
+
 $ribbon_bg: #2E3B45
 $ribbon_fg: lighten($ribbon_bg, 10%)
 
 body
   color: #333
-  font: 16px/1.5 "Museo", sans-serif
+  font: 16px/1.5 "Museo", Arial, sans-serif
   background: #F9EFD9
 
 section
@@ -26,11 +34,11 @@ a
   color: #A10A0F
 
 strong
+  +bolded_webfont
   color: #000
-  font-family: "MuseoBold"
 
 h1, h2, h3, h4
-  font-family: "Novecento"
+  +headline_font
   color: #072D2A
 
 h1
@@ -69,7 +77,7 @@ hr
   line-height: 11em
 
 .name
-  font-family: "Novecento"
+  +headline_font
   text-transform: uppercase
   line-height: 12em
   margin-bottom: 2em
@@ -77,21 +85,21 @@ hr
   text-align: center
 
 #strip
+  +headline_font
   background: #7F97AA
   line-height: 2em
   text-align: center
-  font-family: "Novecento"
   color: #FFF
   border-bottom: 2px solid #8A9CAA
 
 #ribbon
+  +headline_font
   +border-top-left-radius(5px)
   +border-top-right-radius(5px)
   +linear-gradient(color_stops($ribbon_fg, $ribbon_bg))
   color: #FFF
   background-color: $ribbon_fg
   text-align: center
-  font-family: "Novecento"
   margin-bottom: 5em
   line-height: 3em
   position: relative
@@ -176,8 +184,8 @@ hr
     text-align: center
 
   .name
+    +bolded_webfont
     color: #F9EFD9
-    font-family: "MuseoBold"
 
   h3
     color: darken(#9B2B17, 10%)

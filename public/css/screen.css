@@ -166,8 +166,21 @@ hr {
 #crb {
   line-height: 11em;
 }
-
 /* line 79, ../../sass/screen.sass */
+#crb #columbus {
+  font-size: 126.977px;
+  word-spacing: 0.9px;
+}
+/* line 83, ../../sass/screen.sass */
+#crb #ruby {
+  font-size: 270.467px;
+}
+/* line 86, ../../sass/screen.sass */
+#crb #brigade {
+  font-size: 160.456px;
+}
+
+/* line 89, ../../sass/screen.sass */
 .name {
   font-family: "Novecento", Helvetica;
   text-transform: uppercase;
@@ -177,7 +190,7 @@ hr {
   text-align: center;
 }
 
-/* line 87, ../../sass/screen.sass */
+/* line 97, ../../sass/screen.sass */
 #strip {
   font-family: "Novecento", Helvetica;
   background: #7f97aa;
@@ -187,7 +200,7 @@ hr {
   border-bottom: 2px solid #8a9caa;
 }
 
-/* line 95, ../../sass/screen.sass */
+/* line 105, ../../sass/screen.sass */
 #ribbon {
   font-family: "Novecento", Helvetica;
   -moz-border-radius-topleft: 5px;
@@ -215,11 +228,11 @@ hr {
   line-height: 3em;
   position: relative;
 }
-/* line 107, ../../sass/screen.sass */
+/* line 117, ../../sass/screen.sass */
 #ribbon a {
   color: white;
 }
-/* line 110, ../../sass/screen.sass */
+/* line 120, ../../sass/screen.sass */
 #ribbon:before {
   -moz-border-radius-bottomright: 5px;
   -webkit-border-bottom-right-radius: 5px;
@@ -238,7 +251,7 @@ hr {
   border-color: #2e3b45 #2e3b45 #2e3b45 transparent;
   z-index: -1;
 }
-/* line 123, ../../sass/screen.sass */
+/* line 133, ../../sass/screen.sass */
 #ribbon:after {
   -moz-border-radius-bottomleft: 5px;
   -webkit-border-bottom-left-radius: 5px;
@@ -257,48 +270,48 @@ hr {
   border-color: #2e3b45 transparent #2e3b45 #2e3b45;
   z-index: -1;
 }
-/* line 137, ../../sass/screen.sass */
+/* line 147, ../../sass/screen.sass */
 #ribbon a:first-child {
   margin-right: 1em;
 }
-/* line 140, ../../sass/screen.sass */
+/* line 150, ../../sass/screen.sass */
 #ribbon a:last-child {
   margin-left: 1em;
 }
 
-/* line 143, ../../sass/screen.sass */
+/* line 153, ../../sass/screen.sass */
 #top, #bottom {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 146, ../../sass/screen.sass */
+/* line 156, ../../sass/screen.sass */
 .left {
   float: left;
   width: 48%;
 }
 
-/* line 150, ../../sass/screen.sass */
+/* line 160, ../../sass/screen.sass */
 .right {
   float: right;
   width: 48%;
 }
 
-/* line 154, ../../sass/screen.sass */
+/* line 164, ../../sass/screen.sass */
 #speakers {
   width: 340px;
 }
-/* line 157, ../../sass/screen.sass */
+/* line 167, ../../sass/screen.sass */
 #speakers li {
   text-indent: -1em;
   margin-left: 1.5em;
 }
 
-/* line 161, ../../sass/screen.sass */
+/* line 171, ../../sass/screen.sass */
 #join {
   position: relative;
 }
-/* line 164, ../../sass/screen.sass */
+/* line 174, ../../sass/screen.sass */
 #join #tools {
   position: absolute;
   height: 500px;
@@ -308,7 +321,7 @@ hr {
   background: url(/images/tools.png) no-repeat;
 }
 
-/* line 172, ../../sass/screen.sass */
+/* line 182, ../../sass/screen.sass */
 #code_jam {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -329,41 +342,44 @@ hr {
   margin-top: 8em;
   position: relative;
 }
-/* line 182, ../../sass/screen.sass */
+/* line 192, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
   text-align: center;
 }
-/* line 186, ../../sass/screen.sass */
+/* line 196, ../../sass/screen.sass */
 #code_jam .name {
   font-family: "MuseoBold", Arial;
   font-weight: bold;
   color: #f9efd9;
+  font-size: 120.466px;
+  line-height: 1em;
+  margin-bottom: 0.5em;
 }
-/* line 190, ../../sass/screen.sass */
+/* line 203, ../../sass/screen.sass */
 #code_jam h3 {
   color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 195, ../../sass/screen.sass */
+/* line 208, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 199, ../../sass/screen.sass */
+/* line 212, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 202, ../../sass/screen.sass */
+/* line 215, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
   color: white;
 }
-/* line 208, ../../sass/screen.sass */
+/* line 221, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {
   margin-right: 0;
 }

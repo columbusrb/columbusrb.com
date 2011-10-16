@@ -3,10 +3,6 @@
     link: matt-darby.com
     talk_name: The Art of Brewing
 
-  - name: Alex Bartlow
-    link: google.com
-    talk_name: Knockout.js Overview
-
   - name: Jon Canady
     link: joncanady.com
     talk_name: Basic intro to tmux
@@ -14,4 +10,11 @@
   - name: Isaac Sanders
     link: personalcv.heroku.com
     talk_name: ReUser gem
+
+
+10/21/11:
+  - name: Alex Bartlow
+    link: google.com
+    talk_name: Knockout.js Overview
+
 

@@ -321,7 +321,14 @@ hr {
   background: url(/images/tools.png) no-repeat;
 }
 
-/* line 182, ../../sass/screen.sass */
+/* line 183, ../../sass/screen.sass */
+#tweets li {
+  list-style: none;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* line 189, ../../sass/screen.sass */
 #code_jam {
   -moz-border-radius-topleft: 20px;
   -webkit-border-top-left-radius: 20px;
@@ -342,12 +349,12 @@ hr {
   margin-top: 8em;
   position: relative;
 }
-/* line 192, ../../sass/screen.sass */
+/* line 199, ../../sass/screen.sass */
 #code_jam #checkout {
   font-size: 3em;
   text-align: center;
 }
-/* line 196, ../../sass/screen.sass */
+/* line 203, ../../sass/screen.sass */
 #code_jam .name {
   font-family: "MuseoBold", Arial;
   font-weight: bold;
@@ -356,30 +363,30 @@ hr {
   line-height: 1em;
   margin-bottom: 0.5em;
 }
-/* line 203, ../../sass/screen.sass */
+/* line 210, ../../sass/screen.sass */
 #code_jam h3 {
   color: #6f1f10;
   border-bottom: 1px solid #9b2b17;
   margin-bottom: 0.5em;
 }
-/* line 208, ../../sass/screen.sass */
+/* line 215, ../../sass/screen.sass */
 #code_jam a {
   color: white !important;
   border-bottom: 1px dotted #9b2b17;
 }
-/* line 212, ../../sass/screen.sass */
+/* line 219, ../../sass/screen.sass */
 #code_jam .thirds {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 215, ../../sass/screen.sass */
+/* line 222, ../../sass/screen.sass */
 #code_jam .thirds .third {
   width: 30%;
   float: left;
   margin-right: 2em;
   color: white;
 }
-/* line 221, ../../sass/screen.sass */
+/* line 228, ../../sass/screen.sass */
 #code_jam .thirds .third:last-child {
   margin-right: 0;
 }

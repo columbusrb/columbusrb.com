@@ -6,7 +6,7 @@ require 'yaml'
 require 'active_support/all'
 
 class MeetingDates
-  def initialize(relative_date = Date.today)
+  def initialize
     @crb_dates = []
     @jam_dates = []
     calc_meeting_dates

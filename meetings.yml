@@ -17,6 +17,10 @@
     link: about.me/searls
     talk_name: Jasmine Tools
 
+  - name: Jonathan Hogue
+    link: www.hogue.org
+    talk_name: Sinatra as CMS
+
   - name: Alex Bartlow
     link: google.com
     talk_name: Knockout.js Overview

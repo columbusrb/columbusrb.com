@@ -30,3 +30,15 @@
     talk_name: Guard Overview
 
 
+12/19/11:
+  - name: Joe O'Brien
+    link: twitter.com/objo
+    talk_name: People Patterns
+
+  -name: Jon Hogue
+    link: www.hogue.org
+    talk_name: Sinatra as CMS
+
+  - name: Isaac Sanders
+    link: twitter.com/isaacsanders
+    talk_name: Crafting a ruby gem

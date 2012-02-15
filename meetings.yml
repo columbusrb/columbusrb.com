@@ -69,3 +69,7 @@
     link: twitter.com/lenjaffe
     talk_name: "Overview of the friendly_id gem"
 
+  - name: Adam McCrea
+    link: twitter.com/adamlogic
+    talk_name: "The How and Why of the Rails Asset Pipeline"
+

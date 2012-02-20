@@ -65,10 +65,6 @@
     link: matt-darby.com
     talk_name: "New CRB Registration App"
 
-  - name: Len Jaffe
-    link: twitter.com/lenjaffe
-    talk_name: "Overview of the friendly_id gem"
-
   - name: Adam McCrea
     link: twitter.com/adamlogic
     talk_name: "The How and Why of the Rails Asset Pipeline"

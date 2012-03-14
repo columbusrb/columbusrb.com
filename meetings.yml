@@ -70,7 +70,10 @@
     talk_name: "The How and Why of the Rails Asset Pipeline"
 
 03/19/12:
+  - name: Matt Darby
+    link: edgecase.com
+    talk_name: Stubbing OAuth with Capybara
+
   - name: Robert Juliano
     link: www.techcolumbus.org/crb-code-jam
     talk_name: CQRS and Event Sourcing
-

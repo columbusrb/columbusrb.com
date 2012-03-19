@@ -70,6 +70,10 @@
     talk_name: "The How and Why of the Rails Asset Pipeline"
 
 03/19/12:
+  - name: Leon Gersing
+    link: edgecase.com
+    talk_name: TBD
+
   - name: Matt Darby
     link: edgecase.com
     talk_name: Stubbing OAuth with Capybara

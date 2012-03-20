@@ -86,19 +86,18 @@
   Recent Images
 
 %section#photos
-  %img(src="/images/photos/thumbs/IMG_0338.jpg")
-  %img(src="/images/photos/thumbs/IMG_0329.jpg")
-  %img(src="/images/photos/thumbs/IMG_0330.jpg")
-  %img(src="/images/photos/thumbs/IMG_0331.jpg")
-  %img(src="/images/photos/thumbs/IMG_0332.jpg")
-  %img(src="/images/photos/thumbs/IMG_0333.jpg")
-  %img(src="/images/photos/thumbs/IMG_0334.jpg")
-  %img(src="/images/photos/thumbs/IMG_0335.jpg")
-  %img(src="/images/photos/thumbs/IMG_0336.jpg")
-  %img(src="/images/photos/thumbs/IMG_0337.jpg")
-  %img(src="/images/photos/thumbs/IMG_0339.jpg")
-  %img(src="/images/photos/thumbs/IMG_0340.jpg")
-  %img(src="/images/photos/thumbs/IMG_0341.jpg")
+  %img(src="/images/photos/thumbs/IMG_0338.jpg" alt="All are welcome!")
+  %img(src="/images/photos/thumbs/IMG_0329.jpg" alt="Adam McCrea schooling")
+  %img(src="/images/photos/thumbs/IMG_0330.jpg" alt="A full house tonight")
+  %img(src="/images/photos/thumbs/IMG_0331.jpg" alt="Code vs Slides")
+  %img(src="/images/photos/thumbs/IMG_0332.jpg" alt="Adam again")
+  %img(src="/images/photos/thumbs/IMG_0333.jpg" alt="Rubyists love Vim")
+  %img(src="/images/photos/thumbs/IMG_0334.jpg" alt="Columbus Rubyists")
+  %img(src="/images/photos/thumbs/IMG_0336.jpg" alt="Matt Yoho speaking")
+  %img(src="/images/photos/thumbs/IMG_0337.jpg" alt="Rubyists")
+  %img(src="/images/photos/thumbs/IMG_0339.jpg" alt="Yoho action!")
+  %img(src="/images/photos/thumbs/IMG_0341.jpg" alt="Even more Yoho")
+  %img(src="/images/photos/thumbs/leon.png" alt="Leon Gersing holding court")
 
 
 %h2
@@ -141,3 +140,15 @@
     %span.time <%= time %>
     &mdash;
     <%= tweet %>
+
+:javascript
+  $(function() {
+    $.each($('#photos img'), function(i, p) {
+      var photo     = $(p);
+      var alt       = photo.attr('alt');
+      var container = $('<div></div>').addClass('image-container');
+      var caption   = $('<div></div>').html(alt).addClass('alt-message');
+      photo.wrap(container);
+      photo.after(caption);
+    });
+  });

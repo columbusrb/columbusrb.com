@@ -230,8 +230,24 @@ hr
         margin-right: 0
 
 #photos
-  img
-    border: 1px solid #333
-    width: 166px
-    height: 112px
+  .image-container
+    position: relative
+    display: inline-block
+
+    img
+      border: 1px solid #333
+      width: 166px
+      height: 112px
+
+    .alt-message
+      position: absolute
+      bottom: 8px
+      left: 0
+      right: 0
+      background: #000
+      opacity: 0.6
+      width: 160px
+      color: #FFF
+      font-size: 12px
+      padding-left: 0.5em
 

@@ -108,3 +108,16 @@
     link: www.analyticsinside.us
     talk_name: Hadoop and Ruby
 
+06/18/12:
+  - name: Matt Jones
+    link: edgecase.com/about#matt_jones
+    talk_name: Fun with Associations
+
+  - name: Len Jaffe
+    link: www.jaffesoftware.com
+    talk_name: FriendlyID
+
+  - name: Chris Chandler
+    link: twitter.com/#!/developingchris
+    talk_name: Using Thor outside of Rails
+

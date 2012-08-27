@@ -1,0 +1,122 @@
+#top
+  .left
+    h2
+      img(src="/assets/when.png")
+      ' Next Meeting
+
+    section#when
+      p= formatted_date(@next_crb.time)
+
+
+    h2
+      img(src="/assets/where.png")
+      ' Location
+
+    section#location
+      p
+        a(href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9")
+          ' Quick Solutions HQ
+          br
+          ' 440 Polaris Parkway
+          br
+          ' Westerville, OH 43082
+
+  .right
+    = render "crb_format"
+
+h2
+  img(src="/assets/who.png")
+  ' Who We Are
+
+section#who
+  p We are a bunch of professionals, students, and geeks who are excited about Ruby and Rails and the joy they have brought back to web development.
+
+
+h2
+  img(src="/assets/what.png")
+  ' What We Do
+
+section#what
+  p Our only purpose is to get together and geek out about one of the best languages ever developed. We talk about the zen of programming. When we get tired of talking about it, we invite others in to talk about it to us. Networking and socializing are just great perks that come along with the territory.
+
+
+h2
+  img(src="/assets/join.png")
+  ' Can I Join?
+
+section#join
+  #tools
+
+  p
+    strong YES.
+    ' Go to our
+    a(href="http://groups.google.com/group/columbusrb")
+      ' mailing list
+    ' and sign up to begin chatting, or just show up at our next meeting. Meetings are held on the third Monday of every month. You aren't expected to be an expert, so relax and join us.
+
+
+h2
+  img(src="/assets/photos.png")
+  ' Recent Photos
+
+section#photos
+  img(src="/assets/photos/thumbs/IMG_0338.jpg" alt="All are welcome!")
+  img(src="/assets/photos/thumbs/IMG_0329.jpg" alt="Adam McCrea schooling")
+  img(src="/assets/photos/thumbs/IMG_0330.jpg" alt="A full house tonight")
+  img(src="/assets/photos/thumbs/IMG_0331.jpg" alt="Code vs Slides")
+  img(src="/assets/photos/thumbs/IMG_0332.jpg" alt="Adam again")
+  img(src="/assets/photos/thumbs/IMG_0333.jpg" alt="Rubyists love Vim")
+  img(src="/assets/photos/thumbs/IMG_0334.jpg" alt="Columbus Rubyists")
+  img(src="/assets/photos/thumbs/IMG_0336.jpg" alt="Matt Yoho speaking")
+  img(src="/assets/photos/thumbs/IMG_0337.jpg" alt="Rubyists")
+  img(src="/assets/photos/thumbs/IMG_0339.jpg" alt="Yoho action!")
+  img(src="/assets/photos/thumbs/IMG_0341.jpg" alt="Even more Yoho")
+  img(src="/assets/photos/thumbs/leon.png" alt="Leon Gersing holding court")
+
+
+h2
+  img(src="/assets/twitter.png")
+  'Latest Tweets
+
+section#twitter
+  #tweets
+
+
+#code_jam
+  #checkout
+    ' You should also check out
+
+  .name
+    ' Code Jam
+
+  .thirds
+    .third
+      h3 What
+      ' Code Jam is a meetup to pair on cool projects, get one-on-one guidance from experienced Ruby devs and eat pizza.
+
+    .third
+      h3 When
+      p= formatted_date(@next_jam.time)
+
+
+    .third
+      h3 Where
+      a(href="http://maps.google.com/maps/place?q=1275+Kinnear+Rd,+Columbus,+Franklin,+Ohio+43212&hl=en&ftid=0x88388e5de5318269:0x3dfe09a8a22704ee")
+        ' TechColumbus
+        br
+        ' 1275 Kinnear Rd
+        br
+        ' Columbus, OH 43212
+
+
+script#tweetTemplate(type="text/template")
+  li
+    span.time <%= time %>
+    ' &mdash;
+    ' <%= tweet %>
+
+coffee:
+  $ ->
+    app = new window.App()
+    app.labelPhotos()
+    app.loadTweets()

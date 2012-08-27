@@ -1,12 +1,4 @@
-require 'rubygems'
-require 'bundler'
-require 'sinatra'
+# This file is used by Rack-based servers to start the application.
 
-Bundler.require
-
-set :env,  :production
-disable :run
-
-require "#{Dir.pwd}/server"
-
-run Sinatra::Application
+require ::File.expand_path('../config/environment',  __FILE__)
+run Columbusrb::Application

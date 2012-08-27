@@ -1,0 +1,139 @@
+10/17/11:
+  - name: Matt Darby
+    link: matt-darby.com
+    talk_name: The Art of Brewing
+
+  - name: Jon Canady
+    link: joncanady.com
+    talk_name: Basic intro to tmux
+
+  - name: Isaac Sanders
+    link: google.com
+    talk_name: ReUser gem
+
+
+11/21/11:
+  - name: Justin Searls
+    link: about.me/searls
+    talk_name: Jasmine Tools
+
+  - name: Jonathan Hogue
+    link: www.hogue.org
+    talk_name: Sinatra as CMS
+
+  - name: Alex Bartlow
+    link: google.com
+    talk_name: Knockout.js Overview
+
+  - name: Isaac Sanders
+    link: google.com
+    talk_name: Guard Overview
+
+
+12/19/11:
+  - name: Joe O'Brien
+    link: twitter.com/objo
+    talk_name: People Patterns
+
+  - name: Jon Hogue
+    link: www.hogue.org
+    talk_name: Sinatra as CMS
+
+  - name: Isaac Sanders
+    link: twitter.com/isaacsanders
+    talk_name: Crafting a ruby gem
+
+01/16/12:
+  - name: Mark Lorenz
+    link: github.com/dapplebeforedawn
+    talk_name: The Long Tail
+
+  - name: Jon Canady
+    link: joncanady.com
+    talk_name: Presenters in Rails discussion
+
+02/20/12:
+  - name: Magnus Stahre
+    link: twitter.com/magnusstahre
+    talk_name: "git: History is written by the winners"
+
+  - name: Matt Yoho
+    link: twitter.com/mattyoho
+    talk_name: "DCI: Silver Bullet of Rails Design?"
+
+  - name: Matt Darby
+    link: matt-darby.com
+    talk_name: "New CRB Registration App"
+
+  - name: Adam McCrea
+    link: twitter.com/adamlogic
+    talk_name: "The How and Why of the Rails Asset Pipeline"
+
+03/19/12:
+  - name: Leon Gersing
+    link: edgecase.com
+    talk_name: TBD
+
+  - name: Matt Darby
+    link: edgecase.com
+    talk_name: Stubbing OAuth with Capybara
+
+  - name: Robert Juliano
+    link: www.techcolumbus.org/crb-code-jam
+    talk_name: CQRS and Event Sourcing
+
+04/16/12:
+  - name: Chandu Tennety
+    link: twitter.com/#!/tennety
+    talk_name: GraphViz and canviz.js
+
+  - name: Matt Darby
+    link: matt-darby.com
+    talk_name: Rackspace is awesome
+
+  - name: Paul Cook
+    link: ogg.osu.edu
+    talk_name: Evolution of a front-end App
+
+05/21/12:
+  - name: RJ
+    link: columbusrb.com
+    talk_name: Work Environment Contrasts
+
+  - name: Matt Williams
+    link: columbusrb.com
+    talk_name: Developer Best Practices
+
+  - name: Michael Covert
+    link: www.analyticsinside.us
+    talk_name: Hadoop and Ruby
+
+06/18/12:
+  - name: Matt Jones
+    link: edgecase.com/about#matt_jones
+    talk_name: Fun with Associations
+
+  - name: Len Jaffe
+    link: www.jaffesoftware.com
+    talk_name: FriendlyID
+
+  - name: Chris Chandler
+    link: twitter.com/#!/developingchris
+    talk_name: Using Thor outside of Rails
+
+  - name: Kevin Pfefferle
+    link: choremonster.com
+    talk_name: ChoreMonster Code/Tools Overview
+
+08/20/12:
+  - name: Zach Briggs
+    link: twitter.com/TheOtherZach
+    talk_name: "Garbage In, Rainbows Out"
+
+  - name: Isaac Sanders
+    link: isaacbfsanders.com
+    talk_name: Being a Better Apprentice
+
+  - name: Chris Chandler
+    link: twitter.com/#!/developingchris
+    talk_name: Using Thor outside of Rails

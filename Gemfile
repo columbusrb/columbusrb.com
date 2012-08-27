@@ -1,9 +1,14 @@
-source "http://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sinatra"
-gem "haml"
-gem "heroku"
-gem "compass"
-gem "i18n"
-gem "activesupport"
+gem 'rails', '3.2.3'
+gem 'sqlite3'
+gem 'jquery-rails'
+gem 'pry'
+gem 'slim'
 
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier', '>= 1.0.3'
+  gem 'compass-rails'
+end

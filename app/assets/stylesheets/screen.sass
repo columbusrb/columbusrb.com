@@ -1,0 +1,291 @@
+@import compass/reset
+@import compass/css3
+@import compass/utilities/general/clearfix
+
++font-face("Museo", font-files("/assets/museo/Museo300-Regular-webfont.woff", woff, "/assets/museo/Museo300-Regular-webfont.otf", opentype, "/assets/museo/Museo300-Regular-webfont.svg", svg), "/assets/museo/Museo300-Regular-webfont.eot")
++font-face("MuseoBold", font-files("/assets/museo/Museo700-Regular-webfont.woff", woff, "/assets/museo/Museo700-Regular-webfont.otf", opentype, "/assets/museo/Museo700-Regular-webfont.svg", svg), "/assets/museo/Museo700-Regular-webfont.eot")
++font-face("Novecento", font-files("/assets/novecento/Novecentowide-Normal-webfont.woff", woff, "/assets/novecento/Novecentowide-Normal-webfont.otf", opentype, "/assets/novecento/Novecentowide-Normal-webfont.svg", svg), "/assets/novecento/Novecentowide-Normal-webfont.eot")
+
+= bolded_webfont
+  font-family: "MuseoBold", Arial
+  font-weight: bold
+
+= headline_font
+  font-family: "Novecento", Helvetica
+
+
+$ribbon_bg: #2E3B45
+$ribbon_fg: lighten($ribbon_bg, 10%)
+
+body
+  color: #333
+  font: 16px/1.5 "Museo", Arial, sans-serif
+  background: #F9EFD9
+
+section
+  margin-left: 2em
+  margin-bottom: 2.5em
+
+a
+  text-decoration: none
+  color: #A10A0F
+
+strong
+  +bolded_webfont
+  color: #000
+
+h1, h2, h3, h4
+  +headline_font
+  color: #072D2A
+
+h1
+  font-size: 2em
+
+h2
+  font-size: 1.5em
+
+  img
+    vertical-align: text-top
+    margin-right: 0.3em
+
+h3
+  font-size: 1.4em
+
+h4
+  font-size: 1.2em
+
+p
+  margin-bottom: 1.5em
+
+li
+  padding-bottom: 0.5em
+
+hr
+  width: 35%
+  border-width: 0
+  border-bottom: 1px solid $ribbon_fg
+  margin-top: 2em
+  margin-bottom: 5em
+
+.container
+  width: 720px
+  margin: auto
+
+#crb
+  line-height: 11em
+
+  #columbus
+    font-size: 126.977px
+    word-spacing: 0.9px
+
+  #ruby
+    font-size: 270.467px
+
+  #brigade
+    font-size: 160.456px
+
+.name
+  +headline_font
+  text-transform: uppercase
+  line-height: 12em
+  margin-bottom: 2em
+  color: #A10A0F
+  text-align: center
+
+#announcement
+  +headline_font
+  background: #A10A0F
+  line-height: 2em
+  text-align: center
+  color: #FFF
+  border-bottom: 2px solid #8A9CAA
+
+  a
+    color: #FFF
+
+#strip
+  +headline_font
+  background: #7F97AA
+  line-height: 2em
+  text-align: center
+  color: #FFF
+  border-bottom: 2px solid #8A9CAA
+
+#ribbon
+  +headline_font
+  +border-top-left-radius(5px)
+  +border-top-right-radius(5px)
+  +background-image(linear-gradient($ribbon_fg, $ribbon_bg))
+  color: #FFF
+  background-color: $ribbon_fg
+  text-align: center
+  margin-bottom: 5em
+  line-height: 3em
+  position: relative
+
+  a
+    color: #FFF
+
+  &:before
+    +border-bottom-right-radius(5px)
+    content: ' '
+    position: absolute
+    width: 30px
+    height: 0
+    left: -30px
+    top: 12px
+    border-width: 20px 10px
+    border-style: solid
+    border-color: $ribbon_bg $ribbon_bg $ribbon_bg transparent
+    z-index: -1
+
+  &:after
+    +border-bottom-left-radius(5px)
+    content: ' '
+    position: absolute
+    width: 30px
+    height: 0
+    right: -30px
+    top: 12px
+    border-width: 20px 10px
+    border-style: solid
+    border-color: $ribbon_bg transparent $ribbon_bg $ribbon_bg
+    z-index: -1
+
+  a
+    &:first-child
+      margin-right: 1em
+
+    &:last-child
+      margin-left: 1em
+
+#top, #bottom
+  +clearfix
+
+#top
+  border: 1px solid #DDD
+  padding: 1em
+  background: #FCF6EA
+  margin-bottom: 4em
+  +border-radius(3px)
+  +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
+
+.left
+  float: left
+  width: 48%
+
+.right
+  float: right
+  width: 48%
+
+#speakers
+  width: 340px
+
+  li
+    text-indent: -1em
+    margin-left: 1.5em
+
+#join
+  position: relative
+
+  #tools
+    position: absolute
+    height: 500px
+    width: 500px
+    right: 0
+    bottom: 0
+    background: url(/assets/tools.png) no-repeat
+
+#tweets
+  li
+    list-style: none
+    margin-bottom: 0.2em
+
+    .time
+      +bolded_webfont
+
+#code_jam
+  +border-top-left-radius(20px)
+  +border-top-right-radius(20px)
+  background: #E15137 url(/assets/people.png) bottom center no-repeat
+  padding: 3em 2em
+  padding-bottom: 16em
+  color: #9B2B17
+  margin-top: 8em
+  position: relative
+
+  #checkout
+    font-size: 3em
+    text-align: center
+
+  .name
+    +bolded_webfont
+    color: #F9EFD9
+    font-size: 120.466px
+    line-height: 1em
+    margin-bottom: 0.5em
+
+  h3
+    color: darken(#9B2B17, 10%)
+    border-bottom: 1px solid darken(#E15137, 20%)
+    margin-bottom: 0.5em
+
+  a
+    color: #FFF !important
+    border-bottom: 1px dotted darken(#E15137, 20%)
+
+  .thirds
+    +clearfix
+
+    .third
+      width: 30%
+      float: left
+      margin-right: 2em
+      color: #FFF
+
+      &:last-child
+        margin-right: 0
+
+#photos
+  .image-container
+    position: relative
+    display: inline-block
+
+    img
+      width: 166px
+      height: 112px
+      margin-bottom: 20px
+
+    .alt-message
+      position: absolute
+      bottom: 40px
+      left: 0
+      right: 0
+      background: rgba(#000, 0.3)
+      width: 160px
+      color: #FFF
+      font-size: 12px
+      padding: 4px 3px
+      text-align: center
+      +text-shadow(rgba(#000, 0.8) 0 1px 0)
+
+#evolution
+  span.title
+    text-transform: uppercase
+    padding-right: 0.2em
+
+  ul
+    margin-bottom: 1.5em
+
+    p
+      margin-bottom: 0.5em
+    li
+      list-style: inside
+      padding-left: 1em
+
+  p.signature
+    text-align: right !important
+
+    a
+      display: block
+

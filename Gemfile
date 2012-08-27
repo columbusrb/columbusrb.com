@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
-gem 'sqlite3'
 gem 'jquery-rails'
 gem 'pry'
 gem 'slim'
@@ -13,6 +12,11 @@ group :assets do
   gem 'compass-rails'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
 group :production do
   gem 'pg'
+  gem 'therubyracer', '>= 0.11.0beta8', :platform => :ruby
 end

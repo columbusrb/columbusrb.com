@@ -12,3 +12,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'compass-rails'
 end
+
+group :production do
+  gem 'pg'
+end

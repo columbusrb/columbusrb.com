@@ -15,4 +15,7 @@
 //= require jquery-ui.min
 //= require underscore
 //= require sugar
+//= require bigtext
+//= require bootstrap.min
+//= require pjax
 //= require_tree .

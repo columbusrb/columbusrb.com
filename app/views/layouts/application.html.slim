@@ -7,31 +7,39 @@ html
     meta(name="keywords"content="ruby columbus programming usergroup rails javascript web development")
 
     title Columbus Ruby Brigade
+
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
   body
-    #announcement
-      .container= link_to "2012-08-27 &mdash; Read about our evolution".html_safe, evolution_path(anchor: "our-next-step")
+    #overlay
+      #announcement
+        .container
+          .row
+            .span12= link_to "2012-08-27 &mdash; Read about our evolution".html_safe, evolution_path(anchor: "our-next-step")
 
-    #strip
+      #strip
+        .container
+          .row
+            .span12 Since 2005 &mdash; 500 members strong
+
+      = render "header"
+
       .container
-        ' Since 2005 &mdash; 500 members strong
+        #main(data-pjax-container)= yield
 
-    .container
-      #crb.name
-        #columbus Columbus
-        #ruby Ruby
-        #brigade Brigade
+      = link_to "Code Jam", "#", :id => "code-jam-slider"
 
-      #ribbon
-        a(href="http://groups.google.com/group/columbusrb" target="_blank") Join The Mailing List
-        ' |
-        a(href="https://twitter.com/#!/columbusrb" target="_blank") Follow us on Twitter
+    / Outside of #overlay
+    = render "code_jam"
 
-      = yield
+javascript:
+  window.initialPath = "#{request.path.html_safe}"
 
 coffee:
   $ ->
-    $("#announcement a").effect('pulsate', 'slow')
+    $.pjax.defaults.scrollTo = false
+    window.app = new window.App()
+    window.nav = new window.MainNav(window.initialPath)
+

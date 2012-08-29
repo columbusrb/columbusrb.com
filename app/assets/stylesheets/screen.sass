@@ -14,29 +14,34 @@
   font-family: "Novecento", Helvetica
 
 
-$ribbon_bg: #2E3B45
-$ribbon_fg: lighten($ribbon_bg, 10%)
-
 body
-  color: #333
+  color: #FFFBD4
   font: 16px/1.5 "Museo", Arial, sans-serif
-  background: #F9EFD9
+  background: #28484F url(/assets/bg.png)
+  position: relative
 
 section
-  margin-left: 2em
   margin-bottom: 2.5em
 
 a
   text-decoration: none
-  color: #A10A0F
+  color: #DB4D44
+  +text-shadow(rgba(#000, 0.4) 0 1px 0)
+
+  &:hover
+    text-decoration: none
+    color: #FFF
 
 strong
   +bolded_webfont
-  color: #000
+  color: #FFF
+  text-transform: uppercase
+  +text-shadow(rgba(#000, 0.4) 0 1px 0)
 
 h1, h2, h3, h4
+  color: #FFF
   +headline_font
-  color: #072D2A
+  +text-shadow(rgba(#000, 0.4) 0 1px 0)
 
 h1
   font-size: 2em
@@ -63,38 +68,71 @@ li
 hr
   width: 35%
   border-width: 0
-  border-bottom: 1px solid $ribbon_fg
   margin-top: 2em
   margin-bottom: 5em
 
-.container
-  width: 720px
-  margin: auto
+#main
+  margin: 4em 0
 
 #crb
-  line-height: 11em
+  color: #DB4D44
+  font-weight: bold
+  margin-top: 2em
+  line-height: 9em
+
+  /* Landscape phones and down */
+  @media (max-width: 480px)
+    line-height: 4em
+
+    #columbus
+      margin-top: 0.2em
+
+  /* Landscape phone to portrait tablet */
+  @media (max-width: 767px)
+    line-height: 4em
+
+    #columbus
+      margin-top: 0.2em
+
+  /* Portrait tablet to landscape and desktop */
+  @media (min-width: 768px) and (max-width: 979px)
+    line-height: 7em
+
+    #columbus
+      margin-top: 0.1em
+
+  /* Large desktop */
+  @media (min-width: 1200px)
+    line-height: 10em
+    margin-bottom: 4em
+
+    #columbus
+      margin-top: 0.1em
 
   #columbus
-    font-size: 126.977px
-    word-spacing: 0.9px
+    color: #FFFBD4
+    z-index: 1
+    position: relative
 
   #ruby
-    font-size: 270.467px
+    z-index: 0
+    position: relative
 
   #brigade
-    font-size: 160.456px
+    color: #FFFBD4
+    z-index: 1
+    position: relative
 
 .name
   +headline_font
   text-transform: uppercase
-  line-height: 12em
   margin-bottom: 2em
   color: #A10A0F
   text-align: center
 
 #announcement
-  +headline_font
-  background: #A10A0F
+  +bolded_webfont
+  background: #DB4D44 url(/assets/red_bg.png)
   line-height: 2em
   text-align: center
   color: #FFF
@@ -105,78 +143,51 @@ hr
 
 #strip
   +headline_font
-  background: #7F97AA
+  +text-shadow(rgba(#000, 0.8) 0 1px 0)
+  background: #7F97AA url(/assets/blue_gray.png)
   line-height: 2em
   text-align: center
   color: #FFF
   border-bottom: 2px solid #8A9CAA
 
-#ribbon
-  +headline_font
-  +border-top-left-radius(5px)
-  +border-top-right-radius(5px)
-  +background-image(linear-gradient($ribbon_fg, $ribbon_bg))
-  color: #FFF
-  background-color: $ribbon_fg
-  text-align: center
-  margin-bottom: 5em
-  line-height: 3em
-  position: relative
+#nav
+  margin: 2em 0
+
+  .menu-item
+    +rotate(-3deg)
+    +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
+    +text-shadow(rgba(#000, 0.8) 0 1px 0)
+    +border-radius(5px)
+    +bolded_webfont
+    background: #7C994A url(/assets/green_bg.png)
+    padding: 0.2em 0
+    margin-bottom: 0.5em
+    text-align: center
+
+    &.active, &:hover
+      background: #DB4D44
+
+    a
+      color: #FFF
+      width: 100%
+      height: 100%
+      display: block
+
+
+#next-meeting
+  padding: 1em 0
+  background: #6C827C url(/assets/secondary_bg.png)
+  margin: 4em 0
+  +border-radius(10px)
+  +box-shadow(rgba(#000, 0.4) 0px 4px 10px)
 
   a
-    color: #FFF
+    +text-shadow(rgba(#FFF, 0.4) 0 1px 0)
+    +bolded_webfont
+    color: #324F53
 
-  &:before
-    +border-bottom-right-radius(5px)
-    content: ' '
-    position: absolute
-    width: 30px
-    height: 0
-    left: -30px
-    top: 12px
-    border-width: 20px 10px
-    border-style: solid
-    border-color: $ribbon_bg $ribbon_bg $ribbon_bg transparent
-    z-index: -1
-
-  &:after
-    +border-bottom-left-radius(5px)
-    content: ' '
-    position: absolute
-    width: 30px
-    height: 0
-    right: -30px
-    top: 12px
-    border-width: 20px 10px
-    border-style: solid
-    border-color: $ribbon_bg transparent $ribbon_bg $ribbon_bg
-    z-index: -1
-
-  a
-    &:first-child
-      margin-right: 1em
-
-    &:last-child
-      margin-left: 1em
-
-#top, #bottom
-  +clearfix
-
-#top
-  border: 1px solid #DDD
-  padding: 1em
-  background: #FCF6EA
-  margin-bottom: 4em
-  +border-radius(3px)
-  +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
-
-.left
-  float: left
-  width: 48%
-
-.right
-  float: right
-  width: 48%
+  .left-side
+    padding-left: 2em
 
 #speakers
   width: 340px
@@ -188,14 +199,6 @@ hr
 #join
   position: relative
 
-  #tools
-    position: absolute
-    height: 500px
-    width: 500px
-    right: 0
-    bottom: 0
-    background: url(/assets/tools.png) no-repeat
-
 #tweets
   li
     list-style: none
@@ -204,70 +207,24 @@ hr
     .time
       +bolded_webfont
 
-#code_jam
-  +border-top-left-radius(20px)
-  +border-top-right-radius(20px)
-  background: #E15137 url(/assets/people.png) bottom center no-repeat
-  padding: 3em 2em
-  padding-bottom: 16em
-  color: #9B2B17
-  margin-top: 8em
-  position: relative
-
-  #checkout
-    font-size: 3em
-    text-align: center
-
-  .name
-    +bolded_webfont
-    color: #F9EFD9
-    font-size: 120.466px
-    line-height: 1em
-    margin-bottom: 0.5em
-
-  h3
-    color: darken(#9B2B17, 10%)
-    border-bottom: 1px solid darken(#E15137, 20%)
-    margin-bottom: 0.5em
-
-  a
-    color: #FFF !important
-    border-bottom: 1px dotted darken(#E15137, 20%)
-
-  .thirds
-    +clearfix
-
-    .third
-      width: 30%
-      float: left
-      margin-right: 2em
-      color: #FFF
-
-      &:last-child
-        margin-right: 0
-
 #photos
   .image-container
     position: relative
     display: inline-block
+    margin-bottom: 0.75em
 
     img
-      width: 166px
-      height: 112px
-      margin-bottom: 20px
+      +border-radius(4px 4px 0px 0px)
 
     .alt-message
-      position: absolute
-      bottom: 40px
-      left: 0
-      right: 0
       background: rgba(#000, 0.3)
-      width: 160px
       color: #FFF
       font-size: 12px
       padding: 4px 3px
       text-align: center
+      margin-top: -8px
       +text-shadow(rgba(#000, 0.8) 0 1px 0)
+      +border-radius(0px 0px 4px 4px)
 
 #evolution
   span.title
@@ -288,4 +245,69 @@ hr
 
     a
       display: block
+      +bolded_webfont
+      font-size: 1.3em
+
+a#code-jam-slider
+  +rotate(90deg)
+  +border-radius(0px 0px 4px 4px)
+  +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
+  display: block
+  position: fixed
+  right: 0
+  top: 50%
+  background: #316064
+  padding: 0.3em 1em
+  margin-right: -36px
+  z-index: 10
+  color: rgba(#FFF, 0.5)
+
+  &:hover
+    color: #FFF
+
+#code_jam
+  +border-top-left-radius(10px)
+  +border-bottom-left-radius(10px)
+  +box-shadow(rgba(#000, 0.3) 10px 10px 10px)
+  display: block
+  position: fixed
+  right: 0
+  top: 25%
+  background: #DB8B44 url(/assets/orange_bg.png) top left repeat
+  padding: 2em
+  color: #FFF
+  z-index: 1000
+  width: 240px
+  margin-right: -310px
+  +text-shadow(rgba(#000, 0.4) 0 1px 0)
+
+  a#close-jam
+    color: #FFF
+    position: absolute
+    top: 10px
+    left: 20px
+    +bolded_webfont
+    +text-shadow(rgba(#000, 0.2) 0 1px 0)
+
+  #checkout
+    font-size: 1.5em
+    text-align: center
+
+  .name
+    +bolded_webfont
+    color: #8E4F16
+    font-size: 3em
+    line-height: 1em
+    margin-bottom: 0.5em
+
+  h3
+    color: darken(#8E4F16, 10%)
+    border-bottom: 1px solid darken(#8E4F16, 10%)
+    margin-bottom: 0.3em
+
+  section
+    margin-bottom: 1em
+
+  a
+    color: #FFF !important
 

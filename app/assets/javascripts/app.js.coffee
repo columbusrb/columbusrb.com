@@ -17,4 +17,3 @@ class window.App
       e.preventDefault()
       $('#code_jam').animate({"margin-right": "-310px"})
       $('#overlay').animate({"opacity": 1.0})
-

@@ -17,5 +17,5 @@
 //= require sugar
 //= require bigtext
 //= require bootstrap.min
-//= require pjax
+//= require jquery.pjax
 //= require_tree .

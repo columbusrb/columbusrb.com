@@ -1,7 +1,12 @@
 class window.MainNav
+
   constructor: (@initialPath) ->
+    @loadBindings()
     @markInitialActiveItem()
     @watch()
+
+  loadBindings: ->
+    $.pjax.defaults.scrollTo = false
 
   markInitialActiveItem: ->
     $("a[href='#{@initialPath}']").parents('.menu-item').addClass('active')
@@ -13,6 +18,4 @@ class window.MainNav
 
   clearActiveItem: ->
     $('#nav .menu-item').removeClass('active')
-
-
 

@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   def next_meeting
   end
 
-  def who_are_we
+  def crb_labs
   end
 
   def what_we_do

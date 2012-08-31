@@ -5,6 +5,7 @@ gem 'jquery-rails'
 gem 'pry'
 gem 'slim'
 gem 'pjax_rails'
+gem 'redcarpet'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

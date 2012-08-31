@@ -4,7 +4,6 @@ class window.App
     @watchCodeJamSlider()
 
   loadBindings: ->
-    $("#announcement a").effect('pulsate', 'slow')
     $('#crb').bigtext()
 
   watchCodeJamSlider: ->

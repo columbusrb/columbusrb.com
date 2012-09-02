@@ -1,0 +1,10 @@
+section#members
+  h2 Recent Attendees
+
+  #member-list
+
+javascript:
+  $(function(){
+    window.memberArray = #{Member.urls}
+    new window.MemberList($('#member-list'), window.memberArray);
+  });

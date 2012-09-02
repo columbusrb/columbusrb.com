@@ -6,5 +6,5 @@ Columbusrb::Application.routes.draw do
   match "/recent_photos" => "pages#recent_photos"
   match "/recent_tweets" => "pages#recent_tweets"
   match "/evolution"     => "pages#evolution", :as => :evolution
-  root :to               => "pages#next_meeting"
+  root :to               => "pages#landing"
 end

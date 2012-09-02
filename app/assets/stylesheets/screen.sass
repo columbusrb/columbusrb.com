@@ -81,7 +81,7 @@ hr
 #crb
   color: #DB4D44
   font-weight: bold
-  margin-top: 2em
+  margin-top: 1em
   line-height: 9em
 
   /* Landscape phones and down */
@@ -100,10 +100,11 @@ hr
 
   /* Portrait tablet to landscape and desktop */
   @media (min-width: 768px) and (max-width: 979px)
-    line-height: 7em
+    line-height: 10em
 
     #columbus
-      margin-top: 0.1em
+      margin-top: 0em
+      line-height: 1.15em
 
   /* Large desktop */
   @media (min-width: 1200px)
@@ -180,7 +181,7 @@ hr
 #next-meeting
   padding: 1em 0
   background: #6C827C url(/assets/secondary_bg.png)
-  margin: 4em 0
+  margin: 2em 0
   +border-radius(10px)
   +box-shadow(rgba(#000, 0.4) 0px 4px 10px)
 
@@ -314,4 +315,12 @@ a#code-jam-slider
 
   a
     color: #FFF !important
+
+#member-list
+  text-align: center
+
+  img
+    +border-radius(20px)
+    +box-shadow(rgba(#000, 0.2) 0px 4px 10px)
+    margin-right: 5px
 

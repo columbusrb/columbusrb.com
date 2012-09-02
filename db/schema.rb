@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120827020901) do
+ActiveRecord::Schema.define(:version => 20120902164635) do
 
   create_table "meetings", :force => true do |t|
     t.datetime "time"
@@ -20,6 +20,11 @@ ActiveRecord::Schema.define(:version => 20120827020901) do
   end
 
   add_index "meetings", ["time"], :name => "index_meetings_on_time"
+
+  create_table "members", :force => true do |t|
+    t.string "email"
+    t.string "md5_hash"
+  end
 
   create_table "speakers", :force => true do |t|
     t.integer "meeting_id"

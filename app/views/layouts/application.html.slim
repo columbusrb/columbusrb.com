@@ -24,10 +24,22 @@ html
           .row
             .span12 Since 2005 &mdash; 500 members strong
 
-      = render "header"
+      .container
+        .row
+          .span12
+            #crb.name
+              #columbus Columbus
+              #ruby Ruby
+              #brigade Brigade
 
       .container
-        #main(data-pjax-container)= yield
+        = render "next_meeting"
+        = render "what_we_do"
+        = render "how_to_join"
+        = render "crb_labs"
+        = render "members"
+        = render "recent_photos"
+        = render "recent_tweets"
 
       = link_to "Code Jam", "#", :id => "code-jam-slider"
 

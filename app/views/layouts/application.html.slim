@@ -14,32 +14,31 @@ html
 
   body
     #overlay
-      #announcement
-        .container
-          .row
-            .span12= link_to "2012-08-27 &mdash; Read about our evolution".html_safe, evolution_path(anchor: "our-next-step")
-
       #strip
         .container
           .row
             .span12 Since 2005 &mdash; 500 members strong
 
       .container
-        .row
-          .span12
+        #header
+          .left
             #crb.name
               #columbus Columbus
               #ruby Ruby
               #brigade Brigade
 
+            ul#external-links
+              li= link_to "News", evolution_path(anchor: "our-next-step")
+              li= link_to "Github", "http://github.com/columbusrb"
+              li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+              li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
+
+          .right
+            = render "next_meeting"
+
       .container
-        = render "next_meeting"
-        = render "what_we_do"
-        = render "how_to_join"
-        = render "crb_labs"
-        = render "members"
-        = render "recent_photos"
-        = render "recent_tweets"
+        #main
+          = yield
 
       = link_to "Code Jam", "#", :id => "code-jam-slider"
 

@@ -14,5 +14,5 @@ class window.App
 
     $('a#close-jam').on 'click', (e) ->
       e.preventDefault()
-      $('#code_jam').animate({"margin-right": "-310px"})
+      $('#code_jam').animate({"margin-right": "-312px"})
       $('#overlay').animate({"opacity": 1.0})

@@ -18,15 +18,15 @@ class window.Tweet
     @display()
 
   display: ->
-    text = @autoLink(@tweet.text)
+    text = @tweet.text.autoTwitterLink()
     time = Date.create(@tweet.created_at).relative()
     html = _.template(@template.html(), tweet: text, time: time)
     @el.append($("<li>").html(html))
 
-  autoLink: (text) ->
-    url    = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g
-    handle = /@(\w+)/g
-    text   = text.replace(url, "<a href='$1'>$1</a>")
-    text   = text.replace(handle, "<a href='http://twitter.com/$1'>@$1</a>")
 
 
+String::autoTwitterLink = ->
+  url    = /(https?\:\/\/[^"\s\<\>]*[^.,;'">\:\s\<\>\)\]\!])/g
+  handle = /@(\w+)/g
+  text   = this.replace(url, "<a href='$1'>$1</a>")
+  text   = text.replace(handle, "<a href='http://twitter.com/$1'>@$1</a>")

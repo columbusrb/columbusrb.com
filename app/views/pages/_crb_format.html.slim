@@ -9,14 +9,9 @@
         ul
           - @next_crb.speakers.each do |s|
             li
-              strong: a(href="http://#{s.link}")= s.name
+              strong: a(href="http://#{s.url}")= s.name
               br
-              = sp.talk
-
-    - elsif @next_crb.format == "Class"
-      p
-        ' Bring your laptops and questions. More experienced folks can help less
-        ' experienced folks and work on whatever.
+              = s.title
 
     - elsif @next_crb.format == "Fishbowl"
       p

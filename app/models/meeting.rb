@@ -1,7 +1,7 @@
 class Meeting < ActiveRecord::Base
   has_many :speakers
 
-  FORMATS = %w{Class Fishbowl Lecture}
+  ORDER = %w{Lecture Lecture Fishbowl}
 
   attr_protected
   attr_accessor :crb_times, :jam_times
@@ -25,7 +25,7 @@ class Meeting < ActiveRecord::Base
       s = curr_time.beginning_of_month
       e = curr_time.end_of_month
       crb_time = (s..e).select{|d| d.wday == 1}[2] + 18.5.hours
-      format = FORMATS[x%3]
+      format = ORDER[x%3]
 
       crb = Meeting.create!(time: crb_time, format: format, group_name: 'crb')
       jam = Meeting.create!(time: crb_time + 9.days, format: nil, group_name: 'jam')

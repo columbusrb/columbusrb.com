@@ -6,6 +6,7 @@ gem 'pry'
 gem 'slim'
 gem 'pjax_rails'
 gem 'redcarpet'
+gem 'quiet_assets'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

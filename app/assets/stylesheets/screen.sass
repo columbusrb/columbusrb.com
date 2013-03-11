@@ -2,365 +2,101 @@
 @import compass/css3
 @import compass/utilities/general/clearfix
 
-+font-face("Museo", font-files("/assets/museo/Museo300-Regular-webfont.woff", woff, "/assets/museo/Museo300-Regular-webfont.otf", opentype, "/assets/museo/Museo300-Regular-webfont.svg", svg), "/assets/museo/Museo300-Regular-webfont.eot")
-+font-face("MuseoBold", font-files("/assets/museo/Museo700-Regular-webfont.woff", woff, "/assets/museo/Museo700-Regular-webfont.otf", opentype, "/assets/museo/Museo700-Regular-webfont.svg", svg), "/assets/museo/Museo700-Regular-webfont.eot")
-+font-face("Novecento", font-files("/assets/novecento/Novecentowide-Normal-webfont.woff", woff, "/assets/novecento/Novecentowide-Normal-webfont.otf", opentype, "/assets/novecento/Novecentowide-Normal-webfont.svg", svg), "/assets/novecento/Novecentowide-Normal-webfont.eot")
-
-= bolded_webfont
-  font-family: "MuseoBold", Arial
-  font-weight: bold
-
-= headline_font
-  font-family: "Novecento", Helvetica
-
-
 body
   color: #FFF
-  font: 18px/1.5 "Museo", Arial, sans-serif
-  background: #28484F url(/assets/bg.png)
+  background: #4D4E53
+  font: 18px/1.5 Helvetica, Arial, sans-serif
   position: relative
 
-section
-  margin-bottom: 2.5em
+  .strip
+    +text-shadow(rgba(#000, 0.4) 0 1px 0)
+    background: #75B3CF
+    color: #FFF
+    text-align: center
+    line-height: 2em
 
-  ul
+section
+  padding: 2em 0
+
+.container
+  width: 960px
+  margin: auto
+  position: relative
+
+a
+  color: #01A0B3
+
+strong
+
+h1, h2, h3, h4
+
+h1
+  font-size: 12em
+  line-height: 0.8em
+  margin-top: 0.3em
+  color: #FFF
+
+  span
+    &.red
+      color: #F75A55
+
+h2
+  font-size: 2em
+  color: #F75A55
+
+h3
+
+h4
+
+p
+
+ul
+  margin-top: 1em
+
+  li
     list-style: circle
     list-style-position: inside
 
-a
-  text-decoration: none
-  color: #DB4D44
-  +text-shadow(rgba(#000, 0.4) 0 1px 0)
-
-  &:hover
-    text-decoration: none
-    color: #FFF
-
-strong
-  +bolded_webfont
-  color: #FFF
-  text-transform: uppercase
-  +text-shadow(rgba(#000, 0.4) 0 1px 0)
-
-h1, h2, h3, h4
-  color: #FFFBD4
-  +bolded_webfont
-  +text-shadow(rgba(#000, 0.8) 0 1px 0)
-
-h1
-  font-size: 2em
-
-h2
-  font-size: 1.5em
-
-  img
-    vertical-align: text-top
-    margin-right: 0.3em
-
-h3
-  font-size: 1.4em
-
-h4
-  font-size: 1.2em
-
-p
-  margin-bottom: 1.5em
-
-li
-  padding-bottom: 0.5em
-
 hr
-  width: 35%
-  border-width: 0
-  margin-top: 2em
-  margin-bottom: 5em
 
 #main
-  margin: 2em 0
-
-  section
-    margin-top: 3em
-    margin-bottom: 3em
-
-#header
-  +clearfix
-
-  .left
-    float: left
-    width: 54%
-    position: relative
-
-  .right
-    float: right
-    width: 42%
-    position: relative
-
-#next-meeting
-  text-align: center
-  float: right
-  padding: 1em
-  margin-top: 2em
-
-  section
-    width: 80%
-    margin-left: auto
-    margin-right: auto
-    margin-bottom: 2.4em
-
-    &:last-child
-      margin-bottom: 0
 
 ul#external-links
-  text-align: center
-
   li
     display: inline-block
-    background: url(/assets/green_bg.png) top left repeat
-    margin-right: 0.5em
-    line-height: 1em
-    padding: 0.4em 1em
-    +border-radius(4px)
-
-    &:last-child
-      margin-right: 0
-
-    a
-      color: #FFF
-      +bolded_webfont
-
-#crb
-  color: #DB4D44
-  margin-top: 1em
-  line-height: 8em
-  margin-bottom: 1em
-  +bolded_webfont
-
-  #columbus
-    color: #FFFBD4
-    z-index: 1
-    position: relative
-    margin-top: 0.1em
-
-  #ruby
-    z-index: 0
-    position: relative
-
-  #brigade
-    color: #FFFBD4
-    z-index: 1
-    position: relative
-
-.name
-  +headline_font
-  text-transform: uppercase
-  color: #A10A0F
-  text-align: center
-
-#announcement
-  +bolded_webfont
-  background: #DB4D44 url(/assets/red_bg.png)
-  line-height: 2em
-  text-align: center
-  color: #FFF
-  border-bottom: 2px solid #8A9CAA
-
-  a
-    color: #FFF
-
-#strip
-  +headline_font
-  +text-shadow(rgba(#000, 0.8) 0 1px 0)
-  background: #7F97AA url(/assets/blue_gray_bg.png)
-  line-height: 2em
-  text-align: center
-  color: #FFF
-  border-bottom: 2px solid #8A9CAA
-
-#nav
-  margin: 2em 0
-
-  .menu-item
-    +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
-    +text-shadow(rgba(#000, 0.8) 0 1px 0)
-    +border-radius(5px)
-    +bolded_webfont
-    background: #7C994A url(/assets/green_bg.png)
-    padding: 0.2em 0
-    margin-bottom: 0.5em
-    text-align: center
-
-    &.active, &:hover
-      background: #DB4D44
-
-    a
-      color: #FFF
-      width: 100%
-      height: 100%
-      display: block
-
-.well
-  background: #6C827C url(/assets/secondary_bg.png)
-  +border-radius(10px)
-  border-width: 0px
-
-  p:last-child
-    margin-bottom: 0
-
-  a
-    +text-shadow(rgba(#FFF, 0.4) 0 1px 0)
-    +bolded_webfont
-    color: #324F53
-
-  section
-    margin: 1em 0
-
-    &:first-child
-      margin-top: 0
-
-    &:last-child
-      margin-bottom: 0
-
-#speakers
-  width: 340px
-
-  li
-    text-indent: -1em
-    margin-left: 1.5em
-
-#how_and_labs
-  +clearfix
-
-#join
-  position: relative
-  float: left
-  width: 30%
-  margin-right: 2em
-  margin-top: 0
-
-#crb_labs
-  float: right
-  width: 62%
-  position: relative
-
-#tweets
-  li
-    list-style: none
-    margin-bottom: 0.2em
-
-    .time
-      +bolded_webfont
-
-#photos
-  .image-container
-    position: relative
-    display: inline-block
-    margin-bottom: 0.75em
-    +box-shadow(rgba(#000, 0.2) 0px 4px 10px)
-
-    img
-      +border-radius(4px 4px 0px 0px)
-
-    .alt-message
-      background: rgba(#000, 0.3)
-      color: #FFF
-      font-size: 12px
-      padding: 4px 3px
-      text-align: center
-      margin-top: -8px
-      +text-shadow(rgba(#000, 0.8) 0 1px 0)
-      +border-radius(0px 0px 4px 4px)
-
-#evolution
-  span.title
+    padding-right: 1.5em
     text-transform: uppercase
-    padding-right: 0.2em
 
-  ul
-    margin-bottom: 1.5em
+    &:before
+      content: "→ "
 
-    p
-      margin-bottom: 0.5em
-    li
-      list-style: inside
-      padding-left: 1em
+    &:last-child
+      padding-right: 0
 
-  p.signature
-    text-align: right !important
-
-    a
-      display: block
-      +bolded_webfont
-      font-size: 1.3em
-
-a#code-jam-slider
-  +rotate(90deg)
-  +border-radius(0px 0px 4px 4px)
-  +box-shadow(rgba(#000, 0.1) 0px 4px 10px)
-  display: block
-  position: fixed
+#when-and-where
+  text-align: right
+  position: absolute
   right: 0
-  top: 50%
-  background: #316064
-  padding: 0.3em 1em
-  margin-right: -41px
-  z-index: 10
-  color: rgba(#FFF, 0.5)
-
-  &:hover
-    color: #FFF
-
-#code_jam
-  +border-top-left-radius(10px)
-  +border-bottom-left-radius(10px)
-  +box-shadow(rgba(#000, 0.3) 10px 10px 10px)
-  display: block
-  position: fixed
-  right: 0
-  top: 16%
-  background: #DB8B44 url(/assets/orange_bg.png) top left repeat
-  padding: 2em
-  color: #FFF
-  z-index: 1000
-  width: 240px
-  margin-right: -312px
-  text-align: center
-  +text-shadow(rgba(#000, 0.4) 0 1px 0)
-
-  a#close-jam
-    color: #FFF
-    position: absolute
-    top: 10px
-    left: 20px
-    +bolded_webfont
-    +text-shadow(rgba(#000, 0.2) 0 1px 0)
-
-  #checkout
-    font-size: 1.5em
-    text-align: center
-
-  .name
-    +bolded_webfont
-    color: #8E4F16
-    font-size: 3em
-    line-height: 1em
-    margin-bottom: 0.5em
-
-  h3
-    color: darken(#8E4F16, 10%)
-    border-bottom: 1px solid darken(#8E4F16, 10%)
-    margin-bottom: 0.3em
-
-  section
+  bottom: -1em
+  
+  #when, #location
     margin-bottom: 1em
 
-  a
-    color: #FFF !important
+#join
+  h2
+    font-size: 7em
+    line-height: 0.8em
+    text-align: right
 
-#member-list
-  text-align: center
+    &:last-child
+      color: #FFF
 
-  img
-    +border-radius(20px)
-    +box-shadow(rgba(#000, 0.2) 0px 4px 10px)
-    margin-right: 5px
+#what, #crb_labs
+  width: 45%
+  display: inline-block
+  vertical-align: top
+  padding-top: 4em
+
+#crb_labs
+  margin-left: 10%
 

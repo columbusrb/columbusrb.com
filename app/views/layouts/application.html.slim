@@ -8,47 +8,37 @@ html
 
     title Columbus Ruby Brigade
 
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application"
     = csrf_meta_tags
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application", "//use.typekit.net/alz5etq.js"
+
+    javascript:
+      try{Typekit.load();}catch(e){}
 
   body
-    #overlay
-      #strip
-        .container
-          .row
-            .span12 Since 2005 &mdash; 500 members strong
+    p.strip Since 2005 &mdash; 500 members strong
 
+    .top
       .container
-        #header
-          .left
-            #crb.name
-              #columbus Columbus
-              #ruby Ruby
-              #brigade Brigade
+        h1
+          .word
+            span.red C
+            span olumbus
+          .word
+            span.red R
+            span uby
+          .word
+            span.red B
+            span rigade
 
-            ul#external-links
-              li= link_to "News", evolution_path(anchor: "our-next-step")
-              li= link_to "Github", "http://github.com/columbusrb"
-              li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
-              li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
+        = render "next_meeting"
 
-          .right
-            = render "next_meeting"
+        ul#external-links
+          li= link_to "Github", "http://github.com/columbusrb"
+          li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+          li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
 
+    #main
       .container
-        #main
-          = yield
+        = yield
 
-      = link_to "Code Jam", "#", :id => "code-jam-slider"
-
-    / Outside of #overlay
-    = render "code_jam"
-
-javascript:
-  window.initialPath = "#{request.path.html_safe}"
-
-coffee:
-  $ ->
-    window.app = new window.App()
-    window.nav = new window.MainNav(window.initialPath)

@@ -1,20 +1,18 @@
-#next-meeting-format
-  section#meeting-format
-    h2 Meeting Format
+#meeting-format
+  h2 Meeting Format
 
-    strong= meeting_format(@next_crb.format)
+  strong= meeting_format(@next_crb.format)
 
-    - if @next_crb.format == "Lecture"
-      section#speakers
-        ul
-          - @next_crb.speakers.each do |s|
-            li
-              strong: a(href="http://#{s.url}")= s.name
-              br
-              = s.title
+  - if @next_crb.format == "Lecture"
+    ul#speakers
+      - @next_crb.speakers.each do |s|
+        li
+          strong: a(href="http://#{s.url}")= s.name
+          br
+          = s.title
 
-    - elsif @next_crb.format == "Fishbowl"
-      p
-        'Join us as we
-        = link_to "Fishbowl!", "http://en.wikipedia.org/wiki/Fishbowl_(conversation)"
+  - elsif @next_crb.format == "Fishbowl"
+    p
+      'Join us as we
+      = link_to "Fishbowl!", "http://en.wikipedia.org/wiki/Fishbowl_(conversation)"
 

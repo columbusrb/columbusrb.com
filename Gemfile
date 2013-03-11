@@ -4,7 +4,6 @@ gem 'rails', '~> 3.2.11'
 gem 'jquery-rails'
 gem 'pry'
 gem 'slim'
-gem 'pjax_rails'
 gem 'redcarpet'
 gem 'quiet_assets'
 

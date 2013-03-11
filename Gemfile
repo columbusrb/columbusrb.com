@@ -6,6 +6,7 @@ gem 'pry'
 gem 'slim'
 gem 'redcarpet'
 gem 'quiet_assets'
+gem 'activeadmin'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

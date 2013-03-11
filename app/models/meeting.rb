@@ -4,10 +4,9 @@ class Meeting < ActiveRecord::Base
   ORDER = %w{Lecture Lecture Fishbowl}
 
   attr_protected
-  attr_accessor :crb_times, :jam_times
+  attr_accessor :crb_times
 
-  scope :next_crb, lambda{where(["DATE(time) >= ? and group_name = ?", Date.today, "crb"]).limit(1)}
-  scope :next_jam, lambda{where(["DATE(time) >= ? and group_name = ?", Date.today, "jam"]).limit(1)}
+  scope :next_crb, lambda{where(["DATE(time) >= ?", Date.today]).limit(1)}
   scope :lecture, where(["format = ?", "Lecture"])
 
   def self.add_speaker_to_next_meeting(name, title, url)
@@ -22,13 +21,12 @@ class Meeting < ActiveRecord::Base
 
     72.times do |x|
       curr_time = beginning + (x+1).months
-      s = curr_time.beginning_of_month
-      e = curr_time.end_of_month
-      crb_time = (s..e).select{|d| d.wday == 1}[2] + 18.5.hours
-      format = ORDER[x%3]
+      s         = curr_time.beginning_of_month
+      e         = curr_time.end_of_month
+      crb_time  = (s..e).select{|d| d.wday == 1}[2] + 18.5.hours
+      format    = ORDER[x%3]
 
-      crb = Meeting.create!(time: crb_time, format: format, group_name: 'crb')
-      jam = Meeting.create!(time: crb_time + 9.days, format: nil, group_name: 'jam')
+      crb = Meeting.create!(time: crb_time, format: format)
 
       info_time = crb_time.strftime('%m/%d/%y')
 

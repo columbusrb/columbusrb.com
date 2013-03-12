@@ -1,9 +1,0 @@
-#meeting-format
-  h2 Meeting Format
-
-  strong= meeting_format(@next_crb.format)
-
-  - if @next_crb.format == "Fishbowl"
-    p
-      'Join us as we
-      = link_to "Fishbowl!", "http://en.wikipedia.org/wiki/Fishbowl_(conversation)"

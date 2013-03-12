@@ -1,10 +1,11 @@
 doctype html
 html
   head
-    meta(http-equiv="content-type"content="text/html; charset=utf-8")
-    meta(name="language"content="en")
-    meta(name="description"content="Columbus Ruby Brigade is a collection of professionals excited about Ruby")
-    meta(name="keywords"content="ruby columbus programming usergroup rails javascript web development")
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(name="language" content="en")
+    meta(name="description" content="Columbus Ruby Brigade is a collection of professionals excited about Ruby")
+    meta(name="keywords" content="ruby columbus programming usergroup rails javascript web development")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
     title Columbus Ruby Brigade
 
@@ -16,29 +17,34 @@ html
       try{Typekit.load();}catch(e){}
 
   body
-    p.strip Since 2005 &mdash; 500 members strong
+    .row-fluid
+      .span12
+        p.strip Since 2005 &mdash; 500 members strong
 
-    .top
-      .container
-        h1
-          .word
-            span.red C
-            span olumbus
-          .word
-            span.red R
-            span uby
-          .word
-            span.red B
-            span rigade
+    .container
+      .row-fluid.top
+        .span8
+          #header
+            div
+              h1
+                span.red C
+                span olumbus
+            div
+              h1
+                span.red R
+                span uby
+            div
+              h1
+                span.red B
+                span rigade
 
-        = render "next_meeting"
+        .span4
+          = render "next_meeting"
 
-        ul#external-links
-          li= link_to "Github", "http://github.com/columbusrb"
-          li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
-          li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
-
-    #main
-      .container
+      #main
         = yield
 
+javascript:
+  $(function(){
+      $('#header').bigtext();
+    });

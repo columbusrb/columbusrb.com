@@ -6,7 +6,6 @@ body
   color: #FFF
   background: #4D4E53
   font: 18px/1.5 Helvetica, Arial, sans-serif
-  position: relative
 
   .strip
     +text-shadow(rgba(#000, 0.4) 0 1px 0)
@@ -18,30 +17,23 @@ body
 section
   padding: 2em 0
 
-.container
-  width: 960px
-  margin: auto
-  position: relative
-
 a
   color: #1DCDE6
+  text-decoration: none
 
   &:hover
     color: #01A0B3
-    text-decoration: none
 
 strong
 
 h1, h2, h3, h4
 
-h1
-  font-size: 12em
-  line-height: 0.8em
-  margin-top: 0.3em
+#header
   color: #FFF
+  line-height: 12em
 
-  span
-    &.red
+  h1
+    span.red
       color: #F75A55
 
 h2
@@ -66,6 +58,8 @@ hr
 #main
 
 ul#external-links
+  margin-top: 2em
+
   li
     display: inline-block
     padding-right: 1.5em
@@ -79,9 +73,6 @@ ul#external-links
 
 #when-and-where
   text-align: right
-  position: absolute
-  right: 0
-  bottom: -1em
   
   #when, #location
     margin-bottom: 1em
@@ -89,7 +80,7 @@ ul#external-links
 #join
 
   h2
-    font-size: 5em
+    font-size: 6em
     line-height: 0.8em
     text-align: right
 
@@ -97,21 +88,18 @@ ul#external-links
       color: #FFF
 
 #what, #crb_labs, #who-is-speaking, #join
-  width: 45%
-  display: inline-block
   vertical-align: top
-
-#crb_labs
-  margin-left: 10%
-
-.top
-  margin-bottom: 2em
 
 ul#speakers
   li
+    list-style: none
+
     a
       font-weight: bold
 
   span.dash
     padding: 0 0.5em
+
+.container
+  margin: auto
 

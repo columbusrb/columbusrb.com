@@ -13,4 +13,27 @@ section#when-and-where
         br
         ' Westerville, OH 43082
 
-  = render "crb_format"
+  #meeting-format
+    - if @next_crb.format == "Fishbowl"
+      p
+        'Join us as we
+        = link_to "Fishbowl!", "http://en.wikipedia.org/wiki/Fishbowl_(conversation)"
+
+    - elsif @next_crb.format == "Lecture"
+      section#who-is-speaking
+        h2 Who's Speaking?
+
+        ul#speakers
+          - @next_crb.speakers.each do |s|
+            li
+              a(href="http://#{s.url}")= s.name
+              span.dash &mdash;
+              = s.title
+
+  ul#external-links
+    li= link_to "Github", "http://github.com/columbusrb"
+    li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+    li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
+
+
+

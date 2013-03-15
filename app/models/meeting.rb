@@ -41,4 +41,8 @@ class Meeting < ActiveRecord::Base
       end
     end
   end
+
+  def to_s
+    time
+  end
 end

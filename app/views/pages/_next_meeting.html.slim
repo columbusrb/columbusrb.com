@@ -24,16 +24,17 @@ section#when-and-where
         h2 Who's Speaking?
 
         ul#speakers
-          - @next_crb.speakers.each do |s|
-            li
-              a(href="http://#{s.url}")= s.name
-              span.dash &mdash;
-              = s.title
+          - if @next_crb.speakers.present?
+            - @next_crb.speakers.each do |s|
+              li
+                a(href="http://#{s.url}")= s.name
+                span.dash &mdash;
+                = s.title
+          - else
+            li Maybe You?
 
   ul#external-links
     li= link_to "Github", "http://github.com/columbusrb"
     li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
     li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
-
-
 

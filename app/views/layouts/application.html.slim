@@ -45,6 +45,6 @@ html
         = yield
 
 javascript:
-  $(function(){
-      $('#header').bigtext();
-    });
+  window.onload = function(){
+    $('#header').bigtext();
+  };

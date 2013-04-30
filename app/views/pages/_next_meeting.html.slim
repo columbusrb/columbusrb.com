@@ -14,24 +14,18 @@ section#when-and-where
         ' Westerville, OH 43082
 
   #meeting-format
-    - if @next_crb.format == "Fishbowl"
-      p
-        'Join us as we
-        = link_to "Fishbowl!", "http://en.wikipedia.org/wiki/Fishbowl_(conversation)"
+    section#who-is-speaking
+      h2 Who's Speaking?
 
-    - elsif @next_crb.format == "Lecture"
-      section#who-is-speaking
-        h2 Who's Speaking?
-
-        ul#speakers
-          - if @next_crb.speakers.present?
-            - @next_crb.speakers.each do |s|
-              li
-                a(href="http://#{s.url}")= s.name
-                span.dash &mdash;
-                = s.title
-          - else
-            li Maybe You?
+      ul#speakers
+        - if @next_crb.speakers.present?
+          - @next_crb.speakers.each do |s|
+            li
+              a(href="http://#{s.url}")= s.name
+              span.dash &mdash;
+              = s.title
+        - else
+          li Maybe You?
 
   ul#external-links
     li= link_to "Github", "http://github.com/columbusrb"

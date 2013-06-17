@@ -21,7 +21,7 @@ section#when-and-where
         - if @next_crb.speakers.present?
           - @next_crb.speakers.each do |s|
             li
-              a(href="http://#{s.url}")= s.name
+              a(href="#{s.url}")= s.name
               span.dash &mdash;
               = s.title
         - else

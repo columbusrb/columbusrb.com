@@ -43,7 +43,9 @@ html
 
       #main
         = yield
-
+    .row-fluid
+      .span12
+	= render "sponsors"
 javascript:
   window.onload = function(){
     $('#header').bigtext();

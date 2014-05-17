@@ -43,9 +43,14 @@ html
 
       #main
         = yield
+
     .row-fluid
-      .span12
-	= render "sponsors"
+      #sponsors.span12
+        | Columbus Ruby Brigade wishes to thank our generous sponsors
+        br
+        = link_to(image_tag('QuickLogo.png', alt: 'Quick Solutions'), 'http://quicksolutions.com', target: '_blank')
+        = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank');
+
 javascript:
   window.onload = function(){
     $('#header').bigtext();

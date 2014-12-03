@@ -1,0 +1,12 @@
+<% provide(:title, @meeting.time) %>
+
+<div id="meeting">
+  <h1><%= short_date(@meeting.time) %></h1>
+  
+  <ul class="presentations">
+    <%= render @meeting.presentations %>
+    <% if @meeting.format %> <%= @meeting.format %> <% end %> 
+  </ul>
+
+
+</div>

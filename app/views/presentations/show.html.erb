@@ -1,0 +1,24 @@
+<% provide(:title, @presentation.title) %>
+
+<div class="presentation">
+  <h1><%= @presentation.title %> by <% if @presentation.member %><%= link_to @presentation.member.name, @presentation.member %> <% end %></h1>
+  <div><%= link_to short_date(@presentation.meeting.time), @presentation.meeting %></div>
+
+  <div><%= @presentation.description %></div>
+         
+  <div>
+    <% if @presentation.slides && @presentation.slides != "" %> Slides: <%= @presentation.slides %> <% end %>
+    <% if @presentation.video  && @presentation.video != "" %> Video: <%= @presentation.video %> <% end %>
+  </div>
+  <% if !current_member.nil? %>
+    <div class="pull-right">
+      <% if current_member.admin? || current_member?(@presentation.member) %>
+        <%= link_to "edit", edit_presentation_path(@presentation) %>
+      <% end %>
+      <% if current_member.admin? %>
+        <%= link_to "delete", @presentation, method: :delete,
+                                      data: { confirm: "You sure? " } %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

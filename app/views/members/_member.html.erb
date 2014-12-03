@@ -1,0 +1,15 @@
+<li class="members">
+  <div class="row-fluid clearfix text-left">
+    <div class="span6">
+      <%= gravatar_for member, size: 52 %>
+      <%= link_to member.name, member %>
+    </div>
+    <div class="span6">
+      <% if current_member.admin? && !current_member?(member) %>
+        <span class="pull-right"><%= link_to "Delete", member, method: :delete,
+                    data: { confirm: "You sure?" }, class: "btn-danger" %>
+        </span>
+      <% end %>
+    </div>
+  </div>
+</li>

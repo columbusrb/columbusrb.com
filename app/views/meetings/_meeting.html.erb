@@ -1,0 +1,20 @@
+<li class="meetings">
+  <div class="row-fluid clearfix text-left">
+  	<div>
+      <%= link_to short_date(meeting.time), meeting %>
+    </div>
+  </div>
+  <div class="row-fluid clearfix text-left">
+  	<div>
+    	<% meeting.presentations.each do |f| %>
+    		<p><%= link_to f.title, f %> by <%= link_to f.member.name, f.member %></p>
+    	<% end %>
+    	<p><% if meeting.format %> <%= meeting.format %> <% end %></p>
+    </div> 
+  </div>
+        <% if !current_member.nil? && current_member.admin? %>
+        <span class="pull-right"><%= button_to "delete", meeting, method: :delete,
+            data: { confirm: "You sure? "}, class: "btn-danger" %></span>
+        <span class="pull-right"><%= button_to "edit", edit_meeting_path(meeting), method: :get, class: "btn-warning" %></span>
+      <% end %> 
+</li>

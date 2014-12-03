@@ -1,0 +1,27 @@
+<% provide(:title, 'Meetings') %>
+<div class="row-fluid clearfix">
+  <div class="col-sm-offset-1 col-sm-10">
+    <h1>Meetings</h1>
+
+    <% if !current_member.nil? && current_member.admin? %>
+      <%= link_to "Add New Meeting", new_meeting_path %>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="row-fluid clearfix text-center">
+  <div class="col-sm-offset-1 col-sm-10">
+    <%= will_paginate %>
+
+      <div class="meetings">
+        <% if !current_member.nil? && current_member.admin? %>
+          <%= render @meetings.all_crbs %>
+        <% else %>
+          <%= render @meetings.previous_crbs %>
+        <% end %>
+      </div>
+
+    <% will_paginate %>
+  </div>
+</div>

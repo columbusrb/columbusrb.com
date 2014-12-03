@@ -1,0 +1,25 @@
+<% provide(:title, 'Members') %>
+<div class="row-fluid clearfix">
+  <div class="col-sm-offset-1 col-sm-10">
+    <h1>Members</h1>
+
+    <%= form_tag members_path, :method => 'get' do %>
+      <div class="col-sm-6 col-sm-offset-3">
+  	    <%= text_field_tag :search, params[:search] %>
+  	    <%= submit_tag "Search", :name => nil %>
+      </div>
+    <% end %>
+  </div>
+</div>
+<div class="row-fluid clearfix text-center">
+  <div class="col-sm-offset-1 col-sm-10">
+
+    <%= will_paginate %>
+
+      <ul class="members">
+        <%= render @members %>
+      </ul>
+
+    <%= will_paginate %>
+  </div>
+</div>

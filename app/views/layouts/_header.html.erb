@@ -1,0 +1,50 @@
+<header>
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <%= image_tag("iconmonstr-menu-icon-32.png", alt: "Menu") %>
+      </a>
+      <%= link_to "CRB", root_path, id: "logo" %>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <% if signed_in? %>
+            <li><%= link_to "Members",       members_path %></li>
+        <% end %>
+        <li><%= link_to "Meetings",          meetings_path %></li>
+        <li><%= link_to "Presentations",     presentations_path %></li>
+        <li><%= link_to "Job Board",         'http://jobs.columbusrb.com' %></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <% if signed_in? %>
+              <li><%= link_to "Profile", current_member %></li>
+              <li><%= link_to "Edit Profile", edit_member_path(current_member) %></li>
+              <li class="divider"></li>
+              <li>
+                <%= link_to "Sign out", signout_path, method: "delete" %>
+              </li>
+            <% else %>
+              <li><%= link_to "Sign in",           signin_path %></li>
+              <li><%= link_to "Sign up",           signup_path %></li>
+            <% end %>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right social">
+        <li><%= link_to image_tag("iconmonstr-github-icon-32.png", alt: "Github"), 'http://github.com/columbusrb' %></li>
+        <li><%= link_to image_tag("iconmonstr-email-icon-32.png", alt: "Mailing List"), 'http://groups.google.com/group/columbusrb' %></li>
+        <li><%= link_to image_tag("iconmonstr-twitter-icon-32.png", alt: "Twitter"), 'http://twitter.com/#!/columbusrb' %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+  </div><!-- /.container-fluid -->
+</nav>
+
+</header>

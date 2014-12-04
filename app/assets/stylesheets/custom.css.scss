@@ -306,17 +306,19 @@ input {
   height: auto !important;
 }
 
-#error_explantion {
-  color: #f00;
+#error_explanation {
+  color: red;
   ul {
-    list-style: none;
-    margin: 0 0 18px 0;
+    color: red;
+    margin: 0 0 30px 0;
   }
 }
 
 .field_with_errors {
-  @extend .control-group;
-  @extend .error;
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
 }
 
 /* misc */

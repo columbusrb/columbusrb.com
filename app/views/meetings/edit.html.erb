@@ -7,10 +7,10 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :time %>
-      <%= f.datetime_select :time %>
+      <%= f.datetime_select :time, class: 'form-control' %>
 
       <%= f.label :format %>
-      <%= f.text_field :format %>
+      <%= f.text_field :format, class: 'form-control' %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>

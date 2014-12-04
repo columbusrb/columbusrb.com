@@ -5,23 +5,22 @@
   <%= render 'shared/error_messages', object: f.object %>
     <div class="row-fluid">
       <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-1">
-
         <%= f.label :title %>
-        <%= f.text_field :title %>
+        <%= f.text_field :title, class: 'form-control' %>
 
         <% if current_member.admin? %>
           <%= f.label :member_id %>
-          <%= f.collection_select :member_id, Member.all, :id, :name, prompt: true %>
+          <%= f.collection_select :member_id, Member.all, :id, :name, prompt: true, class: 'form-control' %>
 
           <%= f.label :meeting_id %>
-          <%= f.collection_select :meeting_id, Meeting.all, :id, :time, prompt: true %>
+          <%= f.collection_select :meeting_id, Meeting.all, :id, :time, prompt: true, class: 'form-control' %>
         <% end %>
 
         <%= f.label :slides %>
-        <%= f.url_field :slides %>
+        <%= f.url_field :slides, class: 'form-control' %>
 
         <%= f.label :video %>
-        <%= f.url_field :video %>
+        <%= f.url_field :video, class: 'form-control' %>
       </div>
     <div class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0">
       <%= f.label :description %>

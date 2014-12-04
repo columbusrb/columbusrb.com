@@ -28,7 +28,7 @@
             <h2>Who's Speaking?</h2>
             <ul id="speakers">
               <% if @next_crb %>
-                <% if @next_crb.presentations.count > 0 || @next_crb.format %>
+                <% if @next_crb.presentations.count > 0 || @next_crb.format && @next_crb.format != '' %>
                   <% if @next_crb.presentations.count > 0 %>
                     <% @next_crb.presentations.each do |p| %>
                       <li>
@@ -38,7 +38,7 @@
                       </li>
                     <% end %>
                   <% end %>
-                  <% if @next_crb.format %> <li> <%= @next_crb.format %> </li> <% end %>
+                  <% if @next_crb.format %> <li> <%= @next_crb.format %></li> <% end %>
                 <% else %>
                   <li> Maybe You? </li>
                 <% end %> 

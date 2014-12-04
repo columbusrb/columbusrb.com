@@ -16,7 +16,7 @@ gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem 'sprockets'
 
 gem 'recaptcha', '~> 0.3.6'
-gem 'bcrypt-ruby', '~> 3.1.5'
+gem 'bcrypt', '~> 3.1.9'
 
 gem 'pry'
 gem 'slim'

@@ -11,14 +11,14 @@ TODO: Add contributing information.
 
 ### Application Notes
 
-Add an admin user with rails console:
+Add an admin user with heroku console:
 
-<pre>$ rails console
->Member.create(name: "Example User", email: "example@test.com", admin: true, password: "foobar", password_confirmation: "foobar")</pre>
+<pre>$ heroku run console
+> Member.create(name: "Example User", email: "example@test.com", admin: true, password: "foobar", password_confirmation: "foobar")</pre>
 
 Create a year of meetings with rails console:
 
-<pre>$ rails console
+<pre>$ heroku run console
 > Meeting.insert_meetings(desired_year)</pre>
 
 This app uses reCAPTCHA to secure the sign up page. You need to register the domain with the [*reCAPTCHA website*](http://www.google.com/recaptcha), then add them to your [*Heroku configuration*](https://devcenter.heroku.com/articles/config-vars).

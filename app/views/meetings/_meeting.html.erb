@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row-fluid clearfix text-left">
-  	<div>
+  	<div class="col-sm-12">
     	<% meeting.presentations.each do |f| %>
     		<p><%= link_to f.title, f %> by <%= link_to f.member.name, f.member %></p>
     	<% end %>

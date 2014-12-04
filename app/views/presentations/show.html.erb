@@ -1,24 +1,33 @@
 <% provide(:title, @presentation.title) %>
 
 <div class="presentation">
-  <h1><%= @presentation.title %> by <% if @presentation.member %><%= link_to @presentation.member.name, @presentation.member %> <% end %></h1>
-  <div><%= link_to short_date(@presentation.meeting.time), @presentation.meeting %></div>
+  <div class="row-fluid clearfix">
+    <div class="col-sm-offset-1 col-xs-12 col-sm-10">
+      <div class="row-fluid">
+        <h1><%= @presentation.title %> by <% if @presentation.member %><%= link_to @presentation.member.name, @presentation.member %> <% end %></h1>
+      </div>
+      <div class="row-fluid"><%= link_to short_date(@presentation.meeting.time), @presentation.meeting %>
+      </div>
 
-  <div><%= @presentation.description %></div>
-         
-  <div>
-    <% if @presentation.slides && @presentation.slides != "" %> Slides: <%= @presentation.slides %> <% end %>
-    <% if @presentation.video  && @presentation.video != "" %> Video: <%= @presentation.video %> <% end %>
+      <div class="row-fluid col-sm-12"><%= @presentation.description %></div>
+
+  <div class ="row-fluid">
+    <% if @presentation.slides && @presentation.slides != "" %> <%= link_to 'Slides', @presentation.slides %> <% end %>
+    <% if @presentation.video  && @presentation.video != "" %> <%= link_to 'Video', @presentation.video %> <% end %>
   </div>
+
+
   <% if !current_member.nil? %>
-    <div class="pull-right">
-      <% if current_member.admin? || current_member?(@presentation.member) %>
-        <%= link_to "edit", edit_presentation_path(@presentation) %>
-      <% end %>
+    <span class="pull-right">
       <% if current_member.admin? %>
-        <%= link_to "delete", @presentation, method: :delete,
-                                      data: { confirm: "You sure? " } %>
+        <%= button_to "delete", @presentation, method: :delete,
+              data: { confirm: "You sure? " }, class: "btn-danger" %>
       <% end %>
-    </div>
+    </span>
+    <span class="pull-right">
+      <% if current_member.admin? || current_member?(@presentation.member) %>
+        <%= button_to "edit", edit_presentation_path(@presentation), method: :get, class: "btn-warning" %>
+      <% end %>
+    </span>
   <% end %>
 </div>

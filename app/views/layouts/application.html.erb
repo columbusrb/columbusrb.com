@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta content="en" name="language" />
+    <meta content="Columbus Ruby Brigade is a collection of professionals excited about Ruby" name="description" />
+    <meta content="ruby columbus programming usergroup rails javascript web development" name="keywords" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title><%= full_title(yield(:title)) %></title>
+      <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container-fluid">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
+  </body>
+</html>

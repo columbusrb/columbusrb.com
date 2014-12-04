@@ -1,0 +1,103 @@
+<div class="row-fluid top">
+  <div class="col-sm-8">
+
+    <div id="header">
+      <div>
+        <h1><span class="red">C</span><span>olumbus</span></h1>
+      </div>
+      <div>
+        <h1><span class="red">R</span><span>uby</span></h1></div><div><h1><span class="red">B</span><span>rigade</span></h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4">
+    <section id="when-and-where">
+      <div id="when">
+        <h2>Next Meeting</h2>
+        <p>
+          <% if @next_crb %> <%= formatted_date(@next_crb.time) %> <% end %>
+        </p>
+      </div>
+      <div id="location">
+        <h2>Location</h2><p><a href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9">Quick Solutions HQ <br />440 Polaris Parkway, 5th Floor <br />Westerville, OH 43082 </a></p>
+      </div>
+      <div id="leader"><h2>Led By</h2><p><a href="http://matt-darby.com">Matt Darby</a></p></div>
+        <div id="meeting-format">
+          <section id="who-is-speaking">
+            <h2>Who's Speaking?</h2>
+            <ul id="speakers">
+              <% if @next_crb %>
+                <% if @next_crb.presentations.count > 0 || @next_crb.format && @next_crb.format != '' %>
+                  <% if @next_crb.presentations.count > 0 %>
+                    <% @next_crb.presentations.each do |p| %>
+                      <li>
+                        <% if p.member_id %> <%= link_to p.member.name, p.member %> <% end %>
+                        <span class="dash"> &mdash; </span>
+                        <%= link_to p.title, p %>
+                      </li>
+                    <% end %>
+                  <% end %>
+                  <% if @next_crb.format %> <li> <%= @next_crb.format %></li> <% end %>
+                <% else %>
+                  <li> Maybe You? </li>
+                <% end %> 
+              <% end %>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </div>
+  </div>
+  <div id="main">
+    <div class="row-fluid">
+      <div class="col-sm-6">
+        <section id="what">
+          <h2>Who? What? Huh?</h2>
+          <p>
+            We are a bunch of professionals, students, and geeks who are excited about <a href="http://ruby-lang.org">Ruby programming language</a> and <a href="http://rubyonrails.com">Rails framework</a> and the joy they have brought back to web development.
+            Our main goal is to share the love of the Ruby and Rails ecosystems to anyone that is interested. We cater to everyone, whether a non-programmer through advanced Rubyists.
+          </p>
+        </section>
+      </div>
+      <div class="col-sm-6">
+        <section id="code_jam">
+          <h2>Columbus Code Jam</h2>
+          <p>
+            Columbus Code Jam is a casual meetup to pair on cool projects, to get one-on-one guidance from experienced developers &amp; sys admins, to network, learn, and eat pizza.
+          </p>
+          <p>
+            It's a hacker night for all ages, skill levels, platforms, and languages. Bring your project, your questions, or just come and be social.
+          </p>
+          <p>
+            We typically meet the last Wednesday of every month. <a href="http://meetup.com/techlifecolumbus">Find us and RSVP at Techlife Columbus on Meetup.com</a>
+          </p>
+
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid">
+    <div class="col-sm-6">
+      <section id="hacknight">
+        <h2>Neo Hack Night</h2>
+        <p>
+          Neo Hack Night! Every two weeks Neo hosts hack nights at our offices. Come join some of the smartest folks around and hack on interesting projects. Bring your ideas, your laptop, and maybe even some beers and we'll supply the pizza and space. This is a perfect opportunity to learn from others on a variety of topics in a low-key, no-pressure setting.
+        </p>
+        <p>
+          Neo Hack Night is every other Thursday, see <a href="http://twitter.com/neo_cbus">Neo Columbus on Twitter</a> for details leading up to each event.
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  var ready;
+  ready = function() {
+    $('#header').bigtext();
+  };
+
+  $(document).ready(ready);
+  $(document).on('page:load', ready);
+</script>

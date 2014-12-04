@@ -1,0 +1,21 @@
+<% provide(:title, 'New Presentation') %>
+<h1>New Presentation</h1>
+
+<div class="row-fluid">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+    <%= form_for(@presentation) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :member_id %>
+      <%= f.collection_select :member_id, Member.all, :id, :name, prompt: true %>
+
+      <%= f.label :meeting_id %>
+      <%= f.collection_select :meeting_id, Meeting.all, :id, :time, prompt: true %>
+
+      <%= f.submit "Create presentation", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<li>
+  <div class="row-fluid clearfix text-left">
+
+    <div class="row-fluid clearfix">
+      
+        <%= link_to presentation.title, presentation %> by <% if presentation.member %><%= link_to presentation.member.name, presentation.member %> <% end %>
+      
+      <%= link_to short_date(presentation.meeting.time), presentation.meeting, class: "pull-right" %>
+      
+    </div>
+
+    <div class="row-fluid col-xs-12">
+      <%= presentation.description %>
+    </div>
+
+    <div class ="row-fluid">
+      <% if presentation.slides && presentation.slides != "" %> <%= link_to 'Slides', presentation.slides %> <% end %>
+      <% if presentation.video  && presentation.video != "" %> <%= link_to 'Video', presentation.video %> <% end %>
+  
+      <% if !current_member.nil? %>
+        <span class="pull-right">
+          <% if current_member.admin? %>
+            <%= button_to "delete", presentation, method: :delete,
+              data: { confirm: "You sure? " }, class: "btn-danger" %>
+          <% end %>
+        </span>
+        <span class="pull-right">
+          <% if current_member.admin? || current_member?(presentation.member) %>
+            <%= button_to "edit", edit_presentation_path(presentation), method: :get, class: "btn-warning" %>
+          <% end %>
+        </span>
+      <% end %>
+    </div>
+
+  </div>
+</li>

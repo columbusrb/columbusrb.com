@@ -1,0 +1,17 @@
+<% provide(:title, @meeting.time) %>
+
+<div id="meeting">
+  <div class="row-fluid">
+  	<div class="col-sm-offset-1 col-xs-12 col-sm-10">
+      <h1><%= short_date(@meeting.time) %></h1>
+    </div>
+  </div>
+  <div class="row-fluid">
+  	<div class="col-sm-offset-1 col-xs-12 col-sm-10">
+      <ul class="presentations">
+        <%= render @meeting.presentations %>
+        <% if @meeting.format %> <%= @meeting.format %> <% end %> 
+      </ul>
+    </div>
+  <div>
+</div>

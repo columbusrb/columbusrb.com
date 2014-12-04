@@ -1,0 +1,15 @@
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .left .right {
+    width: 100%;
+  }
+  #crb {
+    line-height: 4em;
+    #columbus {
+      margin-top: 0.2em;
+    }
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFF;
+  }
+}

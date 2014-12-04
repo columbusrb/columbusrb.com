@@ -9,62 +9,49 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311163719) do
+ActiveRecord::Schema.define(version: 20140828150631) do
 
-  create_table "active_admin_comments", :force => true do |t|
-    t.string   "resource_id",   :null => false
-    t.string   "resource_type", :null => false
-    t.integer  "author_id"
-    t.string   "author_type"
-    t.text     "body"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-    t.string   "namespace"
-  end
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
-  add_index "active_admin_comments", ["author_type", "author_id"], :name => "index_active_admin_comments_on_author_type_and_author_id"
-  add_index "active_admin_comments", ["namespace"], :name => "index_active_admin_comments_on_namespace"
-  add_index "active_admin_comments", ["resource_type", "resource_id"], :name => "index_admin_notes_on_resource_type_and_resource_id"
-
-  create_table "admin_users", :force => true do |t|
-    t.string   "email",                  :default => "", :null => false
-    t.string   "encrypted_password",     :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at",                             :null => false
-    t.datetime "updated_at",                             :null => false
-  end
-
-  add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
-  add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
-
-  create_table "meetings", :force => true do |t|
+  create_table "meetings", force: true do |t|
     t.datetime "time"
     t.string   "format"
   end
 
-  add_index "meetings", ["time"], :name => "index_meetings_on_time"
+  add_index "meetings", ["time"], name: "index_meetings_on_time", unique: true, using: :btree
 
-  create_table "members", :force => true do |t|
-    t.string "email"
-    t.string "md5_hash"
+  create_table "members", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "github"
+    t.string   "twitter"
+    t.string   "website"
+    t.text     "bio"
+    t.boolean  "admin",           default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+    t.string   "remember_token"
   end
 
-  create_table "speakers", :force => true do |t|
-    t.integer "meeting_id"
-    t.string  "name"
-    t.string  "title"
-    t.string  "url"
+  add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
+  add_index "members", ["remember_token"], name: "index_members_on_remember_token", using: :btree
+
+  create_table "presentations", force: true do |t|
+    t.integer  "member_id"
+    t.integer  "meeting_id"
+    t.string   "title"
+    t.string   "slides"
+    t.string   "video"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
-  add_index "speakers", ["meeting_id"], :name => "index_speakers_on_meeting_id"
+  add_index "presentations", ["meeting_id"], name: "index_presentations_on_meeting_id", using: :btree
+  add_index "presentations", ["member_id"], name: "index_presentations_on_member_id", using: :btree
 
 end

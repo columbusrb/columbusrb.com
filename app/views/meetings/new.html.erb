@@ -1,0 +1,18 @@
+<% provide(:title, "New Meeting") %>
+<h1>New Meeting</h1>
+
+<div class="row-fluid">
+  <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3">
+    <%= form_for(@meeting) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+      <%= f.label :time %>
+      <%= f.datetime_select :time, class: 'form-control' %>
+
+      <%= f.label :format %>
+      <%= f.text_field :format, class: 'form-control' %>
+
+      <%= f.submit "Create new meeting", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>

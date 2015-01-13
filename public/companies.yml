@@ -1,0 +1,7 @@
+- name: CoverMyMeds
+  url: https://www.covermymeds.com
+  market: Healthcare
+  location: Downtown Columbus
+  team_size: Large
+  other_tech: PHP, Python
+  ruby_role: Web apps (GUI & API), backend systems

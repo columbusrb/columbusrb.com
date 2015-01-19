@@ -21,5 +21,5 @@ end
 
 group :production do
   gem 'pg'
-  gem 'therubyracer', '>= 0.11.0beta8', :platform => :ruby
+  # gem 'therubyracer', '>= 0.11.0beta8', :platform => :ruby
 end

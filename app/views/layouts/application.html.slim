@@ -38,19 +38,21 @@ html
                 span.red B
                 span rigade
 
-        .span4
+        .span3
           = render "next_meeting"
 
       #main
         = yield
 
-    .row-fluid
-      #sponsors.span12
-        | Columbus Ruby Brigade wishes to thank our generous sponsors
-        br
-        = link_to(image_tag('QuickLogo.png', alt: 'Quick Solutions'), 'http://quicksolutions.com', target: '_blank')
-        = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank');
-        = link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank');
+      #sponsors
+        .row-fluid
+          .span12 Columbus Ruby Brigade wishes to thank our generous sponsors
+        .row-fluid
+          .span6= link_to(image_tag('QuickLogo.png', alt: 'Quick Solutions'), 'http://quicksolutions.com', target: '_blank')
+          .span6= link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank');
+        .row-fluid
+          .span6= link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank');
+          .span6= link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank');
 
 javascript:
   window.onload = function(){

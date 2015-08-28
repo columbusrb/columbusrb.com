@@ -1,39 +1,39 @@
-section#when-and-where
-  #when
-    h2 Next Meeting
-    p= formatted_date(@next_crb.time)
+#when
+  h2 Next Meeting
+  p= formatted_date(@next_crb.time)
 
-  #location
-    h2 Location
-    p
-      a(href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9")
-        ' Quick Solutions HQ
-        br
-        ' 440 Polaris Parkway, 5th Floor
-        br
-        ' Westerville, OH 43082
+#location
+  h2 Location
+  p
+    a(href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9")
+      ' Quick Solutions HQ
+      br
+      ' 440 Polaris Parkway, 5th Floor
+      br
+      ' Westerville, OH 43082
 
-  #leader
-    h2 Led By
-    p
-      = link_to "Matt Darby", "http://matt-darby.com"
+#meeting-format
+    h2 Who's Speaking?
 
-  #meeting-format
-    section#who-is-speaking
-      h2 Who's Speaking?
+    ul#speakers
+      - if @next_crb.speakers.present?
+        - @next_crb.speakers.each do |s|
+          li
+            a(href="#{s.url}")= s.name
+            span.dash &mdash;
+            = s.title
+      - else
+        li Maybe You?
 
-      ul#speakers
-        - if @next_crb.speakers.present?
-          - @next_crb.speakers.each do |s|
-            li
-              a(href="#{s.url}")= s.name
-              span.dash &mdash;
-              = s.title
-        - else
-          li Maybe You?
+#external-links
+    h2 Links
+    ul
+      li= link_to "Github", "http://github.com/columbusrb"
+      li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+      li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
 
-  ul#external-links
-    li= link_to "Github", "http://github.com/columbusrb"
-    li= link_to "Mailing List", "http://groups.google.com/group/columbusrb"
-    li= link_to "Twitter", "https://twitter.com/#!/columbusrb"
-
+#videos
+  h2 Videos
+  - 3.times do |x|
+    li
+      img(src="")

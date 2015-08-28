@@ -1,0 +1,168 @@
+@import "bourbon";
+@import "neat";
+
+section {
+  @include span-columns(12);
+  margin-bottom: 5em;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+ul {
+
+}
+
+img {
+  background: #999;
+  border-radius: 10px;
+}
+
+#content {
+  @include outer-container;
+}
+
+#strip {
+
+}
+
+#hero {
+  img {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+#header {
+  h1 {}
+  .next-crb {}
+}
+
+#next-meeting {
+  @include span-columns(4 of 12);
+
+  .speaker {
+    @include span-columns(8 of 12);
+
+    .left {
+      @include span-columns(3 of 8);
+      img {
+        height: 64px;
+        width: 64px;
+      }
+    }
+    .right {
+      @include span-columns(5 of 8);
+      @include omega();
+    }
+  }
+}
+
+#location {
+  @include span-columns(4 of 12);
+
+  img {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+#stats {
+  @include span-columns(4 of 12);
+  @include omega();
+}
+
+#links {
+  .link {
+    @include span-columns(4 of 12);
+
+    &:nth-child(4n) {
+      @include omega();
+    }
+    img {
+      @include span-columns(5 of 12);
+      width: 32px;
+      height: 32px;
+    }
+    p {
+      @include span-columns(7 of 12);
+    }
+  }
+}
+
+#videos {
+  .video {
+    @include span-columns(4 of 12);
+
+    &:nth-child(4n) {
+      @include omega();
+    }
+    img {
+      width: 100%;
+      height: 200px;
+    }
+    p {
+      .name {}
+      .title {}
+    }
+  }
+}
+
+#what {
+  @include span-columns(6 of 12);
+}
+
+#crb-labs {
+  @include span-columns(6 of 12);
+}
+
+#board {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .member {
+    @include span-columns(6 of 12);
+
+    &:nth-child(2n) {
+      @include omega();
+    }
+
+    .left {
+      @include span-columns(4 of 12);
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .right {
+      @include span-columns(8 of 12);
+      @include omega();
+      p {
+        .name {}
+        .title {}
+        .bio {}
+      }
+    }
+  }
+}
+
+#sponsors {
+  a {
+    @include span-columns(3 of 12);
+    &:nth-child(4n) {
+      @include omega();
+    }
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      background: white;
+    }
+  }
+}

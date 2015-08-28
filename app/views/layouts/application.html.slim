@@ -17,44 +17,139 @@ html
       try{Typekit.load();}catch(e){}
 
   body
-    .row-fluid
-      .span12
-        p.strip Since 2005 &mdash; 670+ members strong
+    #content
+      section
+        #strip
+          p Since 2005 &mdash; 670+ members strong
 
-    .container
-      .row-fluid.top
-        .span8
-          #header
-            div
-              h1
-                span.red C
-                span olumbus
-            div
-              h1
-                span.red R
-                span uby
-            div
-              h1
-                span.red B
-                span rigade
 
-        .span3
-          = render "next_meeting"
+      section
+        #header
+          h1 Columbus Ruby Brigade
+          .next-crb
+            = formatted_date(@next_crb.time)
 
-      #main
-        = yield
 
-      #sponsors
-        .row-fluid
-          .span12 Columbus Ruby Brigade wishes to thank our generous sponsors
-        .row-fluid
-          .span6= link_to(image_tag('QuickLogo.png', alt: 'Quick Solutions'), 'http://quicksolutions.com', target: '_blank')
-          .span6= link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank');
-        .row-fluid
-          .span6= link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank');
-          .span6= link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank');
+      section
+        #hero
+          img(src="")
 
-javascript:
-  window.onload = function(){
-    $('#header').bigtext();
-  };
+
+      section
+        #next-meeting
+          h2 Next Meeting
+          p= formatted_date(@next_crb.time)
+
+          - if @next_crb.speakers.present?
+            - @next_crb.speakers.each do |s|
+              .speaker
+                .left
+                  img(src="")
+                .right
+                  .name
+                    a(href=s.url)= s.name
+                  .title
+                    = s.title
+          - else
+            p Maybe You?
+
+        #location
+          h2 Location
+          img(src="")
+          p
+            a(href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9")
+              ' Quick Solutions HQ
+              br
+              ' 440 Polaris Parkway, 5th Floor
+              br
+              ' Westerville, OH 43082
+
+        #stats
+          h2 Stats
+          p Speakers in last year
+          p Talks in last year
+          p Attendees in last year
+          p Impressions in the last year
+
+
+      section
+        #what
+          h2 Who? What? Huh?
+          markdown:
+            We are a bunch of professionals, students, and geeks who are excited about [Ruby programming language][1] and [Rails framework][2] and the joy they have brought back to web development.
+            Our main goal is to share the love of the Ruby and Rails ecosystems to anyone that is interested. We cater to everyone, whether a non-programmer through advanced Rubyists.
+
+            * We give free Ruby / Rails classes
+            * We give lectures on programming topics
+            * We develop and release [Open Source software][3]
+            * We freely provide decades worth of experience
+
+            [1]:http://ruby-lang.org
+            [2]:http://rubyonrails.com
+            [3]:http://en.wikipedia.org/wiki/Open-source_software
+
+        #crb-labs
+          h2 CRB Labs
+
+          markdown:
+            CRB Labs' goal is to develop and release great [Open Source software][1] while also teaching core [Ruby][2] and [Rails][3] concepts to class participants. By helping us develop our software, contributors gain:
+
+            * Ruby and Rails experience
+            * Another line item on your resume
+            * How to contribute to any Open Source project
+
+            [1]:http://en.wikipedia.org/wiki/Open-source_software
+            [2]:http://ruby-lang.org
+            [3]:http://rubyonrails.com
+
+
+      section
+        #links
+          h2 Links
+          .link
+            = link_to image_tag(''), "http://github.com/columbusrb"
+            p Github
+          .link
+            = link_to image_tag(''), "http://groups.google.com/group/columbusrb"
+            p Mailing List
+          .link
+            = link_to image_tag(''), "https://twitter.com/#!/columbusrb"
+            p Twitter
+
+
+      section
+        #videos
+          h2 Videos
+          - 3.times do |x|
+            .video
+              .left
+                img(src="")
+              .right
+                p.name NAME
+                p.title TITLE
+
+          a(href="") More Videos
+
+
+      section
+        #board
+          h2 The Board
+          - 5.times do |x|
+            .member
+              .left
+                img(src="")
+              .right
+                p.name NAME
+                p.title TITLE
+                p.twitter TWITTER
+                p.bio BLURBINGS
+
+
+      section
+        #sponsors
+          h2 The Sponsors
+          = link_to(image_tag('QuickLogo.png', alt: 'Quick Solutions'), 'http://quicksolutions.com', target: '_blank')
+          = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank');
+          = link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank');
+          = link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank');
+          = link_to(image_tag('td.png', alt: 'TestDouble'), 'http://testdouble.com', target: '_blank');

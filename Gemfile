@@ -5,11 +5,11 @@ ruby '2.2.0'
 gem 'rails'
 gem 'pry'
 gem 'slim'
-gem 'activeadmin'
 gem 'bourbon'
 gem 'neat'
 gem 'redcarpet'
 gem 'quiet_assets'
+gem 'activeadmin', '~> 1.0.0.pre1'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

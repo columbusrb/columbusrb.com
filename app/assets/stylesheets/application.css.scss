@@ -9,6 +9,9 @@ $lightgray: #F5F5F5;
 $black: #41463F;
 $scarlet: #D33336;
 
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 850px);
+
 body {
   background: $white;
   color: $black;
@@ -102,20 +105,20 @@ a {
   }
 
   .speaker {
-    @include span-columns(8 of 12);
-    padding: 0.5em 0;
+    @include clearfix;
+    padding-bottom: 1em;
 
     .left {
-      @include span-columns(2 of 8);
+      @include span-columns(1 of 5);
       img {
         height: 80px;
         width: 80px;
       }
     }
     .right {
-      @include span-columns(6 of 8);
+      @include span-columns(4 of 5);
       @include omega();
-      padding-left: 0.75em;
+      padding-top: 0.7em;
 
       .name {
         font-weight: bold;
@@ -151,7 +154,8 @@ a {
 
 #links {
   a {
-    @include span-columns(3 of 12);
+    @include span-columns(3);
+    @include omega(4n);
     font-size: modular-scale(3);
     background: $scarlet;
     color: $white;
@@ -160,9 +164,6 @@ a {
     border-radius: 4px;
     text-transform: uppercase;
 
-    &:nth-child(4n) {
-      @include omega();
-    }
     img {
       @include span-columns(5 of 12);
       width: 32px;
@@ -176,10 +177,12 @@ a {
 
 #videos {
   .video {
-    @include span-columns(4 of 12);
+    @include span-columns(4);
+    font-size: modular-scale(-2);
+    margin-bottom: 2em;
 
-    &:nth-child(4n) {
-      @include omega();
+    &:nth-of-type(3n) {
+      @include omega;
     }
     img {
       width: 100%;
@@ -187,18 +190,18 @@ a {
     }
     .name {
       font-weight: bold;
-      padding-right: 0.3em;
     }
     .title {
       font-style: italic;
-      padding-left: 0.3em;
     }
   }
 
   #more {
-    @include span-columns(12 of 12);
+    @include span-columns(12);
+    font-size: modular-scale(-4);
     text-align: right;
     margin-top: 2em;
+    text-transform: uppercase;
   }
 }
 
@@ -217,10 +220,8 @@ a {
   }
   .director, .member {
     @include span-columns(6 of 12);
-
-    &:nth-child(2n) {
-      @include omega();
-    }
+    @include omega(2n);
+    margin-bottom: 2em;
 
     .left {
       @include span-columns(4 of 12);
@@ -243,13 +244,15 @@ a {
         font-style: italic;
         font-size: modular-scale(1);
       }
-      .bio {}
+      .bio {
+        margin-top: 0.75em;
+      }
     }
   }
 
   .director {
     @include span-columns(12);
-    margin-bottom: 2em;
+
     .left {
       @include span-columns(2 of 12);
     }
@@ -262,9 +265,8 @@ a {
 #sponsors {
   a {
     @include span-columns(3 of 12);
-    &:nth-child(4n) {
-      @include omega();
-    }
+    @include omega(4n);
+
     img {
       max-width: 200px;
       max-height: 200px;

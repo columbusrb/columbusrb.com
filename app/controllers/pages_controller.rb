@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 
   def landing
-    @next_crb = Meeting.next_crb.first
+    @next_crb = Meeting.next_crb
   end
 
   def add_speaker

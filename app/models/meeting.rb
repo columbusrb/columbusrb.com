@@ -1,13 +1,13 @@
 class Meeting < ActiveRecord::Base
+
   has_many :speakers
 
   ORDER = %w{Lecture Lecture Fishbowl}
 
-  attr_protected
   attr_accessor :crb_times
 
-  scope :next_crb, lambda{where(["DATE(time) >= ?", Date.today]).limit(1)}
-  scope :lecture, where(["format = ?", "Lecture"])
+  scope :next_crb, -> { where(["DATE(time) >= ?", Date.today]).limit(1).first }
+  scope :lecture, -> { where(["format = ?", "Lecture"]) }
 
   def self.add_speaker_to_next_meeting(name, title, url)
     next_crb.lecture.first.speakers.create!({name: name, title:title, url: url})

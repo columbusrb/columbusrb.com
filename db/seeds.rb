@@ -1,40 +1,55 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
+Meeting.delete_all
+Speaker.delete_all
 BoardMember.delete_all
+Video.delete_all
+
+Meeting.insert_times_for_five_years
+
+20.times do
+  Video.create do |v|
+    v.name = Faker::Name.name
+    v.title = Faker::Company.catch_phrase
+  end
+end
 
 BoardMember.create do |b|
   b.name = "Matt Darby"
   b.title = "Director"
-  b.bio = "Something amazing"
+  b.bio = Faker::Lorem.paragraphs(3).join(" ")
   b.director = true
 end
 
 BoardMember.create do |b|
   b.name = "Tracey Rood"
   b.title = "Treasurer"
-  b.bio = "Something amazing"
+  b.bio = Faker::Lorem.paragraph
 end
 
 BoardMember.create do |b|
   b.name = "Jon Canady"
   b.title = "Secretary"
-  b.bio = "Something amazing"
+  b.bio = Faker::Lorem.paragraph
 end
 
 BoardMember.create do |b|
   b.name = "Ben Winkler"
   b.title = "Legal Counsel"
-  b.bio = "Something amazing"
+  b.bio = Faker::Lorem.paragraph
 end
 
 BoardMember.create do |b|
   b.name = "Mike Danko"
   b.title = "BEARS"
-  b.bio = "Something amazing"
+  b.bio = Faker::Lorem.paragraph
+end
+
+Meeting.all.each do |m|
+  3.times do |x|
+    m.speakers.create do |s|
+      s.name = Faker::Name.name
+      s.title = Faker::Company.catch_phrase
+      s.url = Faker::Internet.url('columbusrb.com')
+      s.twitter = Faker::Internet::user_name
+    end
+  end
 end

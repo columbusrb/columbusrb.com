@@ -1,9 +1,8 @@
 Columbusrb::Application.routes.draw do
-  ActiveAdmin.routes(self)
-
-  devise_for :admin_users, ActiveAdmin::Devise.config
-
-  post '/speakers/add', to: "pages#add_speaker"
+  
+  namespace :api do
+    post '/speakers/add', to: "pages#add_speaker"
+  end
 
   root to: "pages#landing"
 end

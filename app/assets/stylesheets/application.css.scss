@@ -1,64 +1,129 @@
 @import "bourbon";
 @import "neat";
 
-section {
-  @include span-columns(12);
-  margin-bottom: 5em;
+$modular-scale-ratio: $minor-second;
+
+$white: #FEFFFF;
+$gray: #999999;
+$lightgray: #F5F5F5;
+$black: #41463F;
+$scarlet: #D33336;
+
+body {
+  background: $white;
+  color: $black;
+  margin: 0;
+  font-size: modular-scale(1);
 }
 
-h1 {
+p {
+  margin: 0;
+  padding: 0;
+}
 
+section {
+  @include span-columns(12);
+  padding-bottom: 5em;
 }
 
 h2 {
-
-}
-
-ul {
-
+  font-size: modular-scale(4);
 }
 
 img {
-  background: #999;
-  border-radius: 10px;
+  border-radius: 0.5em;
+}
+
+a {
+  text-decoration: none;
+  color: $scarlet;
 }
 
 #content {
   @include outer-container;
 }
 
-#strip {
+#title {
+  position: relative;
 
-}
+  h1 {
+    font-size: modular-scale(26);
+    color: $scarlet;
+    line-height: 1em;
+    text-align: center;
+    padding: 0;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 
-#hero {
-  img {
-    height: 400px;
-    width: 100%;
+  .since {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: modular-scale(-2);
+    padding-right: 0.4em;
+    font-style: italic;
+    color: $gray;
   }
 }
 
-#header {
-  h1 {}
-  .next-crb {}
+#strip {
+  background: $scarlet;
+  color: $white;
+  padding: 0.5em 1em;
+  text-align: right;
+  font-size: modular-scale(-2);
+
+  span.label {
+    font-weight: bold;
+  }
+
+  span.date {
+    padding-left: 0.5em;
+  }
+}
+
+#hero {
+  position: relative;
+
+  img {
+    height: 500px;
+    width: 100%;
+    border-radius: 0;
+  }
 }
 
 #next-meeting {
-  @include span-columns(4 of 12);
+  @include span-columns(5 of 12);
+  font-size: modular-scale(2);
+
+  p {
+    margin-bottom: 1.5em;
+  }
 
   .speaker {
     @include span-columns(8 of 12);
+    padding: 0.5em 0;
 
     .left {
-      @include span-columns(3 of 8);
+      @include span-columns(2 of 8);
       img {
-        height: 64px;
-        width: 64px;
+        height: 80px;
+        width: 80px;
       }
     }
     .right {
-      @include span-columns(5 of 8);
+      @include span-columns(6 of 8);
       @include omega();
+      padding-left: 0.75em;
+
+      .name {
+        font-weight: bold;
+      }
+
+      .title {
+        font-style: italic;
+      }
     }
   }
 }
@@ -67,19 +132,33 @@ img {
   @include span-columns(4 of 12);
 
   img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
+    margin-bottom: 1em;
   }
 }
 
 #stats {
-  @include span-columns(4 of 12);
+  @include span-columns(3 of 12);
   @include omega();
+  text-align: right;
+  font-size: modular-scale(2);
+
+  p {
+    margin-bottom: 1em;
+  }
 }
 
 #links {
-  .link {
-    @include span-columns(4 of 12);
+  a {
+    @include span-columns(3 of 12);
+    font-size: modular-scale(3);
+    background: $scarlet;
+    color: $white;
+    padding: 0.4em 0;
+    text-align: center;
+    border-radius: 4px;
+    text-transform: uppercase;
 
     &:nth-child(4n) {
       @include omega();
@@ -106,10 +185,20 @@ img {
       width: 100%;
       height: 200px;
     }
-    p {
-      .name {}
-      .title {}
+    .name {
+      font-weight: bold;
+      padding-right: 0.3em;
     }
+    .title {
+      font-style: italic;
+      padding-left: 0.3em;
+    }
+  }
+
+  #more {
+    @include span-columns(12 of 12);
+    text-align: right;
+    margin-top: 2em;
   }
 }
 
@@ -126,7 +215,7 @@ img {
     margin: 0;
     padding: 0;
   }
-  .member {
+  .director, .member {
     @include span-columns(6 of 12);
 
     &:nth-child(2n) {
@@ -136,19 +225,36 @@ img {
     .left {
       @include span-columns(4 of 12);
       img {
-        width: 150px;
-        height: 150px;
+        width: 180px;
+        height: 180px;
       }
     }
 
     .right {
       @include span-columns(8 of 12);
       @include omega();
-      p {
-        .name {}
-        .title {}
-        .bio {}
+
+      .name {
+        font-weight: bold;
+        color: $scarlet;
+        font-size: modular-scale(2);
       }
+      .title {
+        font-style: italic;
+        font-size: modular-scale(1);
+      }
+      .bio {}
+    }
+  }
+
+  .director {
+    @include span-columns(12);
+    margin-bottom: 2em;
+    .left {
+      @include span-columns(2 of 12);
+    }
+    .right {
+      @include span-columns(10 of 12);
     }
   }
 }

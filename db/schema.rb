@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311163719) do
+ActiveRecord::Schema.define(:version => 20150829001333) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,6 +46,14 @@ ActiveRecord::Schema.define(:version => 20130311163719) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
+  create_table "board_members", :force => true do |t|
+    t.string  "name"
+    t.string  "title"
+    t.string  "twitter"
+    t.text    "bio"
+    t.boolean "director", :default => false
+  end
+
   create_table "meetings", :force => true do |t|
     t.datetime "time"
     t.string   "format"
@@ -63,6 +71,8 @@ ActiveRecord::Schema.define(:version => 20130311163719) do
     t.string  "name"
     t.string  "title"
     t.string  "url"
+    t.string  "twitter"
+    t.string  "twitter_avatar_url"
   end
 
   add_index "speakers", ["meeting_id"], :name => "index_speakers_on_meeting_id"

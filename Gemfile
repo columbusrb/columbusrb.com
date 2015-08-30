@@ -9,7 +9,10 @@ gem 'bourbon'
 gem 'neat'
 gem 'redcarpet'
 gem 'quiet_assets'
+gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'test-unit'
+gem 'rest-client'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

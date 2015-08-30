@@ -11,7 +11,7 @@ html
 
     = csrf_meta_tags
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application", "//use.typekit.net/alz5etq.js"
+    = javascript_include_tag "application", "//use.typekit.net/yyj5qlw.js"
 
     javascript:
       try{Typekit.load();}catch(e){}
@@ -19,20 +19,16 @@ html
   body
     #content
       section
-        #strip
-          p Since 2005 &mdash; 670+ members strong
-
-
-      section
-        #header
+        #title
           h1 Columbus Ruby Brigade
-          .next-crb
-            = formatted_date(@next_crb.time)
+          .since EST 2005 &mdash; 670+ members strong
 
+        #strip
+          span.label Next Meeting:
+          span.date= formatted_date(@next_crb.time)
 
-      section
         #hero
-          img(src="")
+          img(src="http://i.huffpost.com/gen/2159432/images/o-EMPTY-CLASSROOM-facebook.jpg")
 
 
       section
@@ -44,32 +40,32 @@ html
             - @next_crb.speakers.each do |s|
               .speaker
                 .left
-                  img(src="")
+                  img(src="http://findicons.com/files/icons/1072/face_avatars/300/e05.png")
                 .right
                   .name
                     a(href=s.url)= s.name
                   .title
                     = s.title
-          - else
-            p Maybe You?
 
         #location
           h2 Location
-          img(src="")
-          p
+          img(src="/assets/map.png")
+          .address
             a(href="http://maps.google.com/maps?f=q&source=s_q&hl=en&q=440+Polaris+Pkwy,+Westerville,+Delaware,+Ohio+43082&sll=40.198412,-83.010089&sspn=0.033107,0.047464&ie=UTF8&cd=1&geocode=FReTZAIdiVsO-w&split=0&ll=40.149127,-82.951455&spn=0.015942,0.043344&z=15&iwloc=r9")
-              ' Quick Solutions HQ
+              b Quick Solutions HQ
               br
               ' 440 Polaris Parkway, 5th Floor
               br
               ' Westerville, OH 43082
 
         #stats
-          h2 Stats
-          p Speakers in last year
-          p Talks in last year
-          p Attendees in last year
-          p Impressions in the last year
+          - stats = Stat.now
+          h2 In the last year
+          p= "#{stats[:speakers]} speakers"
+          p= "#{stats[:talks]} talks"
+          p= "#{stats[:attendees]} attendees"
+          p= "#{stats[:impressions]} impressions"
+          p= "#{stats[:pizzas]} pizzas"
 
 
       section
@@ -105,44 +101,50 @@ html
 
       section
         #links
-          h2 Links
-          .link
-            = link_to image_tag(''), "http://github.com/columbusrb"
-            p Github
-          .link
-            = link_to image_tag(''), "http://groups.google.com/group/columbusrb"
-            p Mailing List
-          .link
-            = link_to image_tag(''), "https://twitter.com/#!/columbusrb"
-            p Twitter
+          = link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+          = link_to "YouTube", "https://twitter.com/#!/columbusrb"
+          = link_to "Twitter", "https://twitter.com/#!/columbusrb"
+          = link_to "Github", "http://github.com/columbusrb"
 
 
       section
         #videos
-          h2 Videos
+          h2 Past Sessions
           - 3.times do |x|
             .video
               .left
-                img(src="")
+                img(src="http://placehold.it/370x200")
               .right
-                p.name NAME
-                p.title TITLE
+                span.name NAME
+                | &mdash;
+                span.title TITLE
 
-          a(href="") More Videos
+          #more
+            a(href="") More Videos
 
 
       section
         #board
           h2 The Board
-          - 5.times do |x|
+          - BoardMember.director.each do |m|
+            .director
+              .left
+                img(src="http://placehold.it/180")
+              .right
+                .name= m.name
+                .title= m.title
+                .twitter= m.twitter
+                .bio= m.bio
+
+          - BoardMember.board.order(:title).each do |m|
             .member
               .left
-                img(src="")
+                img(src="http://placehold.it/180")
               .right
-                p.name NAME
-                p.title TITLE
-                p.twitter TWITTER
-                p.bio BLURBINGS
+                .name= m.name
+                .title= m.title
+                .twitter= m.twitter
+                .bio= m.bio
 
 
       section

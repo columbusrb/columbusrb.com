@@ -97,7 +97,7 @@ a {
 }
 
 #next-meeting {
-  @include span-columns(5 of 12);
+  @include span-columns(6 of 12);
   font-size: modular-scale(2);
 
   p {
@@ -142,13 +142,30 @@ a {
 }
 
 #stats {
-  @include span-columns(3 of 12);
+  @include span-columns(2 of 12);
   @include omega();
   text-align: right;
-  font-size: modular-scale(2);
 
-  p {
+  .item {
+    @include clearfix;
     margin-bottom: 1em;
+    text-transform: uppercase;
+    font-size: modular-scale(-4);
+
+    .num {
+      color: $white;
+      background: $scarlet;
+      padding: 1em;
+      width: 35%;
+      float: left;
+      font-weight: bold;
+    }
+    .label {
+      background: $lightgray;
+      padding: 1em;
+      width: 65%;
+      float: left;
+    }
   }
 }
 
@@ -179,7 +196,7 @@ a {
   .video {
     @include span-columns(4);
     font-size: modular-scale(-2);
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 
     &:nth-of-type(3n) {
       @include omega;
@@ -190,6 +207,7 @@ a {
     }
     .name {
       font-weight: bold;
+      margin-top: 1em;
     }
     .title {
       font-style: italic;
@@ -264,9 +282,11 @@ a {
 
 #sponsors {
   a {
-    @include span-columns(3 of 12);
-    @include omega(4n);
+    @include span-columns(3);
 
+    &:nth-of-type(4n) {
+      @include omega;
+    }
     img {
       max-width: 200px;
       max-height: 200px;

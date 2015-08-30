@@ -39,13 +39,11 @@
           ' Westerville, OH 43082
 
     #stats
-      - stats = Stat.now
-      h2 In the last year
-      p= "#{stats[:speakers]} speakers"
-      p= "#{stats[:talks]} talks"
-      p= "#{stats[:attendees]} attendees"
-      p= "#{stats[:impressions]} impressions"
-      p= "#{stats[:pizzas]} pizzas"
+      h2 This Year
+      - Stat.now.each do |(k,v)|
+        .item
+          .num= v
+          .label= k
 
 
   section

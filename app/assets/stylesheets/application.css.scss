@@ -90,7 +90,7 @@ a {
   position: relative;
 
   img {
-    height: 500px;
+    height: 400px;
     width: 100%;
     border-radius: 0;
   }
@@ -126,6 +126,7 @@ a {
 
       .title {
         font-style: italic;
+        font-size: modular-scale(-1);
       }
     }
   }
@@ -133,62 +134,38 @@ a {
 
 #location {
   @include span-columns(4 of 12);
+  text-align: left;
+
+  h2 {
+    color: $white;
+  }
 
   img {
-    height: 300px;
-    width: 300px;
+    height: 370px;
+    width: 370px;
     margin-bottom: 1em;
-  }
-}
-
-#stats {
-  @include span-columns(2 of 12);
-  @include omega();
-  text-align: right;
-
-  .item {
-    @include clearfix;
-    margin-bottom: 1em;
-    text-transform: uppercase;
-    font-size: modular-scale(-4);
-
-    .num {
-      color: $white;
-      background: $scarlet;
-      padding: 1em;
-      width: 35%;
-      float: left;
-      font-weight: bold;
-    }
-    .label {
-      background: $lightgray;
-      padding: 1em;
-      width: 65%;
-      float: left;
-    }
   }
 }
 
 #links {
+  @include span-columns(2);
+  font-size: modular-scale(-1);
+
+  h2 {
+    color: $white;
+  }
+
   a {
-    @include span-columns(3);
-    @include omega(4n);
-    font-size: modular-scale(3);
     background: $scarlet;
     color: $white;
-    padding: 0.4em 0;
+    padding: 0.5em 0;
+    border-radius: 2px;
     text-align: center;
-    border-radius: 4px;
+    padding-left: 0.5em;
     text-transform: uppercase;
-
-    img {
-      @include span-columns(5 of 12);
-      width: 32px;
-      height: 32px;
-    }
-    p {
-      @include span-columns(7 of 12);
-    }
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 1.5em;
   }
 }
 

@@ -38,12 +38,13 @@
           br
           ' Westerville, OH 43082
 
-    #stats
-      h2 This Year
-      - Stat.now.each do |(k,v)|
-        .item
-          .num= v
-          .label= k
+    #links
+      h2 Media
+      = link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+      = link_to "YouTube", "https://twitter.com/#!/columbusrb"
+      = link_to "Twitter", "https://twitter.com/#!/columbusrb"
+      = link_to "Github", "http://github.com/columbusrb"
+      = link_to "IRC", "http://github.com/columbusrb"
 
 
   section
@@ -75,14 +76,6 @@
         [1]:http://en.wikipedia.org/wiki/Open-source_software
         [2]:http://ruby-lang.org
         [3]:http://rubyonrails.com
-
-
-  section
-    #links
-      = link_to "Mailing List", "http://groups.google.com/group/columbusrb"
-      = link_to "YouTube", "https://twitter.com/#!/columbusrb"
-      = link_to "Twitter", "https://twitter.com/#!/columbusrb"
-      = link_to "Github", "http://github.com/columbusrb"
 
 
   section

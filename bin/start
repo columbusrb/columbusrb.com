@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-# Assume Homebrew (http://brew.sh/)
-
-brew install boot2docker docker docker-compose
-boot2docker init
-boot2docker up
-$(boot2docker shellinit)
+docker-machine create --driver=virtualbox crb
+docker-machine start crb
+eval "$(docker-machine env crb)"
 docker-compose scale web=1 db=1
 docker-compose build
-
-if [ "$NEW_DB" = "true" ]
-then
-  docker-compose run web rake db:create db:schema:load db:seed
-fi
+docker-compose run --rm web rake db:create db:schema:load db:seed
+docker-compose up

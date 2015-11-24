@@ -97,7 +97,7 @@
       - BoardMember.director.each do |m|
         .director
           .left
-            img(src="http://placehold.it/180")
+            img(src="/assets/#{m.name.split(' ')[0].downcase}.jpg")
           .right
             .name= m.name
             .title= m.title
@@ -107,7 +107,7 @@
       - BoardMember.board.order(:title).each do |m|
         .member
           .left
-            img(src="http://placehold.it/180")
+            img(src="/assets/#{m.name.split(' ')[0].downcase}.jpg")
           .right
             .name= m.name
             .title= m.title

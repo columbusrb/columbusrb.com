@@ -20,7 +20,7 @@ BoardMember.create do |b|
 end
 
 BoardMember.create do |b|
-  b.name = "Tracey Rood"
+  b.name = "Tracy Rood"
   b.title = "Treasurer"
   b.bio = Faker::Lorem.paragraph
 end

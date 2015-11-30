@@ -13,6 +13,7 @@ gem 'minitest'
 gem 'rest-client'
 gem 'thin'
 gem 'pg'
+gem 'unicorn'
 
 group :development do
   gem 'faker'

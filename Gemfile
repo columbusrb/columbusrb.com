@@ -15,6 +15,7 @@ gem 'thin'
 gem 'pg'
 gem 'unicorn'
 gem 'devise'
+gem 'rails_12factor'
 
 group :development do
   gem 'faker'

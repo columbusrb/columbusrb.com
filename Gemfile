@@ -14,6 +14,7 @@ gem 'rest-client'
 gem 'thin'
 gem 'pg'
 gem 'unicorn'
+gem 'devise'
 
 group :development do
   gem 'faker'

@@ -1,0 +1,35 @@
+#alert
+  p
+    strong Notice &rarr;
+    | WE ARE MEETING AT COVERMYMEDS IN DECEMBER
+
+#content
+  #notice
+    h1 Columbus Ruby Brigade
+    section.when
+      p December 21st, 2015 @ 6:30pm
+      p Hosted by CoverMyMeds
+
+    #info
+      section.what
+        h3 Speakers
+        ul
+          li Daniel Martinez &mdash; Start your Engines
+          li Matt Darby &mdash; Rackspace's Carina Show & Tell
+
+      section.where
+        h3 Location
+
+        = link_to "https://www.google.com/maps/place/CoverMyMeds/@39.9546063,-83.0085224,17z/data=!4m2!3m1!1s0x406ffb2c94bb30af:0x334cb69a64e6e106" do
+          h4 CoverMyMeds
+          p 2 Miranova Pl, Columbus, OH 43215
+
+        p Visitor parking is located on level 1 (orange) of the Miranova parking garage.
+        p The garage is accessed from Mound Street to the South of the building.
+        p Once parked, enter the building and take the elevator to reception on the 12th floor.
+
+      section.questions
+        = mail_to "board@columbusrb.com", "Questions?"
+
+    #map
+      img src="/assets/cmm_map.png"

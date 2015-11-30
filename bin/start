@@ -5,5 +5,5 @@ docker-machine start crb
 eval "$(docker-machine env crb)"
 docker-compose scale web=1 db=1
 docker-compose build
-docker-compose run --rm web rake db:create db:schema:load db:seed
+docker-compose run --rm web rake db:setup
 docker-compose up

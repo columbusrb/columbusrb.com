@@ -271,3 +271,64 @@ a {
     }
   }
 }
+
+#alert {
+  background: $scarlet;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+  text-transform: uppercase;
+
+  strong {
+    font-weight: bold;
+    padding-right: 0.5em;
+  }
+}
+
+#notice {
+  h1 {
+    font-size: modular-scale(30);
+    text-align: center;
+    line-height: 1em;
+  }
+
+  section.when {
+    color: $scarlet;
+    font-size: modular-scale(6);
+    text-align: center;
+    font-style: italic;
+  }
+
+  #info {
+    @include span-columns(7);
+
+    section {
+      margin: 0em;
+      padding: 0em;
+
+      &.questions {
+        margin-top: 3em;
+      }
+
+      &.where {
+        h4 {
+          margin: 0;
+        }
+
+        p {
+          margin-bottom: 0;
+
+          &:nth-child(2) {
+            margin-bottom: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  #map {
+    @include span-columns(5);
+  }
+
+}

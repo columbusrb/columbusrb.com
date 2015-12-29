@@ -16,12 +16,17 @@ body {
   background: $white;
   color: $black;
   margin: 0;
-  font-size: modular-scale(1);
+  font-size: modular-scale(0);
 }
 
 p {
   margin: 0;
   padding: 0;
+  margin-bottom: 1em;
+}
+
+h1 {
+  font-size: modular-scale(15);
 }
 
 section {

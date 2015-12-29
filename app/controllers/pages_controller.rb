@@ -13,4 +13,7 @@ class PagesController < ApplicationController
     render json: meeting
   end
 
+  def announcement
+  end
+
 end

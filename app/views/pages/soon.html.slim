@@ -1,0 +1,35 @@
+#alert
+  p
+    strong Notice &rarr;
+    | WE ARE MEETING AT COVERMYMEDS IN DECEMBER
+
+#content
+  #notice
+    h1 Columbus Ruby Brigade
+    section.when
+      p January 18th, 2016 @ 6:30pm
+      p Hosted by CoverMyMeds
+
+    #info
+      section.what
+        h3 Speakers
+        ul
+          li Alex Burkhart &mdash; Something Amazing
+          li Damian Synadino &mdash; Improv(e) Your Testing! Tips & Tricks from Jester to Tester
+
+      section.where
+        h3 Location
+
+        = link_to "https://www.google.com/maps/place/CoverMyMeds/@39.9546063,-83.0085224,17z/data=!4m2!3m1!1s0x406ffb2c94bb30af:0x334cb69a64e6e106" do
+          h4 CoverMyMeds
+          p 2 Miranova Pl, Columbus, OH 43215
+
+        p After 5pm you can park in any spot in the 2 Miranova garage.
+        p The garage is accessed from Mound Street to the South of the building.
+        p Once parked, enter the building and take the elevator to reception on the 11th floor.
+
+      section.questions
+        = mail_to "board@columbusrb.com", "Questions?"
+
+    #map
+      img src=asset_path('cmm_map.png')

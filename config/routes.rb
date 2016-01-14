@@ -4,5 +4,5 @@ Columbusrb::Application.routes.draw do
     post '/speakers/add', to: "pages#add_speaker"
   end
 
-  root to: "pages#announcement"
+  root to: "pages#soon"
 end

@@ -16,4 +16,7 @@ class PagesController < ApplicationController
   def announcement
   end
 
+  def soon
+  end
+
 end

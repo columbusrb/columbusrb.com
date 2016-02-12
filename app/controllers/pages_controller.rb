@@ -19,4 +19,8 @@ class PagesController < ApplicationController
   def soon
   end
 
+  def now
+    @next_crb = Meeting.next_crb
+  end
+
 end

@@ -1,0 +1,56 @@
+section
+  #next-meeting
+    h2 Next Meeting
+    p= formatted_date(@next_crb.time)
+
+    - @next_crb.speakers.each do |s|
+      .speaker
+        .name
+          a(href=s.url)= s.name
+        .title
+          = s.title
+
+  #location
+    #map
+      a(href="https://www.google.com/maps/place/500,+2+Miranova+Pl,+Columbus,+OH+43215/@39.9545959,-83.0081614,17z/data=!3m1!4b1!4m2!3m1!1s0x88388f478a5f25b3:0x1d1193f8f62da2d4")
+        img(src="/assets/cmm_map.png")
+
+    .address
+      a(href="https://www.google.com/maps/place/500,+2+Miranova+Pl,+Columbus,+OH+43215/@39.9545959,-83.0081614,17z/data=!3m1!4b1!4m2!3m1!1s0x88388f478a5f25b3:0x1d1193f8f62da2d4")
+        p
+          h2 CoverMyMeds
+          | 2 Miranova Pl, Columbus, OH 43215
+
+      p
+        | FREE parking after 5pm in CMM's garage on Mound St.
+        br
+        | Take the elevator to 11th floor.
+
+section
+  #what
+    h3 Who? What? Huh?
+    markdown:
+      We are a bunch of professionals, students, and geeks who are excited about [Ruby programming language][1] and [Rails framework][2] and the joy they have brought back to web development.
+      Our main goal is to share the love of the Ruby and Rails ecosystems to anyone that is interested. We cater to everyone, whether a non-programmer through advanced Rubyists.
+
+      * We give lectures on programming topics
+      * We develop and release [Open Source software][3]
+      * We freely provide decades worth of experience
+
+      [1]:http://ruby-lang.org
+      [2]:http://rubyonrails.com
+      [3]:https://git.columbusrb.com/groups/crb-labs
+
+  #crb-labs
+    h4 CRB Labs
+
+    markdown:
+      CRB Labs' goal is to develop and release great [Open Source software][1] while also teaching core [Ruby][2] and [Rails][3] concepts to class participants. By helping us develop our software, contributors gain:
+
+      * Ruby and Rails experience
+      * Another line item on your resume
+      * How to contribute to any Open Source project
+
+      [1]:https://git.columbusrb.com/groups/crb-labs
+      [2]:http://ruby-lang.org
+      [3]:http://rubyonrails.com

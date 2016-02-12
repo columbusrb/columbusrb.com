@@ -10,7 +10,7 @@ class Meeting < ActiveRecord::Base
   scope :lecture, -> { where(["format = ?", "Lecture"]) }
 
   def self.add_speaker_to_next_meeting(name, title, url)
-    next_crb.lecture.first.speakers.create!({name: name, title:title, url: url})
+    next_crb.speakers.create!({name: name, title:title, url: url})
   end
 
   def self.insert_times_for_five_years

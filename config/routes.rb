@@ -1,8 +1,6 @@
 Columbusrb::Application.routes.draw do
 
-  namespace :api do
-    post '/speakers/add', to: "pages#add_speaker"
-  end
+  post '/speakers/add', to: "pages#add_speaker"
 
   root to: "pages#now"
 end

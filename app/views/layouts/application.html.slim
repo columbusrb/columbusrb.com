@@ -11,10 +11,45 @@ html
 
     = csrf_meta_tags
     = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application", "//use.typekit.net/yyj5qlw.js"
+    = javascript_include_tag "application", "//use.typekit.net/alz5etq.js"
 
     javascript:
       try{Typekit.load();}catch(e){}
 
   body
-    = yield
+    #content
+
+      #strip
+        .since EST 2005 &mdash; 670+ members strong
+        .next-meeting
+          span.label Next Meeting:
+          span.date= formatted_date(@next_crb.time)
+
+      #title
+        img src="/assets/logo.png"
+        .name
+          h1 Columbus
+          h1 Ruby
+          h1 Brigade
+
+      section
+        #links
+          = link_to "Slack", "https://crb-slack-invite.herokuapp.com"
+          = link_to "Forum", "http://forum.columbusrb.com"
+          = link_to "Gitlab", "https://git.columbusrb.com"
+          = link_to "Calendar", "https://calendar.google.com/calendar/embed?src=columbusrb.com_u3g7hnfb4o8dnuisckhgbrn9ro%40group.calendar.google.com&ctz=America/New_York"
+          = link_to "Mailing List", "http://groups.google.com/group/columbusrb"
+          = link_to "Twitter", "https://twitter.com/#!/columbusrb"
+
+      section
+        = yield
+
+      section
+        h2 Graciously Sponsored By
+        #sponsors
+          = link_to(image_tag('https://www.covermymeds.com/main/wp-content/themes/mana-child/images/CoverMyMeds_Logo.png', alt: 'CoverMyMeds'), 'http://covermymeds.com', target: '_blank')
+          = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank')
+          = link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank')
+          = link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank')
+          = link_to(image_tag('td.png', alt: 'TestDouble'), 'http://testdouble.com', target: '_blank')
+          = link_to(image_tag('http://www.balancedteam.org/wp-content/uploads/2012/08/mutuallyhuman-500minusCS-21.png', alt: 'MutuallyHuman'), 'http://www.mutuallyhuman.com', target: '_blank')

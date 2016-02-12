@@ -7,16 +7,19 @@ $white: #FEFFFF;
 $gray: #999999;
 $lightgray: #F5F5F5;
 $black: #41463F;
-$scarlet: #D33336;
+$scarlet: #95080C;
+$links: $white;
 
 $mobile: new-breakpoint(max-width 480px);
 $desktop: new-breakpoint(min-width 850px);
 
 body {
-  background: $white;
-  color: $black;
+  color: $white;
   margin: 0;
   font-size: modular-scale(0);
+  background-color: $white;
+  background-image: url(/assets/101.jpg);
+  background-size: cover;
 }
 
 p {
@@ -44,7 +47,8 @@ img {
 
 a {
   text-decoration: none;
-  color: $scarlet;
+  color: $links;
+  text-shadow: 0px 0px 20px $white;
 }
 
 #content {
@@ -52,42 +56,51 @@ a {
 }
 
 #title {
-  position: relative;
+  @include clearfix;
+  margin: 5em 0;
 
-  h1 {
-    font-size: modular-scale(26);
-    color: $scarlet;
-    line-height: 1em;
-    text-align: center;
-    padding: 0;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+  img {
+    @include span-columns(5);
   }
 
-  .since {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: modular-scale(-2);
-    padding-right: 0.4em;
-    font-style: italic;
-    color: $gray;
+  .name {
+    @include span-columns(7);
+    color: $white;
+
+    h1 {
+      padding: 0;
+      margin: 0;
+      line-height: 1em;
+      font-size: modular-scale(32);
+
+      &:first-child {
+        margin-top: 0.2em;
+      }
+    }
   }
 }
 
 #strip {
-  background: $scarlet;
+  @include clearfix;
   color: $white;
   padding: 0.5em 1em;
-  text-align: right;
   font-size: modular-scale(-2);
 
-  span.label {
-    font-weight: bold;
+  .since {
+    @include span-columns(6 of 12);
   }
 
-  span.date {
-    padding-left: 0.5em;
+  .next-meeting {
+    @include span-columns(6 of 12);
+    text-align: right;
+
+    span.label {
+      font-weight: bold;
+    }
+
+    span.date {
+      padding-left: 0.5em;
+    }
   }
 }
 
@@ -95,15 +108,21 @@ a {
   position: relative;
 
   img {
-    height: 400px;
     width: 100%;
+    height: 100%;
     border-radius: 0;
   }
 }
 
 #next-meeting {
-  @include span-columns(6 of 12);
-  font-size: modular-scale(2);
+  @include span-columns(7 of 12);
+  font-size: modular-scale(6);
+
+  h2 {
+    line-height: 1em;
+    padding:0;
+    margin:0;
+  }
 
   p {
     margin-bottom: 1.5em;
@@ -111,66 +130,49 @@ a {
 
   .speaker {
     @include clearfix;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
 
-    .left {
-      @include span-columns(1 of 5);
-      img {
-        height: 80px;
-        width: 80px;
-      }
+    .name {
+      font-weight: bold;
     }
-    .right {
-      @include span-columns(4 of 5);
-      @include omega();
-      padding-top: 0.7em;
 
-      .name {
-        font-weight: bold;
-      }
-
-      .title {
-        font-style: italic;
-        font-size: modular-scale(-1);
-      }
+    .title {
+      font-style: italic;
+      font-size: modular-scale(-1);
     }
   }
 }
 
 #location {
-  @include span-columns(4 of 12);
-  text-align: left;
-
-  h2 {
-    color: $white;
-  }
+  @include span-columns(5 of 12);
 
   img {
     height: 370px;
     width: 370px;
     margin-bottom: 1em;
   }
+
+  .address {
+    h2 {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 #links {
-  @include span-columns(2);
-  font-size: modular-scale(-1);
+  @include span-columns(12);
 
   h2 {
     color: $white;
   }
 
   a {
-    background: $scarlet;
+    @include span-columns(2);
+    font-size: modular-scale(4);
     color: $white;
-    padding: 0.5em 0;
-    border-radius: 2px;
     text-align: center;
-    padding-left: 0.5em;
     text-transform: uppercase;
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 1.5em;
   }
 }
 
@@ -263,16 +265,22 @@ a {
 }
 
 #sponsors {
-  a {
-    @include span-columns(3);
+  @include clearfix;
+  padding: 3em;
+  background: $white;
+  border-radius: 0.5em;
+  text-align: center;
 
-    &:nth-of-type(4n) {
+  a {
+    @include span-columns(4 of 12);
+
+    &:nth-of-type(3n) {
       @include omega;
     }
+
     img {
       max-width: 200px;
-      max-height: 200px;
-      background: white;
+      max-height: 60px;
     }
   }
 }
@@ -335,10 +343,6 @@ a {
         }
       }
     }
-  }
-
-  #map {
-    @include span-columns(5);
   }
 
 }

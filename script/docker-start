@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+docker-compose build && \
+  docker-compose create && \
+  docker-compose start postgres && \
+  docker-compose run --rm app bundle exec rake db:create db:setup && \
+  docker-compose start app && \
+  docker-compose logs -f || \
+  docker-compose stop # If something fails, make sure the containers are stopped.
+
+function trap_exit() {
+  # Allow ctrl-c to stop the script, and also stop the containers.
+  docker-compose stop
+  exit 2
+}
+
+trap "trap_exit" 2

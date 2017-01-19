@@ -11,14 +11,10 @@ services:
     links:
       - postgres
     environment:
-      DB_NAME: crb_dev_duex
-      DB_USERNAME: postgres
-      DB_PASSWORD: password
-      DB_HOST: postgres
+      DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
 
   postgres:
     image: postgres:9.6
-    container_name: columbusrb.com-postgres
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password

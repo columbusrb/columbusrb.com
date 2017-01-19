@@ -45,4 +45,3 @@ To run commands in the context of the container, e.g., `rails console`:
 ```
 docker-compose run --rm app rails console
 ```
-

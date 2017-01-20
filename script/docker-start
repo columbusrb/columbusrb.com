@@ -3,8 +3,8 @@
 set -euo pipefail
 
 docker-compose build && \
-  docker-compose create && \
-  docker-compose start postgres && \
+  docker-compose create postgres && \
+  docker-compose up -d postgres && \
   docker-compose run --rm app bundle exec rake db:create db:setup && \
   docker-compose start app && \
   docker-compose logs -f || \

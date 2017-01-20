@@ -10,7 +10,18 @@ TODO: Add steps on how to join
 
 ### Contributing
 
-With docker-compose:
+Some utility scripts have been added:
+
+```
+# Run the above docker-compose commands
+script/docker-start
+# Run commands in the container
+script/docker-run rails c
+```
+
+View in your browser at [http://localhost:3000/](http://localhost:3000/)
+
+Or directly with `docker-compose`:
 
 ```
 docker-compose build
@@ -20,19 +31,9 @@ docker-compose run --rm app bundle exec rake db:setup
 docker-compose start app
 ```
 
-View in your browser at [http://localhost:3000/](http://localhost:3000/)
-
 To run commands in the context of the container, e.g., `rake -T`:
 
 ```
 docker-compose run --rm app rake -T
 ```
 
-Some utility scripts have been added:
-
-```
-# Run the above docker-compose commands
-script/docker-start
-# Run commands in the container
-script/docker-run rails c
-```

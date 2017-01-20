@@ -10,7 +10,7 @@ TODO: Add steps on how to join
 
 ### Contributing
 
-Some utility scripts have been added:
+Local development can be done with docker and some utility scripts:
 
 ```
 # Run the above docker-compose commands

@@ -10,30 +10,39 @@ TODO: Add steps on how to join
 
 ### Contributing
 
-Local development can be done with docker and some utility scripts:
+To start the app and database, you can use the helper script:
 
 ```
-# Run the above docker-compose commands
 script/docker-start
-# Run commands in the container
-script/docker-run rails c
+```
+
+Once that is up and running, you can execute `rake` and `rails` commands (or anything else) via `script/docker-run`, e.g.:
+
+```
+script/docker-run rails console
+```
+
+or
+
+```
+script/docker-run rake -T
 ```
 
 View in your browser at [http://localhost:3000/](http://localhost:3000/)
 
-Or directly with `docker-compose`:
+You can also use docker-compose directly:
 
 ```
 docker-compose build
-docker-compose create
-docker-compose start postgres
-docker-compose run --rm app bundle exec rake db:setup
-docker-compose start app
+docker-compose up -d postgres
+docker-compose run --rm app rake db:setup
+docker-compose up -d app
+docker-compose logs -f
 ```
 
-To run commands in the context of the container, e.g., `rake -T`:
+To run commands in the context of the container, e.g., `rails console`:
 
 ```
-docker-compose run --rm app rake -T
+docker-compose run --rm app rails console
 ```
 

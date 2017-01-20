@@ -5,12 +5,12 @@
 #   gem 'sqlite3'
 development: &default
   adapter: postgresql
+  database: <%= ENV['DB_NAME'] || 'crb_dev_duex' %>
+  username: <%= ENV['DB_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
   encoding: unicode
-  database: crb_dev_duex
   pool: 5
-  username: postgres
-  password:
-  host: localhost
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

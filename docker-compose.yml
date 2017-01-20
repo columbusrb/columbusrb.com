@@ -1,13 +1,24 @@
-db:
-  image: postgres
-  ports:
-    - 5432
-web:
-  build: .
-  command: bundle exec thin start
-  volumes:
-    - .:/myapp
-  ports:
-    - "3000:3000"
-  links:
-    - db
+version: '2'
+
+services:
+  app:
+    build: .
+    container_name: columbusrb.com-app
+    volumes:
+      - ".:/app"
+    ports:
+      - "3000:3000"
+    links:
+      - postgres
+    environment:
+      DB_NAME: crb_dev_duex
+      DB_USERNAME: postgres
+      DB_PASSWORD: password
+      DB_HOST: postgres
+
+  postgres:
+    image: postgres:9.6
+    container_name: columbusrb.com-postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password

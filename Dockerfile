@@ -1,14 +1,15 @@
-FROM ruby:2.2.0
-RUN apt-get update -qq
-RUN apt-get install -y build-essential nodejs npm nodejs-legacy libpq-dev vim curl patch gawk g++ gcc make libc6-dev patch libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev
+FROM ruby:2.2.1
 
-RUN npm install -g phantomjs
-RUN mkdir /myapp
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        postgresql-client libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /tmp
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
+WORKDIR /app
+COPY Gemfile* ./
 RUN bundle install
+COPY . /app/
 
-ADD . /myapp
-WORKDIR /myapp
+EXPOSE 3000
+CMD ["rails", "server", "-b", "0.0.0.0"]
+

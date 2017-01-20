@@ -5,8 +5,10 @@ set -euo pipefail
 docker-compose build && \
   docker-compose create postgres && \
   docker-compose up -d postgres && \
+  # Sometimes postgres isn't ready by the time the app starts, so take a cat nap.
+  sleep 2 && \
   docker-compose run --rm app bundle exec rake db:create db:setup && \
-  docker-compose start app && \
+  docker-compose up -d app && \
   docker-compose logs -f || \
   docker-compose stop # If something fails, make sure the containers are stopped.
 

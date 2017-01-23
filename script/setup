@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -eu
+
+STARTTIME=$(date +%s)
+docker-compose up -d postgres
+
+# NOTE: Same credentials/host as docker-compose.yml, but we hit the template1
+# database because the app database won't exist on the first run.
+DATABASE_PING_URL=postgresql://postgres:password@postgres/template1
+
+while true
+do
+  echo "[$(($(date +%s) - $STARTTIME))s] Waiting for postgres to be ready at ${DATABASE_PING_URL}..."
+  docker-compose run --rm postgres psql $DATABASE_PING_URL -c select 1 > /dev/null 2>&1 \
+    && break
+done
+
+docker-compose run --rm web bin/setup
+docker-compose ps

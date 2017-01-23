@@ -1,9 +1,9 @@
 version: '2'
 
 services:
-  app:
+
+  web:
     build: .
-    container_name: columbusrb.com-app
     volumes:
       - ".:/app"
     ports:
@@ -11,6 +11,7 @@ services:
     links:
       - postgres
     environment:
+      # NOTE: Chnage script/setup if you change this value
       DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
 
   postgres:

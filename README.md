@@ -10,39 +10,25 @@ TODO: Add steps on how to join
 
 ### Contributing
 
-To start the app and database, you can use the helper script:
+To start the development server, run the following scripts:
 
 ```
-script/docker-start
+script/setup
+script/server
 ```
 
-Once that is up and running, you can execute `rake` and `rails` commands (or anything else) via `script/docker-run`, e.g.:
-
-```
-script/docker-run rails console
-```
-
-or
-
-```
-script/docker-run rake -T
-```
+After the initial setup you should only need to run `script/server`.
 
 View in your browser at [http://localhost:3000/](http://localhost:3000/)
 
-You can also use docker-compose directly:
+A breakdown of the various scripts:
 
 ```
-docker-compose build
-docker-compose up -d postgres
-docker-compose run --rm app rake db:setup
-docker-compose up -d app
-docker-compose logs -f
+script/setup   # Pull down and setup support images (postgres).
+script/server  # Start the development server.
+script/run     # Execute arbitrary commands in the web container.  E.g., 
+               #   script/run bin/rails runner 'puts BoardMember.count'
+script/test    # Run "rake" in the web container.
+script/console # Run "rails console" in the web container.
+script/cleanup # Remove the development containers.
 ```
-
-To run commands in the context of the container, e.g., `rails console`:
-
-```
-docker-compose run --rm app rails console
-```
-

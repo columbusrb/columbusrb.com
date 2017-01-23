@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -eu
+
+docker-compose run --rm web bin/rails console

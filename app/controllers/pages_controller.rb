@@ -21,6 +21,7 @@ class PagesController < ApplicationController
 
   def now
     @next_crb = Meeting.next_crb
+    @board_members = BoardMember.all
   end
 
 end

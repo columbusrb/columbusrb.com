@@ -54,12 +54,17 @@ section
       [2]:http://ruby-lang.org
       [3]:http://rubyonrails.com
 
+
+
 section
-  #board-of-directors
+  #board
+    h1 Board of Directors
     - @board_members.each do |s|
-      .speaker
+      .member
         .name
           a(href=s.twitter) = s.name
+        .title
+          = s.title
         .bio
           = s.bio
 

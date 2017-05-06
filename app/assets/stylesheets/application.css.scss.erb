@@ -225,30 +225,16 @@ a {
     @include omega(2n);
     margin-bottom: 2em;
 
-    .left {
-      @include span-columns(4 of 12);
-      img {
-        width: 180px;
-        height: 180px;
-      }
+    .name {
+      font-weight: bold;
+      font-size: modular-scale(2);
     }
-
-    .right {
-      @include span-columns(8 of 12);
-      @include omega();
-
-      .name {
-        font-weight: bold;
-        color: $scarlet;
-        font-size: modular-scale(2);
-      }
-      .title {
-        font-style: italic;
-        font-size: modular-scale(1);
-      }
-      .bio {
-        margin-top: 0.75em;
-      }
+    .title {
+      font-style: italic;
+      font-size: modular-scale(1);
+    }
+    .bio {
+      margin-top: 0.75em;
     }
   }
 

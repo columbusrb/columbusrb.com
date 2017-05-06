@@ -21,7 +21,7 @@ class PagesController < ApplicationController
 
   def now
     @next_crb = Meeting.next_crb
-    @board_members = BoardMember.all
+    @board_members = BoardMember.all.order(director: :desc, title: :desc)
   end
 
 end

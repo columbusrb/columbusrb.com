@@ -9,7 +9,6 @@ section
           a(href=s.url)= s.name
         .title
           = s.title
-
   #location
     #map
       a(href="https://www.google.com/maps/place/500,+2+Miranova+Pl,+Columbus,+OH+43215/@39.9545959,-83.0081614,17z/data=!3m1!4b1!4m2!3m1!1s0x88388f478a5f25b3:0x1d1193f8f62da2d4")
@@ -54,3 +53,18 @@ section
       [1]:https://github.com/columbusrb
       [2]:http://ruby-lang.org
       [3]:http://rubyonrails.com
+
+
+
+section
+  #board
+    h1 Board of Directors
+    - @board_members.each do |s|
+      .member
+        .name
+          a(href=s.twitter) = s.name
+        .title
+          = s.title
+        .bio
+          = s.bio
+

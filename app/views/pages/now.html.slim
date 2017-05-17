@@ -62,7 +62,7 @@ section
     - @board_members.each do |s|
       .member
         .name
-          a(href=s.twitter) = s.name
+          a(href=twitter_handle(s.twitter)) = s.name
         .title
           = s.title
         .bio

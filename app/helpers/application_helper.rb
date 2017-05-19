@@ -10,4 +10,10 @@ module ApplicationHelper
     when "Lecture" then "Lecture"
     end
   end
+
+  def twitter_handle(handle)
+    if handle.present?
+      "https://twitter.com/#{handle}"
+    end
+  end
 end

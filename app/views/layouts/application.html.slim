@@ -25,19 +25,16 @@ html
           span.date= formatted_date(@next_crb.time)
 
       #title
-        img src=asset_path("logo.png")
-        .name
-          h1 Columbus
-          h1 Ruby
-          h1 Brigade
+        img src=asset_path("logo.png") alt="Columbus Ruby Brigade"
 
-      section
-        #links
-          = link_to "Meetup.com", "http://www.meetup.com/meetup-group-wEkWWOXK/"
-          = link_to "Slack", "https://crb-slack-invite.herokuapp.com"
-          = link_to "GitHub", "https://github.com/columbusrb"
-          = link_to "Mailing List", "http://eepurl.com/cVggdb"
-          = link_to "Twitter", "https://twitter.com/#!/columbusrb"
+        h2 Connect with us
+
+        ul
+          li = link_to "Meetup.com", "http://www.meetup.com/meetup-group-wEkWWOXK/"
+          li = link_to "Slack", "https://crb-slack-invite.herokuapp.com"
+          li = link_to "GitHub", "https://github.com/columbusrb"
+          li = link_to "Mailing List", "http://eepurl.com/cVggdb"
+          li = link_to "Twitter", "https://twitter.com/#!/columbusrb"
 
       section
         = yield

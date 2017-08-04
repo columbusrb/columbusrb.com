@@ -5,21 +5,33 @@ $modular-scale-ratio: $minor-second;
 
 $white: #FEFFFF;
 $gray: #999999;
+$darkgray: #222;
 $lightgray: #F5F5F5;
 $black: #41463F;
 $scarlet: #95080C;
 $links: $white;
+$to: $darkgray;
+$from: $lightgray;
 
 $mobile: new-breakpoint(max-width 480px);
 $desktop: new-breakpoint(min-width 850px);
 
+@mixin radial-gradient($from, $to) {
+    background: -moz-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, $from), color-stop(100%, $to));
+    background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -o-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: -ms-radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+    background-color: $from;
+}
+
+
 body {
   color: $white;
   margin: 0;
-  font-size: modular-scale(0);
-  background-color: $white;
-  background-image: url('<%= asset_path("101.jpg") %> ');
   background-size: cover;
+  @include radial-gradient(#555A5F, #000000);
 }
 
 p {
@@ -30,6 +42,7 @@ p {
 
 h1 {
   font-size: modular-scale(15);
+  text-shadow: 4px 4px 1px #000;
 }
 
 section {
@@ -39,6 +52,7 @@ section {
 
 h2 {
   font-size: modular-scale(4);
+  text-shadow: 4px 4px 1px #000; 
 }
 
 img {
@@ -48,7 +62,8 @@ img {
 a {
   text-decoration: none;
   color: $links;
-  text-shadow: 0px 0px 20px $white;
+  border-bottom: 1px dashed;
+
 }
 
 #content {
@@ -60,7 +75,7 @@ a {
   margin: 5em 0;
 
   img {
-    @include span-columns(5);
+    @include span-columns(3);
   }
 
   .name {
@@ -71,7 +86,6 @@ a {
       padding: 0;
       margin: 0;
       line-height: 1em;
-      font-size: modular-scale(32);
 
       &:first-child {
         margin-top: 0.2em;
@@ -161,18 +175,12 @@ a {
 }
 
 #links {
-  @include span-columns(12);
 
-  h2 {
-    color: $white;
-  }
 
   a {
-    @include span-columns(2);
     font-size: modular-scale(4);
     color: $white;
     text-align: center;
-    text-transform: uppercase;
   }
 }
 
@@ -287,6 +295,23 @@ a {
   strong {
     font-weight: bold;
     padding-right: 0.5em;
+  }
+}
+
+table{
+  border-collapse: collapse;
+  th {
+    padding: 0.5em;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+  }
+  tr {
+    border-bottom: 1px solid #ccc;
+  }
+  td {
+    text-align: center;
+    padding: 0.5em;
   }
 }
 

@@ -5,4 +5,6 @@ Columbusrb::Application.routes.draw do
   root to: "pages#now"
 
   get 'feedback' => redirect("https://www.surveymonkey.com/r/JB9JX8X")
+
+  get '/companies', to: "pages#companies"
 end

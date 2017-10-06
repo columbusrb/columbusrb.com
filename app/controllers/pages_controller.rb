@@ -10,5 +10,4 @@ class PagesController < ApplicationController
     @next_crb = Meeting.next_crb
     @board_members = BoardMember.all.order(director: :desc, title: :asc)
   end
-
 end

@@ -46,9 +46,10 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
   color: $links;
-  text-shadow: 0px 0px 20px $white;
 }
 
 #content {
@@ -207,11 +208,7 @@ a {
   }
 }
 
-#what {
-  @include span-columns(6 of 12);
-}
-
-#crb-labs {
+#what, #crb-labs {
   @include span-columns(6 of 12);
 }
 
@@ -331,4 +328,17 @@ a {
     }
   }
 
+}
+
+table {
+  width: 100%;
+  background: hsla(0, 0%, 100%, 0.5);
+  color: black;
+  thead {
+    text-align: left;
+  }
+
+  tr {
+    border-bottom: 1px solid white;
+  }
 }

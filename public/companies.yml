@@ -4,4 +4,10 @@
   location: Downtown Columbus
   team_size: Large
   other_tech: PHP, Python
-  ruby_role: Web apps (GUI & API), backend systems
+
+- name: Mutually Human
+  url: https://www.mutuallyhuman.com
+  market: Consulting
+  location: Downtown Columbus
+  team_size: Small
+  other_tech: Javascript, iOS

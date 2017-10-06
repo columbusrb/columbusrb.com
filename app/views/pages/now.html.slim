@@ -54,6 +54,33 @@ section
       [2]:http://ruby-lang.org
       [3]:http://rubyonrails.com
 
+section
+  #who-uses-ruby
+    h4 Who's using Ruby?
+
+    markdown:
+      Have you ever wondered who's using Ruby in Columbus?
+      Want to find Ruby developers who want to work at your company?
+      Want to get your company on the list? [Put in a Pull Request here!][1]
+
+      [1]:http://github.com/columbusrb/columbusrb.com
+
+    table
+      thead
+        tr
+          th Name
+          th Url
+          th Market
+          th Location
+      tbody
+        - COMPANIES.each do |company|
+          tr
+            td = company.name
+            td = company.url
+            td = company.market
+            td = company.location
+
+
 
 
 section

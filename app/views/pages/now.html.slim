@@ -61,9 +61,25 @@ section
     markdown:
       Have you ever wondered who's using Ruby in Columbus?
       Want to find Ruby developers who want to work at your company?
-      [Find out who's using it now!][1]
+      Want to get your company on the list? [Put in a Pull Request here!][1]
 
-      [1]:/companies
+      [1]:http://github.com/columbusrb/columbusrb.com
+
+    table
+      thead
+        tr
+          th Name
+          th Url
+          th Market
+          th Location
+      tbody
+        - COMPANIES.each do |company|
+          tr
+            td = company.name
+            td = company.url
+            td = company.market
+            td = company.location
+
 
 
 

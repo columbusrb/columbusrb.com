@@ -46,9 +46,10 @@ img {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
   color: $links;
-  text-shadow: 0px 0px 20px $white;
 }
 
 #content {
@@ -207,7 +208,7 @@ a {
   }
 }
 
-#what, #crb-labs, #who-uses-ruby {
+#what, #crb-labs {
   @include span-columns(6 of 12);
 }
 

@@ -11,3 +11,10 @@
   location: Downtown Columbus
   team_size: Small
   other_tech: Javascript, iOS
+
+- name: Root Insurance
+  url: https://www.joinroot.com
+  market: Insurance
+  location: Downtown Columbus
+  team_size: Small
+  other_tech: React Native, React, iOS, Android

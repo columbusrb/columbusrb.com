@@ -18,3 +18,10 @@
   location: Downtown Columbus
   team_size: Small
   other_tech: React Native, React, iOS, Android
+
+- name: Orange Barrel Media
+  url: https://www.orangebarrelmedia.com
+  market: Marketing and Advertising
+  location: Downtown Columbus
+  team_size: Small
+  other_tech: Javascript, Backbone, iOS, Android

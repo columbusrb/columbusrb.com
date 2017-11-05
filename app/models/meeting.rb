@@ -4,16 +4,16 @@ class Meeting < ActiveRecord::Base
 
   attr_accessor :crb_times
 
-  scope :next_crb, -> { where(["DATE(time) >= ?", Date.today]).order('time ASC').limit(1) }
+ # scope :next_crb, -> { where(["DATE(time) >= ?", Date.today]).order('time ASC').limit(1).first }
   scope :lecture, -> { where(["format = ?", "Lecture"]) }
   scope :current_month_crb, -> { where(["DATE(time) >? AND DATE(time)<?", Time.now.beginning_of_month, Time.now.end_of_month]).order('time ASC').limit(1) }
-
   def self.add_speaker_to_next_meeting(name, title, url)
-    next_crb.speakers.create!({name: name, title:title, url: url})
+    find_or_create_next_date.speakers.create!({name: name, title:title, url: url})
   end
 
   def self.find_or_create_next_date
-    if Meeting.next_crb.blank?
+    next_crb = Meeting.select("time").where(["DATE(time) >= ?", Date.today]).first
+    if next_crb.blank?
       if Meeting.current_month_crb.blank?
         next_month = 0
       else

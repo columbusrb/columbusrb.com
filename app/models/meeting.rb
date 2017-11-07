@@ -12,8 +12,8 @@ class Meeting < ActiveRecord::Base
   end
 
   def self.find_or_create_next_date
-    next_crb = Meeting.select("time").where(["DATE(time) >= ?", Date.today]).first
-    if next_crb.blank?
+    @next_crb = Meeting.all.where(["DATE(time) >= ?", Date.today]).first
+    if @next_crb.blank?
       if Meeting.current_month_crb.blank?
         next_month = 0
       else
@@ -29,7 +29,7 @@ class Meeting < ActiveRecord::Base
 
       Meeting.find_or_create_by(time: crb_time)
     else
-      next_crb
+      @next_crb
     end
   end
 

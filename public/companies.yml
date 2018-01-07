@@ -25,3 +25,11 @@
   location: Downtown Columbus
   team_size: Small
   other_tech: Javascript, Backbone, iOS, Android
+
+- name: Ready Made RC, LLC 
+  url: https://www.readymaderc.com
+  market: Online Retail 
+  location: Lewis Center
+  team_size: Small 
+  other_tech: React, PHP
+

@@ -1,0 +1,16 @@
+
+doctype html
+html
+  head
+    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(name="language" content="en")
+
+    title Columbus Ruby Brigade
+
+    = csrf_meta_tags
+    = stylesheet_link_tag    "scaffolds", :media => "all"
+    = javascript_include_tag "application"
+
+  body
+
+   = yield

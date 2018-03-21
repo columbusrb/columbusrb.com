@@ -2,10 +2,10 @@ class SpeakersController < ApplicationController
   before_action :set_speaker, only: [:show, :edit, :update, :destroy]
     http_basic_authenticate_with name: ENV["ADMIN_USER"], password: ENV["ADMIN_PASSWORD"]
 
-  layout false
+  layout 'blank_slate'
   # GET /speakers
   def index
-    @speakers = Speaker.all
+    @speakers = Speaker.all.includes(:meeting)
   end
 
   # GET /speakers/1
@@ -55,6 +55,6 @@ class SpeakersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def speaker_params
-      params.require(:speaker).permit(:name, :title, :url)
+      params.require(:speaker).permit(:name, :title, :url, :meeting_id)
     end
 end

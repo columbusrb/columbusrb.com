@@ -23,6 +23,10 @@
     <%= f.label :url %><br>
     <%= f.text_field :url %>
   </div>
+  <div class="field">
+    <%= f.label :meeting %><br>
+    <%= f.select :meeting_id, Meeting.future_meetings.collect { |m| [ m.time, m.id ] }, include_blank: true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

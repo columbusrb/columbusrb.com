@@ -11,8 +11,10 @@ services:
     links:
       - postgres
     environment:
-      # NOTE: Chnage script/setup if you change this value
+      # NOTE: Change script/setup if you change this value
       DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
+      ADMIN_USER: admin
+      ADMIN_PASSWORD: admin
 
   postgres:
     image: postgres:9.6

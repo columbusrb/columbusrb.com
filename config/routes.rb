@@ -1,5 +1,7 @@
 Columbusrb::Application.routes.draw do
 
+  resources :speakers
+  resources :speakers
   post '/speakers/add', to: "pages#add_speaker"
 
   root to: "pages#now"

@@ -79,7 +79,7 @@ section
         - COMPANIES.each do |company|
           tr
             td = company.name
-            td = company.url
+            td = link_to(company.url, company.url, html_options = {})
             td = company.market
             td = company.location
 

@@ -40,3 +40,10 @@
   location: Downtown Columbus
   team_size: Small 
   other_tech: React, MySQL, GoLang, MySQL
+
+- name: Switchbox, Inc
+  url: https://www.switchboxinc.com
+  market: Custom Application Development
+  location: Upper Arlington
+  team_size: Small 
+  other_tech: PHP, Java, .Net, iOS, Android

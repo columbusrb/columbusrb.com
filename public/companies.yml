@@ -12,6 +12,13 @@
   team_size: Small
   other_tech: Javascript, iOS
 
+- name: Bold Penguin
+  url: http://www.boldpenguin.com
+  market: Insurtech
+  location: Downtown Columbus
+  team_size: Small
+  other_tech: AWS, Angular, MySQL, PostgreSQL, Redis
+
 - name: Root Insurance
   url: https://www.joinroot.com
   market: Insurance

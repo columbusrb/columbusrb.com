@@ -3,7 +3,7 @@ Speaker.delete_all
 BoardMember.delete_all
 Video.delete_all
 
-Meeting.insert_times_for_five_years
+Meeting.find_or_create_next_date
 
 20.times do
   Video.create do |v|

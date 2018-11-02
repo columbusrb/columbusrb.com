@@ -5,7 +5,7 @@ class SpeakersController < ApplicationController
   layout 'blank_slate'
   # GET /speakers
   def index
-    @speakers = Speaker.all.includes(:meeting)
+    @speakers = Speaker.all.joins(:meeting).order('meetings.time desc')
   end
 
   # GET /speakers/1

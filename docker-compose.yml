@@ -17,7 +17,7 @@ services:
       ADMIN_PASSWORD: admin
 
   postgres:
-    image: postgres:9.6
+    image: postgres:10
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password

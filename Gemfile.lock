@@ -83,6 +83,7 @@ GEM
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
     daemons (1.2.3)
+    database_cleaner (1.7.0)
     devise (3.5.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -226,6 +227,7 @@ DEPENDENCIES
   bourbon
   coffee-rails
   cucumber-rails
+  database_cleaner
   devise
   faker
   jquery-rails

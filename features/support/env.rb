@@ -31,6 +31,12 @@ ActionController::Base.allow_rescue = false
 # Remove/comment out the lines below if your app doesn't have a database.
 # For some databases (like MongoDB and CouchDB) you may need to use :truncation instead.
 begin
+  DatabaseCleaner
+  DatabaseCleaner.allow_remote_database_url = true
+  # TODO: replace allow_remote_database_url above with this whitelist when
+  # database_cleaner >1.7.0 is released.
+  # DatabaseCleaner.url_whitelist =
+  #   ['postgresql://postgres:password@postgres/crb_development?pool=5']
   DatabaseCleaner.strategy = :transaction
 rescue NameError
   raise "You need to add database_cleaner to your Gemfile (in the :test group) if you wish to use it."

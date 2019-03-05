@@ -18,6 +18,7 @@ gem 'devise'
 gem 'rails_12factor'
 
 group :development do
+  gem 'listen'
   gem 'faker'
 end
 

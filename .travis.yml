@@ -5,9 +5,6 @@ services:
 
 language: ruby
 
-rvm:
-  - 2.6.0
-
 before_install:
   - script/setup
 

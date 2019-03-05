@@ -14,6 +14,13 @@ If Docker is installed start the development server by running the following scr
 script/setup
 script/server
 ```
+
+In certain cases, if you update gems, you may need to rebuild the docker containers to install the new dependencies. This is easily done with:
+
+```
+script/rebuild
+```
+
 If Docker is not installed, please [install][dk]
 [dk]: https://www.docker.com
 
@@ -31,6 +38,7 @@ script/run     # Execute arbitrary commands in the web container.  E.g.,
 script/test    # Run "rake" in the web container.
 script/console # Run "rails console" in the web container.
 script/cleanup # Remove the development containers.
+script/rebuild # Rebuild the web container. Useful if it is missing new gems.
 ```
 
 A pre-requisite is having Docker installed.

@@ -1,15 +1,14 @@
 source 'https://rubygems.org'
 
-ruby '2.2.1'
+ruby '2.6.0'
 
-gem 'rails', '~> 4.2.3'
+gem 'rails', '~> 5.1.0'
 gem 'pry'
 gem 'slim'
-gem 'bourbon'
-gem 'neat'
+gem 'bourbon', '4.2.4'
+gem 'neat', '1.7.2'
 gem 'jquery-rails'
 gem 'redcarpet'
-gem 'quiet_assets'
 gem 'minitest'
 gem 'rest-client'
 gem 'thin'
@@ -19,6 +18,7 @@ gem 'devise'
 gem 'rails_12factor'
 
 group :development do
+  gem 'listen'
   gem 'faker'
 end
 

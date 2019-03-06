@@ -1,4 +1,4 @@
-FROM ruby:2.2.1
+FROM ruby:2.6.0
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -7,9 +7,10 @@ RUN apt-get update \
 
 WORKDIR /app
 COPY Gemfile* ./
+RUN gem update --system
+RUN gem update bundler
 RUN bundle install
 COPY . /app/
 
 EXPOSE 3000
 CMD ["bin/rails", "server", "-b", "0.0.0.0"]
-

@@ -47,7 +47,6 @@
   team_size: Small 
   other_tech: React, PHP
 
-
 - name: Beam Technologies, Inc
   url: https://www.beam.dental
   market: Dental Insurance
@@ -61,3 +60,10 @@
   location: Upper Arlington
   team_size: Small 
   other_tech: PHP, Java, .Net, iOS, Android
+  
+- name: Upstart
+  url: https://www.upstart.com
+  market: Fintech
+  location: Short North
+  team_size: Small
+  other_tech: AWS, Docker, Jenkins, Postgres, Python, React, Redis

@@ -26,7 +26,7 @@ class Admin::SpeakersController < ApplicationController
     @speaker = Speaker.new(speaker_params)
 
     if @speaker.save
-      redirect_to @speaker, notice: 'Speaker was successfully created.'
+      redirect_to admin_speaker_path(@speaker), notice: 'Speaker was successfully created.'
     else
       render :new
     end
@@ -35,7 +35,7 @@ class Admin::SpeakersController < ApplicationController
   # PATCH/PUT /speakers/1
   def update
     if @speaker.update(speaker_params)
-      redirect_to @speaker, notice: 'Speaker was successfully updated.'
+      redirect_to admin_speaker_path(@speaker), notice: 'Speaker was successfully updated.'
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class Admin::SpeakersController < ApplicationController
   # DELETE /speakers/1
   def destroy
     @speaker.destroy
-    redirect_to speakers_url, notice: 'Speaker was successfully destroyed.'
+    redirect_to admin_speakers_url, notice: 'Speaker was successfully destroyed.'
   end
 
   private

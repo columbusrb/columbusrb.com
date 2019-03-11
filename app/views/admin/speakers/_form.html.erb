@@ -1,4 +1,4 @@
-<%= form_for(@speaker) do |f| %>
+<%= form_for([:admin, @speaker]) do |f| %>
   <% if @speaker.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@speaker.errors.count, "error") %> prohibited this speaker from being saved:</h2>

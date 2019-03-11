@@ -21,7 +21,7 @@ class SpeakersControllerTest < ActionController::TestCase
       post :create, speaker: { name: @speaker.name, title: @speaker.title, url: @speaker.url }
     end
 
-    assert_redirected_to speaker_path(assigns(:speaker))
+    assert_redirected_to admin_speaker_path(assigns(:speaker))
   end
 
   test "should show speaker" do
@@ -36,7 +36,7 @@ class SpeakersControllerTest < ActionController::TestCase
 
   test "should update speaker" do
     patch :update, id: @speaker, speaker: { name: @speaker.name, title: @speaker.title, url: @speaker.url }
-    assert_redirected_to speaker_path(assigns(:speaker))
+    assert_redirected_to admin_speaker_path(assigns(:speaker))
   end
 
   test "should destroy speaker" do
@@ -44,6 +44,6 @@ class SpeakersControllerTest < ActionController::TestCase
       delete :destroy, id: @speaker
     end
 
-    assert_redirected_to speakers_path
+    assert_redirected_to admin_speakers_path
   end
 end

@@ -1,4 +1,4 @@
-class SpeakersController < ApplicationController
+class Admin::SpeakersController < ApplicationController
   before_action :set_speaker, only: [:show, :edit, :update, :destroy]
     http_basic_authenticate_with name: ENV["ADMIN_USER"], password: ENV["ADMIN_PASSWORD"]
 

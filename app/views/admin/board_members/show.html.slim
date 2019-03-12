@@ -1,0 +1,26 @@
+h1 #{@member.name}
+
+div class='w-full md:w-1/2 p-3 border'
+  h3 Title
+  p.mb-2
+    - if @member.title.present?
+      = @member.title
+    - else
+      .italic No title, just a cool board member.
+
+  h3 Bio
+  p.mb-2= @member.bio
+
+  h3 Twitter
+  p.mb-2
+    - if @member.twitter.present?
+      = @member.twitter
+    - else
+      .italic Not on Twitter, or just hiding from us. Which is probably smart.
+
+  p.pt-2
+    = link_to "Edit #{@member.name}", edit_admin_board_member_path(@member)
+    | &nbsp|&nbsp
+    = link_to 'Back to list', admin_board_members_path
+    | &nbsp|&nbsp
+    span.bg-red-lighter.p-1.rounded= link_to "Delete #{@member.name}", admin_board_member_path(@member), method: :delete, data: {confirm: "Really delete #{@member.name} from the Board? This is not reversible."}

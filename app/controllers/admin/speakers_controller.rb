@@ -1,8 +1,6 @@
-class Admin::SpeakersController < ApplicationController
+class Admin::SpeakersController < AdminController
   before_action :set_speaker, only: [:show, :edit, :update, :destroy]
-    http_basic_authenticate_with name: ENV["ADMIN_USER"], password: ENV["ADMIN_PASSWORD"]
 
-  layout 'blank_slate'
   # GET /speakers
   def index
     @speakers = Speaker.all.joins(:meeting).order('meetings.time desc')

@@ -8,6 +8,7 @@ class Admin::BoardMembersController < AdminController
   end
 
   def new
+    @header = 'Board Member Creation Kit'
     @member = BoardMember.new
   end
 
@@ -22,13 +23,14 @@ class Admin::BoardMembersController < AdminController
   end
 
   def edit
+    @header = 'Board Member Mutation System'
     @member = BoardMember.find(params[:id])
   end
 
   def update
     @member = BoardMember.find(params[:id])
     if @member.update(member_params)
-      redirect_to admin_member_path(@member), notice: "#{@member.name} details have been updated."
+      redirect_to admin_board_members_path, notice: "#{@member.name} details have been updated."
     else
       render :edit
     end

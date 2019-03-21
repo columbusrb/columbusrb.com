@@ -90,6 +90,20 @@
             </div>
           <% end %>
 
+          <% if flash[:notice].present? %>
+            <div class="bg-green-lightest border-l-4 border-green text-green-dark p-4 m-3" role="alert">
+              <p class="font-bold">You Did It!</p>
+              <p><%= flash[:notice] %></p>
+            </div>
+          <% end %>
+
+          <% if flash[:notice].present? %>
+            <div class="bg-red-lightest border-l-4 border-red text-red-dark p-4 m-3" role="alert">
+              <p class="font-bold">Oh No!</p>
+              <p><%= flash[:error] %></p>
+            </div>
+          <% end %>
+
           <div class="mt-2 pl-4">
             <%= yield %>
           </div>

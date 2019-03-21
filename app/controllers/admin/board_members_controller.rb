@@ -46,6 +46,7 @@ class Admin::BoardMembersController < AdminController
 
   def set_header
     @header = 'Board Members'
+    @current_section = :board
   end
 
   def member_params

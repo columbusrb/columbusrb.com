@@ -51,6 +51,11 @@ class Admin::SpeakersController < AdminController
       @speaker = Speaker.find(params[:id])
     end
 
+    def set_header
+      @header = "Speakers"
+      @current_section = :speakers
+    end
+
     # Only allow a trusted parameter "white list" through.
     def speaker_params
       params.require(:speaker).permit(:name, :title, :url, :meeting_id)

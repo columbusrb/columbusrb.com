@@ -11,6 +11,7 @@ class AdminController < ApplicationController
   private
 
   def set_header
-    @header = 'Admin Dashboard'
+    @header = 'Generic Admin Dashboard'
+    @current_section = :dashboard
   end
 end

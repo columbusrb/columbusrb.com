@@ -97,7 +97,7 @@
             </div>
           <% end %>
 
-          <% if flash[:notice].present? %>
+          <% if flash[:error].present? %>
             <div class="bg-red-lightest border-l-4 border-red text-red-dark p-4 m-3" role="alert">
               <p class="font-bold">Oh No!</p>
               <p><%= flash[:error] %></p>

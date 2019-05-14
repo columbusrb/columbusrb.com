@@ -19,7 +19,7 @@ module ApplicationHelper
 
   def color_section(current_section, section, color)
     if current_section == section
-      "border-#{color}
+      "border-#{color}"
     end
   end
 end

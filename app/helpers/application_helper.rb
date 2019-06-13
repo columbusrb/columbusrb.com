@@ -16,4 +16,10 @@ module ApplicationHelper
       "https://twitter.com/#{handle}"
     end
   end
+
+  def color_section(current_section, section, color)
+    if current_section == section
+      "border-#{color}"
+    end
+  end
 end

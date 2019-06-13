@@ -1,0 +1,18 @@
+p.mb-3.mt-4
+  = link_to 'Add Board Member', new_admin_board_member_path, class: 'bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded no-underline my-4'
+
+table.w-full.p-5.text-grey-darker
+  thead
+    tr
+      th.p-1.text-left.text-blue-darkest Name
+      th.p-1.text-left.text-blue-darkest Title
+      th
+  tbody
+    - @members.each do |member|
+      tr
+        td.p-1= link_to member.name, admin_board_member_path(member)
+        td.p-1= member.title
+        td.p-1
+          = link_to 'edit', edit_admin_board_member_path(member)
+          | &nbsp;|&nbsp;
+          = link_to 'delete', admin_board_member_path(member), method: :delete, data: {confirm: "Really delete #{member.name} from the Board? This is not reversible."}

@@ -1,6 +1,10 @@
 Columbusrb::Application.routes.draw do
 
-  resources :speakers
+  get 'admin' => 'admin#index'
+  namespace :admin do
+    resources :speakers
+    resources :board_members
+  end
 
   root to: "pages#now"
 

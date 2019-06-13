@@ -2,7 +2,7 @@
 
 <h1>Listing Speakers</h1>
 
-<%= link_to 'New Speaker', new_speaker_path %>
+<%= link_to 'New Speaker', new_admin_speaker_path %>
 
 <table>
   <thead>
@@ -22,13 +22,12 @@
         <td><%= speaker.title %></td>
         <td><%= speaker.url %></td>
         <td><%= speaker.meeting.try(:time) %></td>
-        <td><%= link_to 'Show', speaker %></td>
-        <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
-        <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_speaker_path(speaker) %></td>
+        <td><%= link_to 'Edit', edit_admin_speaker_path(speaker) %></td>
+        <td><%= link_to 'Destroy', admin_speaker_path(speaker), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-

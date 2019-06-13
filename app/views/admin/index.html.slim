@@ -1,0 +1,17 @@
+h3.block Next Meeting: #{formatted_date(@next_meeting.to_s)}
+
+.flex.flex-row.flex-wrap.flex-grow
+  .bg-white.border-transparent.rounded-lg.shadow-lg.mt-2
+    .bg-grey-light.border-b-2.border-grey.rounded-tl-lg.rounded-tr-lg.p-2
+      h5.uppercase.text-grey-dark Speakers
+    .p-5
+      table.w-full.p-5.text-grey-darker
+        thead
+          tr
+            th.p-1.text-left.text-blue-darkest Name
+            th.p-1.text-left.text-blue-darkest Title
+        tbody
+          - @next_meeting.speakers.each do |speaker|
+            tr
+              td.p-1= speaker.name
+              td.p-1= speaker.title

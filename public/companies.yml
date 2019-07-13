@@ -74,3 +74,10 @@
   location: Short North
   team_size: Small
   other_tech: AWS, Docker, Jenkins, Postgres, Python, React, Redis
+  
+- name: Your Lighting Brand 
+  url: https://www.lighting.exchange
+  market: Marketing and Advertising 
+  location: Downtown Columbus 
+  team_size: Small
+  other_tech: PostgreSQL, React, PHP, Javascript

@@ -17,3 +17,6 @@
 .DS_Store
 .redcar
 /.redcar
+
+# Ignore encrypted secrets key file.
+config/secrets.yml.key

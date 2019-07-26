@@ -3,7 +3,7 @@ class Admin::SpeakersController < AdminController
 
   # GET /speakers
   def index
-    @speakers = Speaker.all.joins(:meeting).order('meetings.time desc')
+    @speakers = Speaker.all.joins(:meeting).order('meetings.time desc').group_by(&:meeting)
   end
 
   # GET /speakers/1

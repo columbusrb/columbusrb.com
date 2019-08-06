@@ -2,7 +2,8 @@ p.mb-3.mt-4
   = link_to 'Add Speaker', new_admin_speaker_path, class: 'bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded no-underline my-4'
 
 - @speakers.each do |meeting, speakers|
-    h2= formatted_date meeting.time
+    h2 alt=formatted_date(meeting.time)
+      = month_year(meeting.time)
     - speakers.each do |speaker|
       .flex
         div class="w-1/3"

@@ -11,6 +11,10 @@ module ApplicationHelper
     end
   end
 
+  def month_year(date)
+    date.strftime('%B %Y')
+  end
+
   def twitter_handle(handle)
     if handle.present?
       "https://twitter.com/#{handle}"

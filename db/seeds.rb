@@ -15,7 +15,7 @@ end
 BoardMember.create do |b|
   b.name = "Matt Darby"
   b.title = "Director"
-  b.bio = Faker::Lorem.paragraphs(3).join(" ")
+  b.bio = Faker::Lorem.paragraphs.join(" ")
   b.director = true
 end
 
@@ -48,7 +48,7 @@ Meeting.all.each do |m|
     m.speakers.create do |s|
       s.name = Faker::Name.name
       s.title = Faker::Company.catch_phrase
-      s.url = Faker::Internet.url('columbusrb.com')
+      s.url = Faker::Internet.url(host:'columbusrb.com')
       s.twitter = Faker::Internet::user_name
     end
   end

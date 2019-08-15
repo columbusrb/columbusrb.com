@@ -67,4 +67,7 @@ Columbusrb::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   config.assets.precompile += %w(active_admin.css active_admin.js active_admin/print.css)
+
+  #meetup api server url
+  config.meetup_api_server_url = "https://api.meetup.com/"
 end

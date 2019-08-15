@@ -16,6 +16,7 @@ gem 'pg'
 gem 'unicorn'
 gem 'devise'
 gem 'rails_12factor'
+gem 'active_rest_client'
 
 group :development do
   gem 'listen'

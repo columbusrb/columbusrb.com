@@ -81,3 +81,10 @@
   location: Downtown Columbus 
   team_size: Small
   other_tech: PostgreSQL, React, PHP, Javascript
+  
+- name: Pigeon
+  url: https://pigeonforteachers.com
+  market: Edutech
+  location: Columbus
+  team_size: Small
+  other_tech: Postgres, Twilio, Heroku, AWS, Stimulus, React

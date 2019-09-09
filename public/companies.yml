@@ -88,3 +88,10 @@
   location: Columbus
   team_size: Small
   other_tech: Postgres, Twilio, Heroku, AWS, Stimulus, React
+  
+- name: Data-Axle
+  url: https://www.data-axle.com
+  market: Data and Marketing
+  location: Remote
+  team_size: Small
+  other_tech: Elasticsearch, Postgres, AWS, Javascript

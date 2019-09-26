@@ -95,3 +95,10 @@
   location: Remote
   team_size: Small
   other_tech: Elasticsearch, Postgres, AWS, Javascript
+
+- name: Ticketfire
+  url: https://www.ticketfire.com
+  market: Entertainment
+  location: Campus Area
+  team_size: Small
+  other_tech: AWS, MySQL, Javascript, iOS, Android

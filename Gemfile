@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.1'
 
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 6.0.0'
 gem 'pry'
 gem 'slim'
 gem 'bourbon', '4.2.4'

@@ -1,0 +1,20 @@
+h2 Admin Login
+
+- if Rails.env.development?
+  p: markdown: Development login is **admin@example.com** / **devadmin**
+
+  = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .field
+      = f.label :email
+      br
+      = f.email_field :email, autofocus: true, autocomplete: "email"
+
+    .field
+      = f.label :password
+      br
+      = f.password_field :password, autocomplete: "current-password"
+
+    .actions
+      = f.submit "Log in"
+- else
+  = link_to 'Log in with your Columbus Ruby Brigade, Inc account', admin_user_google_oauth2_omniauth_authorize_path

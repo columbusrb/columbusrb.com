@@ -1,6 +1,13 @@
+# coding: utf-8
 Columbusrb::Application.routes.draw do
+  devise_for :admin_users, only: [:sessions, :omniauth_callbacks],
+             controllers: {
+               sessions: 'admin/sessions',
+               omniauth_callbacks: 'admin/sessions'
+             }
 
   get 'admin' => 'admin#index'
+
   namespace :admin do
     resources :speakers
     resources :board_members
@@ -9,5 +16,4 @@ Columbusrb::Application.routes.draw do
   root to: "pages#now"
 
   get 'feedback' => redirect("https://www.surveymonkey.com/r/JB9JX8X")
-
 end

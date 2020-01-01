@@ -23,7 +23,7 @@ class Admin::SessionsController < Devise::SessionsController
   def google_oauth2
     auth_hash = request.env['omniauth.auth']
     user = AdminUser.from_omniauth(auth_hash)
-    log_in(user)
+    sign_in(user)
 
     redirect_to admin_path
   end

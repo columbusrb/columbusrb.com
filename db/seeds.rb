@@ -2,6 +2,7 @@ Meeting.delete_all
 Speaker.delete_all
 BoardMember.delete_all
 Video.delete_all
+AdminUser.delete_all
 
 Meeting.find_or_create_next_date
 
@@ -52,4 +53,10 @@ Meeting.all.each do |m|
       s.twitter = Faker::Internet::user_name
     end
   end
+end
+
+AdminUser.create do |u|
+  u.name = 'Development Admin'
+  u.email = 'admin@example.com'
+  u.password = u.password_confirmation = 'devadmin'
 end

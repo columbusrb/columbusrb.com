@@ -1,4 +1,4 @@
-class MeetupGroup < ActiveRestClient::Base
+class MeetupGroup < Flexirest::Base
   base_url Rails.application.config.meetup_api_server_url
 
   get :info, "meetup-group-wEkWWOXK"

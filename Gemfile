@@ -17,7 +17,7 @@ gem 'unicorn'
 gem 'devise'
 gem 'omniauth-google-oauth2'
 gem 'rails_12factor'
-gem 'active_rest_client'
+gem 'flexirest'
 
 group :development do
   gem 'listen'

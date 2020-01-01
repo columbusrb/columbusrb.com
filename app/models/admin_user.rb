@@ -7,6 +7,7 @@ class AdminUser < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     user = where(email: auth.info.email).first_or_initialize
+    user.password = user.password_confirmation = SecureRandom.uuid
     user.name = auth.info.name
     user.google_token = auth.credentials.token
 

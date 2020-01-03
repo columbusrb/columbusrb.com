@@ -20,3 +20,10 @@
 
 # Ignore encrypted secrets key file.
 config/secrets.yml.key
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

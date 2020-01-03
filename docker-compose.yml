@@ -5,17 +5,30 @@ services:
   web:
     build: .
     volumes:
-      - ".:/app"
+      - .:/app
     ports:
-      - "3000:3000"
+      - 3000:3000
     links:
       - postgres
+      - webpacker
     environment:
       # NOTE: Change script/setup if you change this value
       DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
+      WEBPACKER_DEV_SERVER_HOST: webpacker
 
   postgres:
     image: postgres:10
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
+
+  webpacker:
+    build: .
+    command: ./bin/webpack-dev-server
+    ports:
+      - 3035:3035
+    volumes:
+      - .:/app
+    environment:
+      DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
+      WEBPACKER_DEV_SERVER_HOST: 0.0.0.0

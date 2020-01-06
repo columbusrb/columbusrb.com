@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "@rails/webpacker": "4.2.2"
+    "@rails/webpacker": "4.2.2",
+    "npx": "^10.2.0",
+    "tailwindcss": "^1.1.4"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.10.1"

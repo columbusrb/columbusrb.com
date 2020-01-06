@@ -5,48 +5,59 @@ html
     meta(name="language" content="en")
     meta(name="description" content="Columbus Ruby Brigade is a collection of professionals excited about Ruby")
     meta(name="keywords" content="ruby columbus programming usergroup rails javascript web development")
+    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Bebas+Neue|Zilla+Slab&display=swap"
+    = javascript_pack_tag 'application'
+    = stylesheet_pack_tag 'application'
 
     title Columbus Ruby Brigade
 
     = csrf_meta_tags
-    = stylesheet_link_tag    "application", :media => "all"
-    = javascript_include_tag "application", "//use.typekit.net/alz5etq.js"
-
-    javascript:
-      try{Typekit.load();}catch(e){}
 
   body
-    #content
-      #strip
-        .since EST 2005 &mdash; #{@members} members strong
-        .next-meeting
-          span.label Next Meeting:
-          span.date= formatted_date(@next_crb.time)
 
-      #title
-        img src=asset_path("logo.png")
-        .name
-          h1 Columbus
-          h1 Ruby
-          h1 Brigade
+    div class="bg-purple-700 text-gray-200 font-semibold align-top p-1 text-center"
+      p Established 2005 &mdash; #{@members} members strong
 
-      section
-        #links
-          = link_to "Meetup.com", "http://www.meetup.com/meetup-group-wEkWWOXK/"
-          = link_to "Slack", "https://crb-slack-invite.herokuapp.com"
-          = link_to "GitHub", "https://github.com/columbusrb"
-          = link_to "Mailing List", "http://eepurl.com/cVggdb"
-          = link_to "Twitter", "https://twitter.com/columbusrb"
+    div class="bg-purple-900 p-4 lg:flex justify-center"
+      = image_pack_tag('media/images/logo.png', class: 'w-1/4 h-1/4')
 
-      section
-        = yield
+      div class="text-gray-200 pl-6"
+        h1.text-6xl Columbus Ruby Brigade
+        .flex.text-3xl
+          div class="w-1/3 font-extrabold" Next Meeting:
+          div class="w-2/3"= formatted_date(@next_crb.time)
 
-      section
-        h2 Graciously Sponsored By
-        #sponsors
-          = link_to(image_tag('https://www.covermymeds.com/main/wp-content/themes/mana-child/images/CoverMyMeds_Logo.png', alt: 'CoverMyMeds'), 'http://covermymeds.com', target: '_blank')
-          = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank')
-          = link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank')
-          = link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank')
-          = link_to(image_tag('td.png', alt: 'TestDouble'), 'http://testdouble.com', target: '_blank')
-          = link_to(image_tag('http://www.balancedteam.org/wp-content/uploads/2012/08/mutuallyhuman-500minusCS-21.png', alt: 'MutuallyHuman'), 'http://www.mutuallyhuman.com', target: '_blank')
+/   #content
+/     #strip
+/       .since EST 2005 &mdash; #{@members} members strong
+/       .next-meeting
+/         span.label Next Meeting:
+/         span.date= formatted_date(@next_crb.time)
+
+/     #title
+/       img src=asset_path("logo.png")
+/       .name
+/         h1 Columbus
+/         h1 Ruby
+/         h1 Brigade
+
+/     section
+/       #links
+/         = link_to "Meetup.com", "http://www.meetup.com/meetup-group-wEkWWOXK/"
+/         = link_to "Slack", "https://crb-slack-invite.herokuapp.com"
+/         = link_to "GitHub", "https://github.com/columbusrb"
+/         = link_to "Mailing List", "http://eepurl.com/cVggdb"
+/         = link_to "Twitter", "https://twitter.com/columbusrb"
+
+/     section
+/       = yield
+
+/     section
+/       h2 Graciously Sponsored By
+/       #sponsors
+/         = link_to(image_tag('https://www.covermymeds.com/main/wp-content/themes/mana-child/images/CoverMyMeds_Logo.png', alt: 'CoverMyMeds'), 'http://covermymeds.com', target: '_blank')
+/         = link_to(image_tag('jetbrains.png', alt: 'JetBrains'), 'http://www.jetbrains.com', target: '_blank')
+/         = link_to(image_tag('oreilly.gif', alt: 'O\'Reilly'), 'http://www.oreilly.com', target: '_blank')
+/         = link_to(image_tag('rax.jpg', alt: 'Rackspace'), 'http://developer.rackspace.com', target: '_blank')
+/         = link_to(image_tag('td.png', alt: 'TestDouble'), 'http://testdouble.com', target: '_blank')
+/         = link_to(image_tag('http://www.balancedteam.org/wp-content/uploads/2012/08/mutuallyhuman-500minusCS-21.png', alt: 'MutuallyHuman'), 'http://www.mutuallyhuman.com', target: '_blank')

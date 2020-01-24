@@ -22,3 +22,7 @@ group :development do
   gem 'listen'
   gem 'faker'
 end
+
+group :development, :test do
+  gem 'rspec-rails'
+end

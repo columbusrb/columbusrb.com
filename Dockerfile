@@ -23,6 +23,8 @@ COPY Gemfile* ./
 RUN gem update --system
 RUN gem update bundler
 RUN bundle install
+COPY yarn.lock ./
+RUN yarn install
 COPY . /app/
 
 EXPOSE 3000

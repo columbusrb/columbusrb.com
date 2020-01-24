@@ -1,17 +1,9 @@
 Meeting.delete_all
 Speaker.delete_all
 BoardMember.delete_all
-Video.delete_all
 AdminUser.delete_all
 
 Meeting.find_or_create_next_date
-
-20.times do
-  Video.create do |v|
-    v.name = Faker::Name.name
-    v.title = Faker::Company.catch_phrase
-  end
-end
 
 BoardMember.create do |b|
   b.name = "Matt Darby"

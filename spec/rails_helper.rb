@@ -38,6 +38,10 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  if ENV['DATABASE_URL'] =~ /postgres:password@postgres/
+    DatabaseCleaner.allow_remote_database_url = true
+  end
+
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction
     DatabaseCleaner.clean_with(:truncation)

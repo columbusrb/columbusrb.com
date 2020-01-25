@@ -14,26 +14,22 @@ class Meeting < ActiveRecord::Base
 
   def self.find_or_create_next_date
     @next_crb = future_meetings.first
-    if @next_crb.blank?
-      if current_month_crb.blank?
-        next_month = 0
-      else
-        next_month = 1
-      end
+    return @next_crb if @next_crb.present?
 
-      beginning = Date.today.beginning_of_month
+    target_month = Date.today.beginning_of_month
+    target_month += 1.month if meeting_exists_for_this_month?
 
-      curr_time = beginning + next_month.months
-      s         = curr_time.beginning_of_month
-      e         = curr_time.end_of_month
-      crb_time  = (s..e).select{|d| d.wday == 1}[2] + 18.5.hours
+    start_of_month    = target_month.beginning_of_month
+    end_of_month      = target_month.end_of_month
+    third_monday_630p = (start_of_month..end_of_month).select{|d| d.wday == 1}[2] + 18.5.hours
+    third_monday_630p += 1.month if third_monday_630p.past?
 
-      find_or_create_by(time: crb_time)
-    else
-      @next_crb
-    end
+    find_or_create_by(time: third_monday_630p)
   end
 
+  def self.meeting_exists_for_this_month?
+    current_month_crb.present?
+  end
 
   def to_s
     time

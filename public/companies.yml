@@ -102,3 +102,10 @@
   location: Campus Area
   team_size: Small
   other_tech: AWS, MySQL, Javascript, iOS, Android
+  
+- name: Sana
+  url: https://sanabenefits.com
+  market: Health Insurance
+  location: Remote! (Co-founder based in Columbus)
+  team_size: Small
+  other_tech: React/Javascript, AWS, Postgres, Elasticsearch

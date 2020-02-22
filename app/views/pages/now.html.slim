@@ -5,7 +5,7 @@ html
     meta(name="language" content="en")
     meta(name="description" content="Columbus Ruby Brigade is a collection of professionals excited about Ruby")
     meta(name="keywords" content="ruby columbus programming usergroup rails javascript web development")
-    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Bebas+Neue|Zilla+Slab&display=swap"
+      = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Bebas+Neue|Zilla+Slab|Permanent+Marker&display=swap"
     = javascript_pack_tag 'application'
     = stylesheet_pack_tag 'application'
 
@@ -18,19 +18,18 @@ html
     div class="bg-purple-700 text-gray-200 font-semibold align-top p-1 text-center"
       p Established 2005 &mdash; #{@members} members strong
 
-    div class="bg-purple-900 p-4 lg:flex justify-center"
-      = image_pack_tag('media/images/logo.png', class: 'w-1/4 h-1/4')
-
-      div class="text-gray-200 pl-6"
-        h1.text-6xl Columbus Ruby Brigade
-        .text-3xl
-          div class="font-extrabold font-bebas align-bottom" Next Meeting:
-          div.mt-0
-          = formatted_date(@next_crb.time) 
-          | &nbsp; at CoverMyMeds
-        .text-3xl
-          div class="font-extrabold font-bebas" Speaking:
-          - @next_crb.speakers.each do |s|
-            .font-extrabold= s.name
-            div= s.title
-            
+    div class="bg-purple-900 p-4"
+      div class="container mx-auto px-6 flex items-center flex-wrap"
+        div class="lg:w-1/2 relative"
+          div class="text-gray-200 pl-6"
+            h1.text-6xl Columbus Ruby Brigade
+            .text-3xl
+              div class="font-extrabold font-marker align-bottom" Next Meeting:
+              div.mt-0
+              = formatted_date(@next_crb.time)
+              |  at Root Insurance
+            .text-3xl
+              div class="font-extrabold font-marker align-bottom" Speaking:
+              = render collection: @next_crb.speakers, partial: 'pages/speaker' || "<p>There aren't any speakers signed up. Yet.</p>"
+        div class="p-16 lg:p-0 lg:w-1/2"
+          = image_pack_tag('media/images/logo.png', class: 'md:m-auto')

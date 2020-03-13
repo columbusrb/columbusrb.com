@@ -1,6 +1,6 @@
 section
   #next-meeting
-    h2 Next Meeting
+    h2 Next Meeting (remote! see location!)
     p= formatted_date(@next_crb.time)
 
     - @next_crb.speakers.each do |s|
@@ -11,19 +11,22 @@ section
           = s.title
   #location
     #map
-      a(href="https://www.google.com/maps/place/Root+Insurance/@39.963511,-83.0136561,14.25z/data=!4m5!3m4!1s0x88388f30384416dd:0xd6b86aadbf4430ee!8m2!3d39.9580889!4d-82.9977805")
-        img src=asset_path("root-map.png")
+      a(href="https://zoom.us/j/563608022k")
+        img src=asset_path("wfh.jpg") style="width: 400px; height: 276px"
 
     .address
-      a(href="https://www.google.com/maps/place/Root+Insurance/@39.963511,-83.0136561,14.25z/data=!4m5!3m4!1s0x88388f30384416dd:0xd6b86aadbf4430ee!8m2!3d39.9580889!4d-82.9977805")
+      a(href="https://zoom.us/j/563608022k")
         p
-          h2 Root Insurance Co.
-          | 88 E. Rich St. Suite 500
+          h2 Remote via Zoom!
+          | https://zoom.us/j/563608022k
+    p
+      | For the obvious reasons, Root Insurance has suspended in-person meetups at their offices. They've generously offered their Zoom setup to do a remote meetup, which we're excited to try out!
 
-      p
-        | Park in the garage across the street (55 E Rich St.), and we will validate your parking for you. Walk across sky bridge on the 2nd floor of the garage, take "work" lift to floor 6.
-      p
-        | The doors lock at 7:30pm, so do not arrive later than that.
+    p
+      | Download the Zoom client at #{link_to 'zoom.us', 'https://zoom.us'} if you don't already have it, and join us for a few fun talks and some properly socially distant networking!
+
+    p
+      | Image attribution: #{link_to 'https://www.flickr.com/photos/fensterbme/64985745'}
 
 section
   #what

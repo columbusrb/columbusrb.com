@@ -1,3 +1,10 @@
+- name: Root Insurance
+  url: https://www.joinroot.com
+  market: Insurance
+  location: Downtown Columbus
+  team_size: Small
+  other_tech: React Native, React, iOS, Android
+
 - name: CoverMyMeds
   url: https://www.covermymeds.com
   market: Healthcare
@@ -5,13 +12,6 @@
   team_size: Large
   other_tech: PHP, Python
 
-- name: Mutually Human
-  url: https://www.mutuallyhuman.com
-  market: Consulting
-  location: Downtown Columbus
-  team_size: Small
-  other_tech: Javascript, iOS
-  
 - name: Test Double
   url: https://testdouble.com/
   market: Consulting
@@ -25,13 +25,6 @@
   location: Downtown Columbus
   team_size: Small
   other_tech: AWS, Angular, MySQL, PostgreSQL, Redis
-
-- name: Root Insurance
-  url: https://www.joinroot.com
-  market: Insurance
-  location: Downtown Columbus
-  team_size: Small
-  other_tech: React Native, React, iOS, Android
 
 - name: Orange Barrel Media
   url: https://www.orangebarrelmedia.com

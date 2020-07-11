@@ -1,6 +1,6 @@
 <div style="background-image: url('<%= asset_pack_path('media/images/101.jpg') %>')">
     <div class="bg-purple-700 text-gray-200 font-semibold align-top p-1 text-center font-serif">
-        <p>Established 2005 &mdash; #{@members} members strong</p>
+        <p>Established 2005 &mdash; <%= pluralize(@members, 'members') %> strong</p>
 
         <div class="bg-purple-900 p-4">
             <div class="container mx-auto px-6 flex items-center flex-wrap">

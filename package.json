@@ -3,7 +3,7 @@
     "@rails/webpacker": "4.2.2",
     "@tailwindcss/ui": "^0.3.0",
     "npx": "^10.2.0",
-    "tailwindcss": "^1.1.4"
+    "tailwindcss": "^1.2.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.10.1"

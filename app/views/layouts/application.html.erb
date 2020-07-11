@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+        <meta content="en" name="language" />
+        <meta content="Columbus Ruby Brigade is a collection of professionals excited about Ruby" name="description" />
+        <meta content="ruby columbus programming usergroup rails javascript web development" name="keywords" />
+        <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Zilla+Slab&display=swap" %>
+        <%= stylesheet_link_tag "https://rsms.me/inter/inter.css" %>
+
+        <%= javascript_pack_tag 'application' %>
+        <%= stylesheet_pack_tag 'application' %>
+
+        <title>Columbus Ruby Brigade </title>
+        <%= csrf_meta_tags %>
+    </head>
+    <body class="text-base font-sans">
+        <%= yield %>
+
+        <div class="container mx-auto px-6">
+            <%= render 'companies' %>
+        </div>
+
+        <%= render 'footer' %>
+    </body>
+</html>

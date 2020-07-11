@@ -29,7 +29,7 @@
 </div>
 -->
 
-<div class="relative bg-gray-50 overflow-hidden">
+<div class="relative bg-gray-50 overflow-hidden" x-data="{ isOpen: false }">
   <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
     <div class="relative h-full max-w-screen-xl mx-auto">
       <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
@@ -57,10 +57,10 @@
         <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
           <div class="flex items-center justify-between w-full md:w-auto">
             <a href="#" aria-label="Home">
-              <img class="h-8 w-auto sm:h-10" src="/img/logos/workflow-mark-on-white.svg" alt="Logo" />
+              <img class="h-8 w-auto sm:h-10" src="<%= asset_pack_path('media/images/logo.png') %>" alt="Logo" />
             </a>
             <div class="-mr-2 flex items-center md:hidden">
-              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
+              <button type="button" @click="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" id="main-menu" aria-label="Main menu" aria-haspopup="true">
                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -77,25 +77,23 @@
       </nav>
     </div>
 
-    <!--
-      Mobile menu, show/hide based on menu open state.
-
-      Entering: "duration-150 ease-out"
-        From: "opacity-0 scale-95"
-        To: "opacity-100 scale-100"
-      Leaving: "duration-100 ease-in"
-        From: "opacity-100 scale-100"
-        To: "opacity-0 scale-95"
-    -->
-    <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+    <div
+        x-show="isOpen"
+        x-transition:enter="transition ease-out duration-100 transform"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75 transform"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-95"
+        class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
       <div class="rounded-lg shadow-md">
         <div class="rounded-lg bg-white shadow-xs overflow-hidden" role="menu" aria-orientation="vertical" aria-labelledby="main-menu">
           <div class="px-5 pt-4 flex items-center justify-between">
             <div>
-              <img class="h-8 w-auto" src="/img/logos/workflow-mark-on-white.svg" alt="" />
+                <img class="h-8 w-auto" src="<%= asset_pack_path('media/images/logo.png') %>" alt="" />
             </div>
             <div class="-mr-2">
-              <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
+              <button type="button" @click="isOpen = !isOpen" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out" aria-label="Close menu">
                 <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -113,9 +111,9 @@
     </div>
 
     <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 xl:mt-28">
-        <h2 class="text-4xl tracking-tight leading-10 font-title text-gray-900 sm:text-5xl sm:leading-none md:text-6xl text-center">
+        <h2 class="text-4xl tracking-tight leading-10 font-title text-gray-900 sm:text-5xl sm:leading-none md:text-5xl text-center">
             <span class="text-indigo-600">Columbus</span>
-            <br class="md:hidden" />
+            <br class="lg:hidden" />
             Ruby
             <span class="text-indigo-600">Brigade</span>
         </h2>
@@ -129,7 +127,7 @@
                 </p>
                 <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                     <div class="rounded-md shadow">
-                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                        <a href="#" class="w-full flex items-center justify-center px-16 py-6 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                             RSVP on Meetup
                         </a>
                     </div>

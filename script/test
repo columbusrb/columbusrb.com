@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -eu
 
-CMD=${@:-bin/rspec}
+CMD=${@:-bundle exec rspec}
 
 docker-compose run --rm web $CMD

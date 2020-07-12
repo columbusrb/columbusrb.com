@@ -1,4 +1,4 @@
-class CreateMeetings < ActiveRecord::Migration
+class CreateMeetings < ActiveRecord::Migration[5.0]
   def up
     create_table :meetings do |t|
       t.datetime :time

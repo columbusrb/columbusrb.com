@@ -1,4 +1,4 @@
-class CreateSpeakers < ActiveRecord::Migration
+class CreateSpeakers < ActiveRecord::Migration[5.0]
   def up
     create_table :speakers do |t|
       t.integer :meeting_id

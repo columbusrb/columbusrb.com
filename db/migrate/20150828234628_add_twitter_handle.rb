@@ -1,4 +1,4 @@
-class AddTwitterHandle < ActiveRecord::Migration
+class AddTwitterHandle < ActiveRecord::Migration[5.0]
   def up
     add_column :speakers, :twitter, :string
     add_column :speakers, :twitter_avatar_url, :string

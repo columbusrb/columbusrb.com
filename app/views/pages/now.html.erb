@@ -1,34 +1,3 @@
-<!--
-<div style="background-image: url('<%= asset_pack_path('media/images/101.jpg') %>')">
-    <div class="bg-purple-700 text-gray-200 font-semibold align-top p-1 text-center font-serif">
-        <p>Established 2005 &mdash; <%= pluralize(@members, 'members') %> strong</p>
-
-        <div class="bg-purple-900 p-4">
-            <div class="container mx-auto px-6 flex items-center flex-wrap">
-                <div class="lg:w-2/3 relative">
-                    <div class="text-gray-200">
-                        <h1 class="text-2xl font-extrabold">Columbus Ruby Brigade</h1>
-                        <div class="font-extrabold align-bottom">
-                            Next Meeting:
-                        </div>
-                        <div class="pt-0">
-                            <%= formatted_date(@next_crb.time) %> at Root Insurance
-                        </div>
-                        <div class="font-bold align-bottom text-xl my-2">
-                            Speaking:
-                            <%= render collection: @next_crb.speakers, partial: 'speaker' || "<p>There aren't any speakers signed up. Yet.</p>" %>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-16 lg:p-0 lg:w-1/3">
-                    <%= image_pack_tag('media/images/logo.png', class: 'md:m-auto') %>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
-
 <div class="relative bg-gray-50 overflow-hidden" x-data="{ isOpen: false }">
   <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full">
     <div class="relative h-full max-w-screen-xl mx-auto">
@@ -118,13 +87,19 @@
             <span class="text-indigo-600">Brigade</span>
         </h2>
         <div class="xl:grid grid-cols-4">
-            <div class="col-span-1">
-                <%= image_pack_tag('media/images/logo.png', class: 'xl:w-auto w-1/3 m-auto') %>
-            </div>
             <div class="col-span-3">
-                <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-                </p>
+                <div class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-lg md:max-w-3xl">
+                    <div class="font-extrabold align-bottom">
+                        Next Meeting:
+                    </div>
+                    <div class="pt-0">
+                        <%= formatted_date(@next_crb.time) %> at Root Insurance
+                    </div>
+                    <div class="font-bold align-bottom text-xl my-2">
+                        Speaking:
+                        <%= render collection: @next_crb.speakers, partial: 'speaker' || "<p>There aren't any speakers signed up. Yet.</p>" %>
+                    </div>
+                </div>
                 <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
                     <div class="rounded-md shadow">
                         <a href="#" class="w-full flex items-center justify-center px-16 py-6 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
@@ -133,10 +108,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-span-1 flex align-middle">
+                <%= image_pack_tag('media/images/logo.png', class: 'xl:w-auto w-1/3 m-auto') %>
+            </div>
         </div>
     </main>
   </div>
 </div>
+
+<div class="container mx-auto px-6">
+    <%= render 'who_we_are' %>
+</div>
+
 <div class="container mx-auto px-6">
     <%= render 'companies' %>
 </div>

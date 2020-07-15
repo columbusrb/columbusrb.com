@@ -1,0 +1,14 @@
+<li class="col-span-1 flex flex-col text-center bg-white rounded-lg shadow">
+    <div class="flex-1 flex flex-col p-8">
+        <h3 class="mt-1 mb-2 text-gray-900 text-sm leading-5 font-medium"><%= board_member.name %></h3>
+        <% if board_member.title.present? %>
+            <dt class="sr-only"><%= board_member.title %></dt>
+            <dd class="mb-2">
+                <span class="px-2 py-1 text-teal-800 text-xs leading-4 font-medium bg-teal-100 rounded-full"><%= board_member.title %></span>
+            </dd>
+        <% end %>
+        <dl class="mt-1 flex-grow flex flex-col justify-between">
+            <dd class="text-gray-500 text-sm leading-5"><%= board_member.bio %></dd>
+        </dl>
+    </div>
+</li>

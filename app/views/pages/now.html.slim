@@ -3,6 +3,22 @@ section
     h2 Next Meeting (remote! see location!)
     p= formatted_date(@next_crb.time)
 
+    img src=asset_path("crb-aug2020.png") style="width: 600px; height: 300px;"
+
+    .speaker
+      .name Ligtning Talks
+
+    p Join us August 17 and bring your lightning talks!
+    p Lightning talks are short (roughly 5 minute) talks, with slides or live presentation alongside. Because they're so brief, you can pick nearly any topic and run with it!
+    p Some ideas:
+    ul
+      li A Ruby method that you recently found out was cool
+      li A gem that you like -- even one that you think folks already know about
+      li A technique you're trying out, like TDD or Pairing
+      li A tool you're using
+
+    p If you're interested in presenting, just show up with your slides and wave your hand when we ask if anyone wants to present!
+
     - @next_crb.speakers.each do |s|
       .speaker
         .name

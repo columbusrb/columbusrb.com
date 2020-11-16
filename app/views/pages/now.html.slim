@@ -3,13 +3,6 @@ section
     h2 Next Meeting (remote! see location!)
     p= formatted_date(@next_crb.time)
 
-    img src=asset_path("crb-oct2020.png") style="width: 600px; height: 300px;"
-
-    .speaker
-      .name Technical Talks
-
-      p Join us for a fantastic evening of technical talks!
-
     - @next_crb.speakers.each do |s|
       .speaker
         .name

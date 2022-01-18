@@ -22,3 +22,7 @@
 config/secrets.yml.key
 /node_modules/
 /public/packs/
+
+# Ignore IDE files
+/.idea
+*.iml

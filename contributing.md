@@ -1,6 +1,6 @@
 ## Contributing
 
-We love pull requests from everyone. We'd like for people to be encouraged to contribute, especially early career or people new to programming.
+We love pull requests from everyone. We'd like for people to be encouraged to contribute, especially early career or people new to programming. [Join our Slack organization](https://crb-slack-invite.herokuapp.com/) and hit up the #general channel if you get stuck. There are many kind people there who will gladly give you a hand!
 
 Fork, then clone the repo:
 
@@ -48,3 +48,23 @@ Make your change. Push to your fork and [submit a pull request][pr].
 [pr]: https://github.com/columbusrb/columbusrb.com/compare/
 
 At this point, you are waiting on us. We like to at least comment on pull requests within three business days (and, typically, one business day). We may suggest some changes or improvements or alternatives.
+
+## Trouble Shooting Environment Setup
+
+- Issue: `script/setup` is throwing a fuss about the rails environment being wrong:
+
+You need to set the environment variable through Docker. Run:
+```shell
+script/run rails db:environment:set RAILS_ENV=development
+```
+and try once more!
+- Issue: If `script/server` exits with status code 1 saying the server already exists:
+
+This happens if the the server you just ran did not have enough time to exit gracefully before closing. In that case, even if you are not running another instance of the container, the program thinks you are because a lingering artifact - specifically, a `.pid` file. You need to find that file and destroy it. Here is the path:
+```
+/tmp/pids/server.pid
+``` 
+`ctl + c` and try once more!
+
+---
+If you run into any other issues, please, don't hesitate to reach out to us on [Slack!](https://crb-slack-invite.herokuapp.com/)

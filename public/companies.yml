@@ -102,3 +102,10 @@
   location: Remote! (Co-founder based in Columbus)
   team_size: Small
   other_tech: React/Javascript, AWS, Postgres, Elasticsearch
+
+- name: Northwoods
+  url: https://www.teamnorthwoods.com/
+  market: Health and Human Services
+  location: Dublin
+  team_size: Small
+  other_tech: React/Typescipt, AWS, Postgres

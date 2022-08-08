@@ -1,6 +1,6 @@
 section
   #next-meeting
-    h2 Next Meeting (remote! see location!)
+    h2 Next Meeting
     p= formatted_date(@next_crb.time)
 
     - @next_crb.speakers.each do |s|
@@ -11,17 +11,8 @@ section
           = s.title
 
   #location
-    #map
-      a(href="https://www.google.com/maps/search/?api=1&query=40.146294%2C%20-82.94297")
-        img src=asset_path("wfh.jpg") style="width: 400px; height: 276px"
-
-    .address
-      a(href="https://www.google.com/maps/search/?api=1&query=40.146294%2C%20-82.94297")
-        p
-          h2 Rusty Bucket in Polaris!
-          | 400 Polaris Pkwy
-          | Westerville, OH 43082
-
+    p CRB is going on tour! A new location every month until the end of the year! Check the
+     | #{link_to "Meetup event", "https://www.meetup.com/columbusrb/"} for this month to see the location!
     p
       | Image attribution: #{link_to 'https://www.flickr.com/photos/fensterbme/64985745'}
 

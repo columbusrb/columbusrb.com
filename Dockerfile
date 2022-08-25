@@ -1,4 +1,4 @@
-FROM ruby:2.6.6
+FROM ruby:3.1.2
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
@@ -13,4 +13,4 @@ RUN bundle install
 COPY . /app/
 
 EXPOSE 3000
-CMD ["bin/rails", "server", "-b", "0.0.0.0"]
+#CMD ["bin/rails", "server", "-b", "0.0.0.0"]

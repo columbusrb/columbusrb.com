@@ -1,21 +1,19 @@
-version: '2'
+version: '3.9'
 
 services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
 
   web:
     build: .
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
-      - ".:/app"
+      - .:/app
     ports:
       - "3000:3000"
-    links:
-      - postgres
-    environment:
-      # NOTE: Change script/setup if you change this value
-      DATABASE_URL: postgresql://postgres:password@postgres/crb_development?pool=5
-
-  postgres:
-    image: postgres:10
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+    depends_on:
+      - db

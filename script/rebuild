@@ -5,4 +5,4 @@ cd "$(dirname "$0")/.."
 
 script/cleanup
 docker-compose build web
-script/setup
+docker-compose up

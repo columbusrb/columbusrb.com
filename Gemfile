@@ -8,7 +8,9 @@ gem 'flexirest'
 gem 'jquery-rails'
 gem 'minitest'
 gem 'neat', '1.7.2'
-gem 'net-smtp', require: false #may only be necessary until Rails 7
+gem 'net-imap', require: false
+gem 'net-pop', require: false
+gem 'net-smtp', require: false
 gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'puma'

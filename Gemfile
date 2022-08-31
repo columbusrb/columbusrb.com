@@ -2,30 +2,31 @@ source 'https://rubygems.org'
 
 ruby '3.1.2'
 
-gem 'rails', '~> 6.0.3.6'
-gem 'pry'
-gem 'slim'
 gem 'bourbon', '4.2.4'
-gem 'neat', '1.7.2'
+gem 'devise'
+gem 'flexirest'
 gem 'jquery-rails'
-gem 'redcarpet'
 gem 'minitest'
-gem 'rest-client'
-gem 'thin'
+gem 'neat', '1.7.2'
+gem 'net-smtp', require: false #may only be necessary until Rails 7
+gem 'omniauth-google-oauth2'
 gem 'pg'
 gem 'puma'
-gem 'devise'
-gem 'omniauth-google-oauth2'
+gem 'rails', '~> 6.0.3.6'
 gem 'rails_12factor'
-gem 'flexirest'
+gem 'redcarpet'
+gem 'rest-client'
+gem 'slim'
+gem 'thin'
 
 group :development do
-  gem 'listen'
   gem 'faker'
+  gem 'listen'
+  gem 'pry'
 end
 
 group :assets do
-  gem 'sass-rails'
   gem 'coffee-rails'
+  gem 'sass-rails'
   gem 'uglifier'
 end

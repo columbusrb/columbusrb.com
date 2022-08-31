@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-set -eu
-
-docker-compose up -d web
-
-# ctrl-c will trigger the stop
-docker-compose logs -f || docker-compose stop web

@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.6.6'
+ruby '3.1.2'
 
 gem 'rails', '~> 6.0.3.6'
 gem 'pry'

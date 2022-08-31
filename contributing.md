@@ -14,6 +14,11 @@ After Docker is installed, start the development server by running the following
 ```
 docker-compose up 
 ```
+For the first time set up, also run 
+```
+script/run rails db:setup
+```
+
 If you want everything to run in the background, you can use `docker-compose up -d`
 
 In certain cases, if you update gems, you may need to rebuild the docker containers to install the new dependencies. This is easily done with:

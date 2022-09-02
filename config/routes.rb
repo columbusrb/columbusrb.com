@@ -14,7 +14,6 @@ Columbusrb::Application.routes.draw do
   end
 
   root to: "pages#now"
-  get '/2020/location', to: 'pages#location'
 
   get 'feedback' => redirect("https://www.surveymonkey.com/r/JB9JX8X")
 end

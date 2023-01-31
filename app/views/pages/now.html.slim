@@ -11,8 +11,15 @@ section
           = s.title
 
   #location
-    h2 Location
-    p CRB is going on tour! A new location every month until the end of the year! Check the #{link_to "Meetup event", "https://www.meetup.com/columbusrb/"} for this month to see the location!
+    #map
+      a(href="https://goo.gl/maps/akZ6hzFxric89fxq6" target="_blank")
+        img src=asset_path("northwoods-map.png")
+
+    .address
+      a(href="https://goo.gl/maps/akZ6hzFxric89fxq6" target="_blank")
+        p
+          h2 Northwoods
+          | 5200 Rings Rd, Dublin, OH 43017
 
 section
   #what

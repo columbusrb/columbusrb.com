@@ -152,7 +152,6 @@ a {
   @include span-columns(5 of 12);
 
   img {
-    height: 370px;
     width: 370px;
     margin-bottom: 1em;
   }
@@ -253,6 +252,9 @@ a {
 
 #sponsors {
   @include clearfix;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 3em;
   background: $white;
   border-radius: 0.5em;

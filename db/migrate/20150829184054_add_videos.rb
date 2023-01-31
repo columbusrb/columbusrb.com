@@ -1,4 +1,4 @@
-class AddVideos < ActiveRecord::Migration
+class AddVideos < ActiveRecord::Migration[4.2]
   def up
     create_table :videos do |t|
       t.string :url

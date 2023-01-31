@@ -1,4 +1,4 @@
-class AddBoardMembers < ActiveRecord::Migration
+class AddBoardMembers < ActiveRecord::Migration[4.2]
   def up
     create_table :board_members do |t|
       t.string :name

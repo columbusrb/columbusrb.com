@@ -12,6 +12,7 @@ gem 'net-imap', require: false
 gem 'net-pop', require: false
 gem 'net-smtp', require: false
 gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection', '~> 1.0'
 gem 'pg'
 gem 'puma'
 gem 'rails', '~> 6.0.3.6'

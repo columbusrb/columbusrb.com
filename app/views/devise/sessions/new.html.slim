@@ -17,4 +17,4 @@ h2 Admin Login
     .actions
       = f.submit "Log in"
 - else
-  = link_to 'Log in with your Columbus Ruby Brigade, Inc account', admin_user_google_oauth2_omniauth_authorize_path, method: :post
+  = button_to 'Log in with your Columbus Ruby Brigade, Inc account', admin_user_google_oauth2_omniauth_authorize_path

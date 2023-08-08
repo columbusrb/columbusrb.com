@@ -108,4 +108,11 @@
   market: Health and Human Services
   location: Dublin
   team_size: Small
-  other_tech: React/Typescipt, AWS, Postgres
+  other_tech: React/Typescript, AWS, Postgres
+
+- name: Empora Title
+  url: https://www.emporatitle.com
+  market: Real Estate
+  location: Remote-first, with an office in the Short North
+  team_size: Small
+  other_tech: Hotwire, Ember, Typescript, Heroku, AWS, Postgres

@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-set -eu
-
-CMD=${@:-bin/rake}
-
-docker-compose run --rm web $CMD

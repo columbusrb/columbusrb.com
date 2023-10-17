@@ -1,5 +1,5 @@
 class MeetupGroup < Flexirest::Base
-  base_url Rails.application.config.meetup_api_server_url
+  base_url 'https://api.meetup.com/'
 
   get :info, "meetup-group-wEkWWOXK"
 

@@ -1,5 +1,7 @@
 ## Columbus Ruby Brigade Website
 
+[![Ruby](https://github.com/columbusrb/columbusrb.com/actions/workflows/ruby.yml/badge.svg)](https://github.com/columbusrb/columbusrb.com/actions/workflows/ruby.yml)
+
 ### About
 
 This is the source that powers [http://columbusrb.com](http://columbusrb.com). Contributions are always welcome.

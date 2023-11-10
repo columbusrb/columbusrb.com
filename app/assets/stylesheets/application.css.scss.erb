@@ -1,7 +1,9 @@
 @import "bourbon";
 @import "neat";
 
-$modular-scale-ratio: $minor-second;
+$bourbon: (
+  "modular-scale-ratio": $minor-second,
+);
 
 $white: #FEFFFF;
 $gray: #999999;
@@ -9,9 +11,6 @@ $lightgray: #F5F5F5;
 $black: #41463F;
 $scarlet: #95080C;
 $links: $white;
-
-$mobile: new-breakpoint(max-width 480px);
-$desktop: new-breakpoint(min-width 850px);
 
 body {
   color: $white;

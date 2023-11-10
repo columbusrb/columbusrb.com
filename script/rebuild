@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-set -eu
-
-cd "$(dirname "$0")/.."
-
-script/cleanup
-docker-compose build web
-docker-compose up

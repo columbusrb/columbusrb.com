@@ -33,55 +33,55 @@
   team_size: Small
   other_tech: Javascript, Backbone, iOS, Android
 
-- name: Ready Made RC, LLC 
+- name: Ready Made RC, LLC
   url: https://www.readymaderc.com
-  market: Online Retail 
+  market: Online Retail
   location: Lewis Center
-  team_size: Small 
+  team_size: Small
   other_tech: React, PHP
 
 - name: Beam Technologies, Inc
   url: https://www.beam.dental
   market: Dental Insurance
   location: Downtown Columbus
-  team_size: Small 
+  team_size: Small
   other_tech: React, MySQL, GoLang, MySQL
 
 - name: Switchbox, Inc
   url: https://www.switchboxinc.com
   market: Custom Application Development
   location: Upper Arlington
-  team_size: Small 
+  team_size: Small
   other_tech: PHP, Java, .Net, iOS, Android
-  
+
 - name: Bark, Inc
   url: https://www.barkbox.com
   market: Making Dogs Happy
   location: Franklinton
-  team_size: Small 
+  team_size: Small
   other_tech: Javascript, Redis, Postgres
-  
+
 - name: Upstart
   url: https://www.upstart.com
   market: Fintech
   location: Short North
   team_size: Small
   other_tech: AWS, Docker, Jenkins, Postgres, Python, React, Redis
-  
-- name: Your Lighting Brand 
+
+- name: Your Lighting Brand
   url: https://www.lighting.exchange
-  market: Marketing and Advertising 
-  location: Downtown Columbus 
+  market: Marketing and Advertising
+  location: Downtown Columbus
   team_size: Small
   other_tech: PostgreSQL, React, PHP, Javascript
-  
+
 - name: Pigeon
   url: https://pigeonforteachers.com
   market: Edutech
   location: Columbus
   team_size: Small
   other_tech: Postgres, Twilio, Heroku, AWS, Stimulus, React
-  
+
 - name: Data-Axle
   url: https://www.data-axle.com
   market: Data and Marketing
@@ -95,7 +95,7 @@
   location: Campus Area
   team_size: Small
   other_tech: AWS, MySQL, Javascript, iOS, Android
-  
+
 - name: Sana
   url: https://sanabenefits.com
   market: Health Insurance

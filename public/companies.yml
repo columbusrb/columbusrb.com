@@ -116,3 +116,10 @@
   location: Remote-first, with an office in the Short North
   team_size: Small
   other_tech: Hotwire, Ember, Typescript, Heroku, AWS, Postgres
+
+- name: Kode Health
+  url: https://www.kodehealth.com
+  market: Healthcare
+  location: Fully Remote
+  team_size: Small
+  other_tech: Clean vanilla modern Rails app, Stimulus, Heroku, AWS, Postgres

@@ -1,7 +1,9 @@
 section
   #next-meeting
     h2 Next Meeting
-    p= formatted_date(@next_crb.time)
+    p
+      Food and networking: 5pm-6:30pm
+      Program: #{formatted_date(@next_crb.time)}
 
     - @next_crb.speakers.each do |s|
       .speaker

@@ -1,9 +1,10 @@
-class MeetupGroup < Flexirest::Base
-  base_url 'https://api.meetup.com/'
+class MeetupGroup #< Flexirest::Base
+  # base_url 'https://api.meetup.com/'
 
-  get :info, "meetup-group-wEkWWOXK"
+  #get :info, "meetup-group-wEkWWOXK"
 
   def self.get_members_count
-    self.info.members
+    "1000+"
+   # self.info.members
   end
 end
